@@ -1,0 +1,26 @@
+---
+title: "check_quarto"
+format:
+  html:
+    embed-resources: true
+---
+
+## Section title
+
+This is a mini [quarto](https://quarto.org/) document with text and some R code.  
+
+- in Rstudio, click "Render" at the top
+- in VScode, click the Preview button (topright)
+
+This will execute the R code and weave together the text, code and output.
+
+In Rstudio, I recommend to set (Cog symbol) Preview in Viewer Pane.
+
+```{r, plot_example, echo=TRUE}
+pairs(iris[, 1:4], main="Anderson's Iris Data",
+      col=c("orange", "salmon", "lightblue")[unclass(iris$Species)], 
+	  pch=16, cex=1.5, lower.panel=NULL, las=1)
+
+```
+
+More in lesson I1.5, specifically the homework, where we'll also mix in Python code :)
