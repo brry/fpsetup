@@ -13,7 +13,7 @@ so we have a lot of software to install. It may be a bit tedious, but it will be
 Any improvements to the guide are very welcome!
 
 - <mark>Step 1a</mark>: install [R + Rstudio](https://bookdown.org/brry/course/install.html), including the Rdata settings
-- <kbd>Step 1b</kbd>: check if R is on the PATH (locations where executables are found):  
+- <kbd>Step 1b</kbd>: check if R is on the PATH (locations where executables are found):
   - in your OS, search (Windows: `Windows key`. Mac: `CMD`+`SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
   - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
   - if R is not found / recognized, add it to the _system_ (not user) PATH:
