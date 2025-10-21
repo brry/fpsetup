@@ -2,13 +2,14 @@
 
 **for the course 'Fundamentals of Programming'**
 
-We want to  
+We want to
 
 - mix Python and R code in quarto markdown documents (more in lesson I1.5)
 - try two IDEs to find out what we like about each
 - have our exercises scored from within our IDEs (more in lesson I1.3)
 
-so we have a lot of software to install. It may be a bit tedious, but it will be worth it!  
+so we have a lot of software to install.  
+It's a bit much at once, but it will be worth it!  
 
 Any improvements to the guide are very welcome!
 
@@ -71,3 +72,8 @@ Any improvements to the guide are very welcome!
 - <mark>Step 6</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `Command`+`Shift`+`.` to  show hidden files
+
+You made it through! 🎉  
+Now you're set up for the rest of the course (and beyond).
+
+*Again: improvements to this guide are very welcome!*
