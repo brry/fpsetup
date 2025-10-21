@@ -26,7 +26,7 @@ Any improvements to the guide are very welcome!
 
  ~
 
-- <span style="background-color:aquamarine">Step 2a</span>: install [git](https://bookdown.org/brry/course/git.html), including the SSH key setup.  
+- ![](https://img.shields.io/badge/Step%202a-aquamarine?style=flat): install [git](https://bookdown.org/brry/course/git.html), including the SSH key setup.  
   If you already have a personal github account, use that :)
 - <span style="background-color:palegreen">Step 2b</span>: follow the [use git](https://bookdown.org/brry/course/git.html#use-git) section to download these instructions
 - <span style="background-color:palegreen">Step 2c</span>: run `setup_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
