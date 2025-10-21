@@ -12,7 +12,7 @@ so we have a lot of software to install. It may be a bit tedious, but it will be
 
 Any improvements to the guide are very welcome!
 
-- <span style="background-color:aquamarine">Step 1a</span>: install [R + Rstudio](https://bookdown.org/brry/course/install.html), including the Rdata settings
+- <mark>Step 1a</mark>: install [R + Rstudio](https://bookdown.org/brry/course/install.html), including the Rdata settings
 - <span style="background-color:palegreen">Step 1b</span>: check if R is on the PATH (locations where executables are found):  
   - in your OS, search (Windows: `Windows key`. Mac: `CMD`+`SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
   - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
