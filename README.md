@@ -77,3 +77,4 @@ You made it through! 🎉
 Now you're set up for the rest of the course (and beyond).
 
 *Again: improvements to this guide are very welcome!*
+print("Hello guys, Excited to learn Python & R")
