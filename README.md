@@ -39,7 +39,8 @@ Any improvements to the guide are very welcome!
   - installation from R (way easier, especially on Mac): run `setup_Python.R` line by line
 - <mark>Step 3b</mark>: install Python modules:
   - on Windows / if you use the system Python, run in the terminal:  
-    `pip install numpy pandas matplotlib` (pip3 instead of pip on Mac)
+    `pip install numpy pandas matplotlib`  
+    (pip3 instead of pip on Mac)
   - else, in an R console (e.g. in Rstudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
 - <mark>Step 3c</mark>: run `check_python_setup.py` (`CTRL`/`CMD`+`SHIFT`+`S`)
@@ -57,16 +58,21 @@ Any improvements to the guide are very welcome!
 - <mark>Step 4d</mark>: run Python scripts in VScode:
   - open `check_python_setup.py`
   - install the Python extension when prompted (or manually)
+  - potentially press `CTRL`/`CMD` + `SHIFT` + `P`, search "Python: Select Interpreter", set to the path from `setup_python.R`
   - open the Settings (`CTRL`+`,`), search 'execin', check the box for `Python > Terminal: execute in file dir` ([Source](https://stackoverflow.com/a/65835091))
   - now run `check_python_setup.py` (if errors are raised, go back to Step 3b)
 - <mark>Step 4e</mark>: run qmd scripts in VScode:
   - open `check_quarto.qmd` 
   - install the Quarto extension when prompted (or manually)
   - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
+- <mark>Step 4f</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts, type "Python Run", set
+  - for Selection/Line , change to `CTRL`/`CMD` + `ENTER` if wanted
+  - for Python File in Terminal , set e.g. `CTRL`/`CMD` + `SHIFT` + `S`
 
 ~
 
-- <mark>Step 5</mark>: in an R console (e.g. in Rstudio), run `remotes::install_github("openHPI/codeoceanR")`  
+- <mark>Step 5</mark>: in an R console (e.g. in Rstudio), run  
+  `remotes::install_github("openHPI/codeoceanR")`  
   Ignore the Rtools warning.  
   If you encounter issues, see these [solutions](https://github.com/openHPI/codeoceanR#issues).
 - <mark>Step 6</mark>: housekeeping:
