@@ -65,9 +65,21 @@ Any improvements to the guide are very welcome!
   - open `check_quarto.qmd` 
   - install the Quarto extension when prompted (or manually)
   - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
-- <mark>Step 4f</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts, type "Python Run", set
-  - for Selection/Line , change to `CTRL`/`CMD` + `ENTER` if wanted
-  - for Python File in Terminal , set e.g. `CTRL`/`CMD` + `SHIFT` + `S`
+- <mark>Step 4f</mark>:  `CTRL`/`CMD` + `K` + `S` to open keyboard shortcuts 
+  and set whichever you like (suggestions as in Rstudio). 
+  Set first, then set again to deal with duplicates:  
+  type "Python Run" and set
+  - Selection/Line to `CTRL`/`CMD` + `ENTER`
+  - Python File in Terminal to `CTRL`/`CMD` + `SHIFT` + `S` (useful for scoring exercices)  
+  
+  type "comment" and set  
+  - Toggle Line Comment and Toggle Block Comment both to `CTRL`/`CMD` + `SHIFT` + `C`
+  
+  type "delete" and set
+  - Delete Line to `CTRL`/`CMD` + `D`
+  
+  type "duplicate" and set
+  - Duplicate Selection to `CTRL`/`CMD` + `SHIFT` + `D`
 
 ~
 
