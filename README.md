@@ -13,6 +13,10 @@ It's a bit much at once, but it will be worth it!
 
 Any improvements to the guide are very welcome!
 
+Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc)
+
+#### R
+
 - <mark>Step 1a</mark>: install [R + Rstudio](https://bookdown.org/brry/course/install.html), including the Rdata settings
 - <mark>Step 1b</mark>: check if R is on the PATH (locations where executables are found):
   - in your OS, search (Windows: `Windows key`. Mac: `CMD`+`SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
@@ -20,19 +24,19 @@ Any improvements to the guide are very welcome!
   - if R is not found / recognized, add it to the _system_ (not user) PATH:
     - copy the path where you installed R  -  or  - in Rstudio -> Tools -> Global Options, copy the path (e.g. `C:\Program Files\R\R-4.5.1)` 
     - search (`Windows key`)  for "env", click "Edit the system environment variables", then "Environment Variables" ([guide with images](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/))
-    - under "**System** Variables" double click on "Path"
+    - under "**System** Variables" (in the bottom half) double click on "Path"
     - click "New" and copy-paste your installation location (if from Rstudio, add `\bin` at the end)
     - close the variable windows + the terminal, open a new one and try `R`/`R.exe` again.  
       Potentially restart Windows inbetween.
 
- ~
+#### Git
 
 - <mark>Step 2a</mark>: install [git](https://bookdown.org/brry/course/git.html), including the SSH key setup.  
   If you already have a personal github account, use that :)
 - <mark>Step 2b</mark>: follow the [use git](https://bookdown.org/brry/course/git.html#use-git) section to download these instructions
 - <mark>Step 2c</mark>: run `setup_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
 
-~
+#### Python
 
 - <mark>Step 3a</mark>: install Python with one of
   - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
@@ -45,7 +49,7 @@ Any improvements to the guide are very welcome!
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
 - <mark>Step 3c</mark>: run `check_python_setup.py` (`CTRL`/`CMD`+`SHIFT`+`S`)
 
-~
+#### VScode
 
 - <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download)  
   When prompted: manage restricted mode - add folder, click 'trust'
@@ -78,7 +82,7 @@ Any improvements to the guide are very welcome!
   - type "duplicate" and set
     - Duplicate Selection to `CTRL`/`CMD` + `SHIFT` + `D`
 
-~
+#### Misc
 
 - <mark>Step 5</mark>: in an R console (e.g. in Rstudio), run  
   `remotes::install_github("openHPI/codeoceanR")`  
