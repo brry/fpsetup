@@ -88,7 +88,12 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
   `remotes::install_github("openHPI/codeoceanR")`  
   Ignore the Rtools warning.  
   For issues (like the system libraries on Linux), see these [solutions](https://github.com/openHPI/codeoceanR#issues).  
-- <mark>Step 6</mark>: housekeeping:
+- <mark>Step 6</mark>: For a more concise view of the python exercises in VScode,  
+  you can press `CTRL`/`CMD` + `SHIFT` + `P` and search "files: exclude" and add
+  - **/__pycache__
+  - **/.co
+  - **/score.py
+- <mark>Step 7</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `Command`+`Shift`+`.` to  show hidden files
 
