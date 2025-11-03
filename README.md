@@ -87,7 +87,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
 - <mark>Step 5</mark>: in an R console (e.g. in Rstudio), run  
   `remotes::install_github("openHPI/codeoceanR")`  
   Ignore the Rtools warning.  
-  If you encounter issues, see these [solutions](https://github.com/openHPI/codeoceanR#issues).
+  For issues (like the system libraries on Linux), see these [solutions](https://github.com/openHPI/codeoceanR#issues).  
 - <mark>Step 6</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `Command`+`Shift`+`.` to  show hidden files
