@@ -58,7 +58,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 - <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download)  
   - open the folder to the fpsetup folder from Step 2b. (Explorer Tab `CTRL` + `SHIFT` + `E`)
   - When prompted: manage restricted mode - add folder, click "trust"
-  - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "workbench editor enable preview" and uncheck the box
+  - open the settings (`CTRL` + `,`), search "workbench editor enable preview" and uncheck the box
 - <mark>Step 4b</mark>: disable [telemetry](https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html) if you don't want to send data to Micro$oft:
   - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
   - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "Configure Runtime Arguments" and in the argv.json file, change the value for "enable-crash-reporter" to false, restart VScode
@@ -81,16 +81,16 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
 - <mark>Step 4f</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts (or via the cog wheel at the bottom left)
   and set whichever you like (suggestions as in Rstudio). 
-  Set first, then rightklick -> "show same keybindings"" to deal with duplicates.  
-  - (useful for scoring exercices) type "Python Run" and set
+  Set first, then rightclick -> "show same keybindings" to deal with duplicates.  
+  - (useful for scoring exercices) search "Python Run" and set
     - Selection/Line to `CTRL` + `ENTER`
-    - Python File in Terminal to `CTRL` + `SHIFT` + `S`   
-  - type "comment" and set  
+    - Python File in (Dedicated\*) Terminal to `CTRL` + `SHIFT` + `S` (*: see Step 7)
+  - search "comment" and set  
     - Toggle Line Comment to `CTRL` + `SHIFT` + `C`
     - Toggle Block Comment also to `CTRL` + `SHIFT` + `C`
-  - type "delete" and set
+  - search "delete" and set
     - Delete Line to `CTRL` + `D`
-  - type "duplicate" and set
+  - search "duplicate" and set
     - Duplicate Selection to `CTRL` + `SHIFT` + `D`
 
 #### Misc
@@ -104,7 +104,17 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - **/\_\_pycache__
   - **/.co
   - **/score.py
-- <mark>Step 7</mark>: housekeeping:
+- <mark>Step 7</mark>: switching between REPL and full scoring:
+  - Set the keyboard shortcut (Step 4f) to "Run Python File in **Dedicated** Terminal". 
+    It's not yet perfect, see [discussion](https://github.com/microsoft/vscode-python/discussions/25563).
+  - `CTRL` + `ENTER` sends the selection (from any script in any folder) to one terminal
+  - `CTRL` + `SHIFT` + `S` saves and runs the entire script in a separate terminal (including the scoring call)
+  - `CTRL` + `ENTER` then steps back into the first terminal
+  - To import files in REPL, use   
+    `import os`  
+    `if not os.getenv("CODEOCEAN")=="true": os.chdir("FP_P14_Importing")`
+  - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
+- <mark>Step 8</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
 
