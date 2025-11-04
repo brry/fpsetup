@@ -19,7 +19,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
 
 - <mark>Step 1a</mark>: install [R + Rstudio](https://bookdown.org/brry/course/install.html), including the Rdata settings
 - <mark>Step 1b</mark>: check if R is on the PATH (locations where executables are found):
-  - in your OS, search (Windows: `Windows key`. Mac: `CMD`+`SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
+  - in your OS, search (Windows: `Windows key`. Mac: `CMD` + `SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
   - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
   - if R is not found / recognized, add it to the _system_ (not user) PATH:
     - copy the path where you installed R  -  or  - in Rstudio -> Tools -> Global Options, copy the path (e.g. `C:\Program Files\R\R-4.5.1)` 
@@ -36,6 +36,8 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
 - <mark>Step 2b</mark>: follow the [use git](https://bookdown.org/brry/course/git.html#use-git) section to download these instructions
 - <mark>Step 2c</mark>: run `setup_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
 
+From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
+
 #### Python
 
 - <mark>Step 3a</mark>: install Python with one of
@@ -47,40 +49,43 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
     (pip3 instead of pip on Mac)
   - else, in an R console (e.g. in Rstudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
-- <mark>Step 3c</mark>: run `check_python_setup.py` (`CTRL`/`CMD`+`SHIFT`+`S`)
+- <mark>Step 3c</mark>: run `check_python_setup.py` (`CTRL` + `SHIFT` + `S`)
 
 #### VScode
 
 - <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download)  
-  When prompted: manage restricted mode - add folder, click 'trust'
+  - When prompted: manage restricted mode - add folder, click 'trust'
+  - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "workbench editor enable preview" and uncheck the box
 - <mark>Step 4b</mark>: disable [telemetry](https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html) if you don't want to send data to Micro$oft
+  - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
+  - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "Configure Runtime Arguments" and in the argv.json file, change the value for "enable-crash-reporter" to false, restart VScode
 - <mark>Step 4c</mark>: run R scripts in VScode:
-  - open (`CTRL`+`O` or Explorer Tab `CTRL`+`SHIFT`+`E`) the file `setup_cran_mirror.R`
-  - install the R extension when prompted (or manually under Extensions (`CTRL`/`CMD`+`SHIFT`+`X`))
+  - open (`CTRL` + `O` or Explorer Tab `CTRL` + `SHIFT` + `E`) the file `setup_cran_mirror.R`
+  - install the R extension when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
   - run the file
   - edit and save the Rprofile file
 - <mark>Step 4d</mark>: run Python scripts in VScode:
   - open `check_python_setup.py`
   - install the Python extension when prompted (or manually)
-  - potentially press `CTRL`/`CMD` + `SHIFT` + `P`, search "Python: Select Interpreter", set to the path from `setup_python.R`
-  - open the Settings (`CTRL`+`,`), search 'execin', check the box for `Python > Terminal: execute in file dir` ([Source](https://stackoverflow.com/a/65835091))
+  - potentially press `CTRL` + `SHIFT` + `P`, search "Python: Select Interpreter", set to the path from `setup_python.R`
+  - open the Settings (`CTRL` + `,`), search 'execin', check the box for `Python > Terminal: execute in file dir` ([Source](https://stackoverflow.com/a/65835091))
   - now run `check_python_setup.py` (if errors are raised, go back to Step 3b)
 - <mark>Step 4e</mark>: run qmd scripts in VScode:
   - open `check_quarto.qmd` 
   - install the Quarto extension when prompted (or manually)
   - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
-- <mark>Step 4f</mark>:  `CTRL`/`CMD` + `K` + `S` to open keyboard shortcuts 
+- <mark>Step 4f</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts (or via the cog wheel at the bottom left)
   and set whichever you like (suggestions as in Rstudio). 
   Set first, then set again to deal with duplicates:  
   - type "Python Run" and set
-    - Selection/Line to `CTRL`/`CMD` + `ENTER`
-    - Python File in Terminal to `CTRL`/`CMD` + `SHIFT` + `S` (useful for scoring exercices)  
+    - Selection/Line to `CTRL` + `ENTER`
+    - Python File in Terminal to `CTRL` + `SHIFT` + `S` (useful for scoring exercices)  
   - type "comment" and set  
-    - Toggle Line Comment and Toggle Block Comment both to `CTRL`/`CMD` + `SHIFT` + `C`
+    - Toggle Line Comment and Toggle Block Comment both to `CTRL` + `SHIFT` + `C`
   - type "delete" and set
-    - Delete Line to `CTRL`/`CMD` + `D`
+    - Delete Line to `CTRL` + `D`
   - type "duplicate" and set
-    - Duplicate Selection to `CTRL`/`CMD` + `SHIFT` + `D`
+    - Duplicate Selection to `CTRL` + `SHIFT` + `D`
 
 #### Misc
 
@@ -89,13 +94,13 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
   Ignore the Rtools warning.  
   For issues (like the system libraries on Linux), see these [solutions](https://github.com/openHPI/codeoceanR#issues).  
 - <mark>Step 6</mark>: For a more concise view of the python exercises in VScode,  
-  you can press `CTRL`/`CMD` + `SHIFT` + `P` and search "files: exclude" and add
+  you can press `CTRL` + `SHIFT` + `P` or `CTRL` + `,` and search "files: exclude" and add
   - **/\_\_pycache__
   - **/.co
   - **/score.py
 - <mark>Step 7</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
-  - on Mac: in any Finder folder, press `Command`+`Shift`+`.` to  show hidden files
+  - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
 
 You made it through! 🎉  
 Now you're set up for the rest of the course (and beyond).
