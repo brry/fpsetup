@@ -110,10 +110,19 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - `CTRL` + `ENTER` sends the selection (from any script in any folder) to one terminal
   - `CTRL` + `SHIFT` + `S` saves and runs the entire script in a separate terminal (including the scoring call)
   - `CTRL` + `ENTER` then steps back into the first terminal
-  - To import files in REPL, use   
-    `import os`  
-    `if not os.getenv("CODEOCEAN")=="true": os.chdir("FP_P14_Importing")`
+  - To import files in REPL, use in the console (not the script!)  
+    `import os; os.chdir("FP_P14_Importing")`
   - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
+  - Alternatively, to have scoring as a keyboard shortcut, put [key_score,py](https://www.dropbox.com/scl/fi/cwnv4tt6otexoady57apa/key_score.py?rlkey=rtsfpl47g2dy5bawg98keiu1v&dl=1)
+    in your main exercise folder, [tasks.json](https://www.dropbox.com/scl/fi/3xu282s3lrh055nia5b1m/tasks.json?rlkey=kvhu74blp8gorgmcnuuagoh0j&dl=1)
+    in the `.vscode` folder (also inside your main exercise folder) and add to your `keybindings.json`:
+    ```
+    {
+        "key": "ctrl+shift+y",
+        "command": "workbench.action.tasks.runTask", 
+        "args": "score"
+    }
+    ```
 
 #### Misc
 
