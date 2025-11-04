@@ -104,7 +104,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - **/\_\_pycache__
   - **/.co
   - **/score.py
-- <mark>Step 7</mark>: switching between REPL and full scoring:
+- <mark>Step 7 option 1</mark>: switching between REPL and full scoring:
   - Set the keyboard shortcut (Step 4f) to "Run Python File in **Dedicated** Terminal". 
     It's not yet perfect, see [discussion](https://github.com/microsoft/vscode-python/discussions/25563).
   - `CTRL` + `ENTER` sends the selection (from any script in any folder) to one terminal
@@ -113,9 +113,12 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - To import files in REPL, use in the console (not the script!)  
     `import os; os.chdir("FP_P14_Importing")`
   - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
-  - Alternatively, to have scoring as a keyboard shortcut, put [key_score,py](https://www.dropbox.com/scl/fi/cwnv4tt6otexoady57apa/key_score.py?rlkey=rtsfpl47g2dy5bawg98keiu1v&dl=1)
-    in your main exercise folder, [tasks.json](https://www.dropbox.com/scl/fi/3xu282s3lrh055nia5b1m/tasks.json?rlkey=kvhu74blp8gorgmcnuuagoh0j&dl=1)
-    in the `.vscode` folder (also inside your main exercise folder) and add to your `keybindings.json`:
+- <mark>Step 7 option 2</mark>: scoring as a keyboard shortcut
+  - put [key_score.py](https://www.dropbox.com/scl/fi/cwnv4tt6otexoady57apa/key_score.py?rlkey=rtsfpl47g2dy5bawg98keiu1v&dl=1)
+    in your main exercise folder
+  - put [tasks.json](https://www.dropbox.com/scl/fi/3xu282s3lrh055nia5b1m/tasks.json?rlkey=kvhu74blp8gorgmcnuuagoh0j&dl=1)
+    in the `.vscode` folder (also inside your main exercise folder)
+  - add to your `keybindings.json`:
     ```
     {
         "key": "ctrl+shift+y",
