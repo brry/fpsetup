@@ -22,8 +22,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc
   - in your OS, search (Windows: `Windows key`. Mac: `CMD` + `SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
   - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
   - if R is not found / recognized, add it to the _system_ (not user) PATH:
-    - copy the path where you installed R  -  or  - in Rstudio -> Tools -> Global Options, copy the path (e.g. `C:\Program Files\R\R-4.5.1)` 
-    - search (`Windows key`)  for "env", click "Edit the system environment variables", then "Environment Variables" ([guide with images](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/))
+    - copy the path where you installed R  -  or  - in Rstudio -> Tools -> Global Options,
+      copy the path (e.g. `C:\Program Files\R\R-4.5.1)` 
+    - search (`Windows key`)  for "env", click "Edit the system environment variables",
+      then "Environment Variables" ([guide with images](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/))
     - under "**System** Variables" (in the bottom half) double click on "Path"
     - click "New" and copy-paste your installation location (if from Rstudio, add `\bin` at the end)
     - close the variable windows + the terminal, open a new one and try `R`/`R.exe` again.  
@@ -54,34 +56,38 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 #### VScode
 
 - <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download)  
-  - When prompted: manage restricted mode - add folder, click 'trust'
+  - open the folder to the fpsetup folder from Step 2b. (Explorer Tab `CTRL` + `SHIFT` + `E`)
+  - When prompted: manage restricted mode - add folder, click "trust"
   - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "workbench editor enable preview" and uncheck the box
-- <mark>Step 4b</mark>: disable [telemetry](https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html) if you don't want to send data to Micro$oft
+- <mark>Step 4b</mark>: disable [telemetry](https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html) if you don't want to send data to Micro$oft:
   - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
   - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "Configure Runtime Arguments" and in the argv.json file, change the value for "enable-crash-reporter" to false, restart VScode
 - <mark>Step 4c</mark>: run R scripts in VScode:
-  - open (`CTRL` + `O` or Explorer Tab `CTRL` + `SHIFT` + `E`) the file `setup_cran_mirror.R`
+  - open the file `setup_cran_mirror.R` (Explorer Tab `CTRL` + `SHIFT` + `E`)
   - install the R extension when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
   - run the file
   - edit and save the Rprofile file
 - <mark>Step 4d</mark>: run Python scripts in VScode:
   - open `check_python_setup.py`
   - install the Python extension when prompted (or manually)
-  - potentially press `CTRL` + `SHIFT` + `P`, search "Python: Select Interpreter", set to the path from `setup_python.R`
-  - open the Settings (`CTRL` + `,`), search 'execin', check the box for `Python > Terminal: execute in file dir` ([Source](https://stackoverflow.com/a/65835091))
-  - now run `check_python_setup.py` (if errors are raised, go back to Step 3b)
+  - open the Settings (`CTRL` + `,`), search "execin",
+    check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
+  - now run `check_python_setup.py`  
+    If errors are raised, go back to Step 3b or potentially press `CTRL` + `SHIFT` + `P`, 
+    search "Python: Select Interpreter", set to the path from `setup_python.R`
 - <mark>Step 4e</mark>: run qmd scripts in VScode:
   - open `check_quarto.qmd` 
   - install the Quarto extension when prompted (or manually)
   - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
 - <mark>Step 4f</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts (or via the cog wheel at the bottom left)
   and set whichever you like (suggestions as in Rstudio). 
-  Set first, then set again to deal with duplicates:  
-  - type "Python Run" and set
+  Set first, then rightklick -> "show same keybindings"" to deal with duplicates.  
+  - (useful for scoring exercices) type "Python Run" and set
     - Selection/Line to `CTRL` + `ENTER`
-    - Python File in Terminal to `CTRL` + `SHIFT` + `S` (useful for scoring exercices)  
+    - Python File in Terminal to `CTRL` + `SHIFT` + `S`   
   - type "comment" and set  
-    - Toggle Line Comment and Toggle Block Comment both to `CTRL` + `SHIFT` + `C`
+    - Toggle Line Comment to `CTRL` + `SHIFT` + `C`
+    - Toggle Block Comment also to `CTRL` + `SHIFT` + `C`
   - type "delete" and set
     - Delete Line to `CTRL` + `D`
   - type "duplicate" and set
