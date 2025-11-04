@@ -13,7 +13,7 @@ It's a bit much at once, but it will be worth it!
 
 Any improvements to the guide are very welcome!
 
-Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Misc](#misc)
+Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Exercises](#exercises), [Misc](#misc)
 
 #### R
 
@@ -93,7 +93,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - search "duplicate" and set
     - Duplicate Selection to `CTRL` + `SHIFT` + `D`
 
-#### Misc
+#### Exercises
 
 - <mark>Step 5</mark>: in an R console (e.g. in Rstudio), run  
   `remotes::install_github("openHPI/codeoceanR")`  
@@ -114,6 +114,9 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
     `import os`  
     `if not os.getenv("CODEOCEAN")=="true": os.chdir("FP_P14_Importing")`
   - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
+
+#### Misc
+
 - <mark>Step 8</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
