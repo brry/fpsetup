@@ -17,7 +17,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Exercises](
 
 #### R
 
-- <mark>Step 1a</mark>: install [R + Rstudio](https://bookdown.org/brry/course/install.html), including the Rdata settings
+- <mark>Step 1a</mark>: install [R + Rstudio](https://brry.github.io/course/install.html), including the Rdata settings
 - <mark>Step 1b</mark>: check if R is on the PATH (locations where executables are found):
   - in your OS, search (Windows: `Windows key`. Mac: `CMD` + `SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
   - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
@@ -33,9 +33,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Exercises](
 
 #### Git
 
-- <mark>Step 2a</mark>: install [git](https://bookdown.org/brry/course/git.html), including the SSH key setup.  
+- <mark>Step 2a</mark>: install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
   If you already have a personal github account, use that :)
-- <mark>Step 2b</mark>: follow the [use git](https://bookdown.org/brry/course/git.html#use-git) section to download these instructions
+- <mark>Step 2b</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) section to download these instructions
 - <mark>Step 2c</mark>: run `setup_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
 
 From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
@@ -113,7 +113,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - To import files in REPL, use in the console (not the script!)  
     `import os; os.chdir("FP_P14_Importing")`
   - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
-- <mark>Step 7 option 2</mark>: scoring as a keyboard shortcut
+- <mark>Step 7 option 2</mark>: scoring with a keyboard shortcut
   - put [key_score.py](https://www.dropbox.com/scl/fi/cwnv4tt6otexoady57apa/key_score.py?rlkey=rtsfpl47g2dy5bawg98keiu1v&dl=1)
     in your main exercise folder
   - put [tasks.json](https://www.dropbox.com/scl/fi/3xu282s3lrh055nia5b1m/tasks.json?rlkey=kvhu74blp8gorgmcnuuagoh0j&dl=1)
