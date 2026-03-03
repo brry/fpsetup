@@ -4,9 +4,9 @@
 
 We want to
 
-- mix Python and R code in quarto markdown documents (more in lesson I1.5)
+- mix Python and R code in quarto markdown documents (more in lesson i.2)
 - try two IDEs to find out what we like about each
-- have our exercises scored from within our IDEs (more in lesson I1.3)
+- have our exercises scored from within our IDEs (more in lesson i.3)
 
 so we have a lot of software to install.  
 It's a bit much at once, but it will be worth it!  
@@ -42,16 +42,21 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 #### Python
 
-- <mark>Step 3a</mark>: install Python with one of
+- <mark>Step 3a</mark>: Check if Python is installed:
+  - Open the file `check_python_installed.py` with any IDE.
+  - Run it (in Rstudio, this would be "Source Script" in the topright).
+  - See if you get a printout with Version > 3.8.20.
+  - If yes, skip step 3b. You do NOT want several versions of Python installed.
+- <mark>Step 3b</mark>: if not yet installed, install Python with one of
   - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
   - installation from R (way easier, especially on Mac): run `setup_Python.R` line by line
-- <mark>Step 3b</mark>: install Python modules:
+- <mark>Step 3c</mark>: install Python modules:
   - on Windows / if you use the system Python, run in the terminal:  
     `pip install numpy pandas matplotlib`  
     (pip3 instead of pip on Mac)
   - else, in an R console (e.g. in Rstudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
-- <mark>Step 3c</mark>: run `check_python_setup.py` (`CTRL` + `SHIFT` + `S`)
+- <mark>Step 3d</mark>: run `check_python_setup.py` (`CTRL` + `SHIFT` + `S`)
 
 #### VScode
 
@@ -73,7 +78,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - open the Settings (`CTRL` + `,`), search "execin",
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
   - now run `check_python_setup.py`  
-    If errors are raised, go back to Step 3b or potentially press `CTRL` + `SHIFT` + `P`, 
+    If errors are raised, go back to Step 3c or potentially press `CTRL` + `SHIFT` + `P`, 
     search "Python: Select Interpreter", set to the path from `setup_python.R`
 - <mark>Step 4e</mark>: run qmd scripts in VScode:
   - open `check_quarto.qmd` 
