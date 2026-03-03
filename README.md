@@ -43,9 +43,11 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 #### Python
 
 - <mark>Step 3a</mark>: Check if Python is installed:
-  - Open the file `check_python_installed.py` with any IDE.
+  - In a terminal (see step 1b), type `python`
+  - If found with a version > 3.8.20, type `quit` and proceed to step 3c.
+  - If not found, open the file `check_python_installed.py` with any IDE.
   - Run it (in Rstudio, this would be "Source Script" in the topright).
-  - See if you get a printout with Version > 3.8.20.
+  - See if you get a printout with a version > 3.8.20.
   - If yes, skip step 3b. You do NOT want several versions of Python installed.
 - <mark>Step 3b</mark>: if not yet installed, install Python with one of
   - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
