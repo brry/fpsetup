@@ -12,9 +12,9 @@ This is a mini [quarto](https://quarto.org/) document with text and some R code.
 - in Rstudio, click "Render" at the top
 - in VScode, click the Preview button (topright)
 
-This will execute the R code and weave together the text, code and output.
+This will execute the code chunks and weave together the text, code and output.
 
-In Rstudio, I recommend to set (Cog symbol) Preview in Viewer Pane.
+In Rstudio, I recommend to set (Cog symbol) `Preview in Viewer Pane` and (personal preference) `Chunk Output in Console`.
 
 ```{r, plot_example, echo=TRUE}
 pairs(iris[, 1:4], main="Anderson's Iris Data",
@@ -23,4 +23,11 @@ pairs(iris[, 1:4], main="Anderson's Iris Data",
 
 ```
 
-More in lesson I1.5, specifically the homework, where we'll also mix in Python code :)
+More in lesson i.2, specifically the homework.
+
+
+## Diagnostics for check_quarto_python.qmd
+
+```{r, pyconfig, echo=TRUE}
+reticulate::py_config()
+```

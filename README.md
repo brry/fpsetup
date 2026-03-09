@@ -13,7 +13,7 @@ It's a bit much at once, but it will be worth it!
 
 Any improvements to the guide are very welcome!
 
-Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Exercises](#exercises), [Misc](#misc)
+Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd), [Exercises](#exercises), [Misc](#misc)
 
 #### R
 
@@ -82,16 +82,12 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - now run `check_python_setup.py`  
     If errors are raised, go back to Step 3c or potentially press `CTRL` + `SHIFT` + `P`, 
     search "Python: Select Interpreter", set to the path from `setup_python.R`
-- <mark>Step 4e</mark>: run qmd scripts in VScode:
-  - open `check_quarto.qmd` 
-  - install the Quarto extension when prompted (or manually)
-  - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
-- <mark>Step 4f</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts (or via the cog wheel at the bottom left)
+- <mark>Step 4e</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts (or via the cog wheel at the bottom left)
   and set whichever you like (suggestions as in Rstudio). 
   Set first, then rightclick -> "show same keybindings" to deal with duplicates.  
   - (useful for scoring exercices) search "Python Run" and set
     - Selection/Line to `CTRL` + `ENTER`
-    - Python File in (Dedicated\*) Terminal to `CTRL` + `SHIFT` + `S` (*: see Step 7)
+    - Python File in (Dedicated (see step 8)) Terminal to `CTRL` + `SHIFT` + `S`
   - search "comment" and set  
     - Toggle Line Comment to `CTRL` + `SHIFT` + `C`
     - Toggle Block Comment also to `CTRL` + `SHIFT` + `C`
@@ -99,20 +95,32 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
     - Delete Line to `CTRL` + `D`
   - search "duplicate" and set
     - Duplicate Selection to `CTRL` + `SHIFT` + `D`
+    
+### qmd
+
+- <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
+  - open `check_quarto.qmd` 
+  - install the Quarto extension when prompted (or manually)
+  - render (a.k.a. compile) `check_quarto.qmd` as instructed inside
+- <mark>Step 5b</mark>:  Open `check_quarto.qmd` in **Rstudio**
+    - render as instructed
+- <mark>Step 5c</mark>:  Open `check_quarto_python.qmd` in **Rstudio**
+    - run code chunks as instructed
+
 
 #### Exercises
 
-- <mark>Step 5</mark>: in an R console (e.g. in Rstudio), run  
+- <mark>Step 6</mark>: in an R console (e.g. in Rstudio), run  
   `remotes::install_github("openHPI/codeoceanR")`  
   Ignore the Rtools warning.  
   For issues (like the system libraries on Linux), see these [solutions](https://github.com/openHPI/codeoceanR#issues).  
-- <mark>Step 6</mark>: For a more concise view of the python exercises in VScode,  
+- <mark>Step 7</mark>: For a more concise view of the python exercises in VScode,  
   you can press `CTRL` + `SHIFT` + `P` or `CTRL` + `,` and search "files: exclude" and add
   - **/\_\_pycache__
   - **/.co
   - **/score.py
-- <mark>Step 7 option 1</mark>: switching between REPL and full scoring:
-  - Set the keyboard shortcut (Step 4f) to "Run Python File in **Dedicated** Terminal". 
+- <mark>Step 8 option 1</mark>: switching between REPL and full scoring:
+  - Set the keyboard shortcut (Step 4e) to "Run Python File in **Dedicated** Terminal". 
     It's not yet perfect, see [discussion](https://github.com/microsoft/vscode-python/discussions/25563).
   - `CTRL` + `ENTER` sends the selection (from any script in any folder) to one terminal
   - `CTRL` + `SHIFT` + `S` saves and runs the entire script in a separate terminal (including the scoring call)
@@ -120,7 +128,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - To import files in REPL, use in the console (not the script!)  
     `import os; os.chdir("FP_P14_Importing")`
   - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
-- <mark>Step 7 option 2</mark>: scoring with a keyboard shortcut
+- <mark>Step 8 option 2</mark>: scoring with a keyboard shortcut
   - put [key_score.py](https://www.dropbox.com/scl/fi/cwnv4tt6otexoady57apa/key_score.py?rlkey=rtsfpl47g2dy5bawg98keiu1v&dl=1)
     in your main exercise folder
   - put [tasks.json](https://www.dropbox.com/scl/fi/3xu282s3lrh055nia5b1m/tasks.json?rlkey=kvhu74blp8gorgmcnuuagoh0j&dl=1)
@@ -136,7 +144,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 #### Misc
 
-- <mark>Step 8</mark>: housekeeping:
+- <mark>Step 9</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
 

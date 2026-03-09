@@ -1,0 +1,30 @@
+---
+title: "check_quarto"
+format:
+  html:
+    embed-resources: true
+---
+
+Testing python chunk execution
+
+```{r, load_reticulate}
+library(reticulate)
+```
+
+```{python, create_object}
+testing_object = 44
+```
+
+```{python, change_object}
+testing_object = testing_object + 11
+```
+
+In Rstudio in the following chunk, click on the arrow to "run all chunks above",
+then inside the chunk double-click on `testing_object` to mark it 
+and hit CTRL/CMD + ENTER to see if you can directly see 55.
+
+```{python, test_object, echo=TRUE}
+testing_object
+```
+
+If this is not the case, hopefully this [issue](https://github.com/rstudio/rstudio/issues/17196) on Mac will be solved by then.
