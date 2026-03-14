@@ -1,6 +1,6 @@
 ### Software installation guide
 
-**for the course 'Fundamentals of Programming'**
+**for the [course](https://brry.github.io/course/) 'Fundamentals of Programming'**
 
 We want to
 
@@ -11,7 +11,7 @@ We want to
 so we have a lot of software to install.  
 It's a bit much at once, but it will be worth it!  
 
-Any improvements to the guide are very welcome!
+Any improvements to this guide are very welcome!
 
 Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd), [Exercises](#exercises), [Misc](#misc)
 
@@ -33,10 +33,15 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd),
 
 #### Git
 
-- <mark>Step 2a</mark>: install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
+- <mark>Step 2a</mark>: in a sensible (easy to reach) location on your computer, 
+create a folder for this course. Use a short expressive name like `FundamentalsProgramming`.
+This will over time contain the folders `fpsetup`, `FP26` along with the 
+exercise folders `FP_P11_Syntax`, `FP_P12_DataTypes` etc, `FP_R12_Syntax`, `FP_R13_Help` etc.
+- <mark>Step 2b</mark>: install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
   If you already have a personal github account, use that :)
-- <mark>Step 2b</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) section to download these instructions
-- <mark>Step 2c</mark>: run `setup_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
+- <mark>Step 2c</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) 
+section to download these instructions into your main course folder
+- <mark>Step 2d</mark>: run `setup_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
 
 From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
@@ -44,7 +49,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 - <mark>Step 3a</mark>: Check if Python is installed:
   - In a terminal (see step 1b), type `python`
-  - If found with a version > 3.8.20, type `quit` and proceed to step 3c.
+  - If found with a version 3.9+, type `quit` and proceed to step 3c.
   - If not found, open the file `check_python_installed.py` with any IDE.
   - Run it (in Rstudio, this would be "Source Script" in the topright).
   - See if you get a printout with a version > 3.8.20.
@@ -63,8 +68,8 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 #### VScode
 
 - <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download)  
-  - open the folder to the fpsetup folder from Step 2b. (Explorer Tab `CTRL` + `SHIFT` + `E`)
-  - When prompted: manage restricted mode - add folder, click "trust"
+  - in the Explorer Tab `CTRL` + `SHIFT` + `E`, open the `fpsetup` folder from Step 2c.
+  - when prompted: manage restricted mode - add folder, click "trust"
   - open the settings (`CTRL` + `,`), search "workbench editor enable preview" and uncheck the box
 - <mark>Step 4b</mark>: disable [telemetry](https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html) if you don't want to send data to Micro$oft:
   - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
@@ -72,8 +77,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 - <mark>Step 4c</mark>: run R scripts in VScode:
   - open the file `setup_cran_mirror.R` (Explorer Tab `CTRL` + `SHIFT` + `E`)
   - install the R extension when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
-  - run the file
-  - edit and save the Rprofile file
+  - run the file and (as instructed there), edit and save the `.Rprofile` file
 - <mark>Step 4d</mark>: run Python scripts in VScode:
   - open `check_python_setup.py`
   - install the Python extension when prompted (or manually)
@@ -81,11 +85,11 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
   - now run `check_python_setup.py`  
     If errors are raised, go back to Step 3c or potentially press `CTRL` + `SHIFT` + `P`, 
-    search "Python: Select Interpreter", set to the path from `setup_python.R`
+    search "Python: Select Interpreter", set to the path from `setup_Python.R`
 - <mark>Step 4e</mark>:  `CTRL` + `K` + `S` to open keyboard shortcuts (or via the cog wheel at the bottom left)
   and set whichever you like (suggestions as in Rstudio). 
   Set first, then rightclick -> "show same keybindings" to deal with duplicates.  
-  - (useful for scoring exercices) search "Python Run" and set
+  - (useful for scoring exercises) search "Python Run" and set
     - Selection/Line to `CTRL` + `ENTER`
     - Python File in (Dedicated (see step 8)) Terminal to `CTRL` + `SHIFT` + `S`
   - search "comment" and set  
@@ -96,7 +100,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - search "duplicate" and set
     - Duplicate Selection to `CTRL` + `SHIFT` + `D`
     
-### qmd
+#### qmd
 
 - <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
   - open `check_quarto.qmd` 
@@ -110,10 +114,11 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 #### Exercises
 
-- <mark>Step 6</mark>: in an R console (e.g. in Rstudio), run  
+- <mark>Step 6a</mark>: in an R console (e.g. in Rstudio), run  
   `remotes::install_github("openHPI/codeoceanR")`  
   Ignore the Rtools warning.  
   For issues (like the system libraries on Linux), see these [solutions](https://github.com/openHPI/codeoceanR#issues).  
+- <mark>Step 6b</mark>: copy the file `scriptunzip.py` into your main course folder (one level up)
 - <mark>Step 7</mark>: For a more concise view of the python exercises in VScode,  
   you can press `CTRL` + `SHIFT` + `P` or `CTRL` + `,` and search "files: exclude" and add
   - **/\_\_pycache__
@@ -127,12 +132,10 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - `CTRL` + `ENTER` then steps back into the first terminal
   - To import files in REPL, use in the console (not the script!)  
     `import os; os.chdir("FP_P14_Importing")`
-  - Do not use this for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
+  - Do not use chdir for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
 - <mark>Step 8 option 2</mark>: scoring with a keyboard shortcut
-  - put [key_score.py](https://www.dropbox.com/scl/fi/cwnv4tt6otexoady57apa/key_score.py?rlkey=rtsfpl47g2dy5bawg98keiu1v&dl=1)
-    in your main exercise folder
-  - put [tasks.json](https://www.dropbox.com/scl/fi/3xu282s3lrh055nia5b1m/tasks.json?rlkey=kvhu74blp8gorgmcnuuagoh0j&dl=1)
-    in the `.vscode` folder (also inside your main exercise folder)
+  - copy the file `key_score.py` into your main course folder (one level up)
+  - if needed, create the folder `.vscode` (in your main course folder). Copy the file `tasks.json` there.
   - add to your `keybindings.json`:
     ```
     {

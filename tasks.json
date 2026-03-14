@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "score",
+      "type": "shell",
+      "command": "python ../key_score.py",
+      "options": {
+        "cwd": "${fileDirname}"  // set working directory to the file’s folder
+      },
+      "presentation": {
+        "clear": true // comment out to see previous runs in the dedicated terminal
+      }
+    }
+  ]
+}
