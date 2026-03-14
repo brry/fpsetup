@@ -19,7 +19,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd),
 
 - <mark>Step 1a</mark>: install [R + Rstudio](https://brry.github.io/course/install.html), including the Rdata settings
 - <mark>Step 1b</mark>: check if R is on the PATH (locations where executables are found):
-  - in your OS, search (Windows: `Windows key`. Mac: `CMD` + `SPACE`) for "**Terminal**" (a.k.a. console, shell, bash, cmd)  
+  - in your OS, search (Windows: `Windows key`. Mac: `CMD` + `SPACE`) for "**Terminal**" (also known as console, shell, bash, cmd)  
   - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
   - if R is not found / recognized, add it to the _system_ (not user) PATH:
     - copy the path where you installed R  -  or  - in Rstudio -> Tools -> Global Options,
@@ -49,7 +49,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 - <mark>Step 3a</mark>: Check if Python is installed:
   - In a terminal (see step 1b), type `python`
-  - If found with a version 3.9+, type `quit` and proceed to step 3c.
+  - If found with a version 3.9+, type `quit` or `quit()` and proceed to step 3c.
   - If not found, open the file `check_python_installed.py` with any IDE.
   - Run it (in Rstudio, this would be "Source Script" in the topright).
   - See if you get a printout with a version > 3.8.20.
@@ -132,18 +132,12 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - `CTRL` + `ENTER` then steps back into the first terminal
   - To import files in REPL, use in the console (not the script!)  
     `import os; os.chdir("FP_P14_Importing")`
-  - Do not use chdir for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
-- <mark>Step 8 option 2</mark>: scoring with a keyboard shortcut
-  - copy the file `key_score.py` into your main course folder (one level up)
-  - if needed, create the folder `.vscode` (in your main course folder). Copy the file `tasks.json` there.
-  - add to your `keybindings.json`:
-    ```
-    {
-        "key": "ctrl+shift+y",
-        "command": "workbench.action.tasks.runTask", 
-        "args": "score"
-    }
-    ```
+  - Do not use `chdir` for scoring - that is folder specific and much faster with `CTRL` + `SHIFT` + `S`
+- <mark>Step 8 option 2</mark>: NEW: scoring with a keyboard shortcut
+  - Run `setup_keybinding.py`
+  - If this works well, I will remove option 1, the `import score; score.score()`
+  calls and the `score.py` files of each exercise. Let me know what you think!
+
 
 #### Misc
 
