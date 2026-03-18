@@ -1,4 +1,5 @@
 # This script tests whether the needed python modules are available.
+# Run it in Rstudio with CTRL/CMD + SHIFT + S
 
 print("Seeing if modules can be loaded ...")
 import numpy

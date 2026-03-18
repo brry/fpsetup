@@ -60,11 +60,9 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 - <mark>Step 3c</mark>: install Python modules:
   - if installed via reticulate, in an R console (e.g. in Rstudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
-  - on Windows, run in the terminal (step 1b):  
-    `pip install numpy pandas matplotlib`  
-  - on Mac if you use the system Python, run:  
-    `pip3 install numpy pandas matplotlib`  
-- <mark>Step 3d</mark>: run `3d_check_python_setup.py` (`CTRL` + `SHIFT` + `S`)
+  - else, run in the terminal (step 1b):  
+    `pip install numpy pandas matplotlib`  (pip3 on Mac)
+- <mark>Step 3d</mark>: run `3d_check_python_setup.py`
 
 #### VScode
 
