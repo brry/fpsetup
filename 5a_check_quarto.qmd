@@ -14,7 +14,9 @@ This is a mini [quarto](https://quarto.org/) document with text and some R code.
 
 This will execute the code chunks and weave together the text, code and output.
 
-In Rstudio, I recommend to set (Cog symbol) `Preview in Viewer Pane` and (personal preference) `Chunk Output in Console`.
+In Rstudio, I recommend to set (Cog symbol)  
+- `Preview in Viewer Pane`  
+- and (personal preference) `Chunk Output in Console`.
 
 ```{r, plot_example, echo=TRUE}
 pairs(iris[, 1:4], main="Anderson's Iris Data",
