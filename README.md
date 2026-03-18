@@ -82,8 +82,8 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - install the Python extension when prompted (or manually)
   - open the Settings (`CTRL` + `,`), search "execin",
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
-  - now run the file
-   <mark>Step 4e</mark>: Customize keyboard shortcuts, suggestions as in Rstudio.
+  - now run the file as instructed inside.
+- <mark>Step 4e</mark>: Customize keyboard shortcuts, suggestions as in Rstudio.
   - press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left)
   - Set first, then rightclick -> "show same keybindings" to deal with duplicates.  
   - search "Python Run" and set
