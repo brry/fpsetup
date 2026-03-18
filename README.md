@@ -51,7 +51,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - In a terminal (see step 1b), type `python`
   - If found with a version 3.9+, type `quit` or `quit()` and proceed to step 3c.
   - If not found, open the file `3a_check_python_installed.py` with any IDE.
-  - Run it (in Rstudio, this would be "Source Script" in the topright).
+  - Run it as instructed inside.
   - See if you get a printout with a version > 3.9.
   - If yes, skip step 3b. You do NOT want several versions of Python installed.
 - <mark>Step 3b</mark>: if not yet installed, install Python with one of
