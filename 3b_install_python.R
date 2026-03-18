@@ -1,6 +1,8 @@
-# This file helps you install python on Macbook (and on Windows too, sometimes)
-# Yes, I use R to get this done.
+# This file helps you install Python, especially on Mac OS.
+# It uses R because it simply works!
 # If you find a better way, please provide instructions...
+
+# Set the cursor anywhere in a line of code and press CTRL + ENTER to run that whole line.
 
 stop("Do not run this entire file! Run code line by line!")
 

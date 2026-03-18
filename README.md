@@ -56,7 +56,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - If yes, skip step 3b. You do NOT want several versions of Python installed.
 - <mark>Step 3b</mark>: if not yet installed, install Python with one of
   - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
-  - installation from R (way easier, especially on Mac): run `3b_install_python.R` line by line
+  - installation via R (way easier, especially on Mac): run `3b_install_python.R` line by line
 - <mark>Step 3c</mark>: install Python modules:
   - if installed via reticulate, in an R console (e.g. in Rstudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
