@@ -1,5 +1,5 @@
 ---
-title: "check_quarto"
+title: "check_quarto_python"
 format:
   html:
     embed-resources: true
