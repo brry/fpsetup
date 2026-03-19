@@ -12,7 +12,7 @@ import os
 import platform
 import subprocess
 def score():
-	"""Run the CodeOcean scoring script via R."""
+    """Run the CodeOcean scoring script via R."""
     if os.getenv("CODEOCEAN")=="true": # Do not run in CodeOcean browser instance
         return
     cmd = "codeoceanR::rt_score()"
