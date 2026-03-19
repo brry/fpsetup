@@ -17,7 +17,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd),
 
 #### R
 
-- <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), including the Rdata settings
+- <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), change the Rdata settings
 - <mark>Step 1b</mark>: check if R is on the [PATH](https://brry.github.io/course/path.html)
   and has a version > 4.3.x.
 
