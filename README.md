@@ -64,6 +64,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
   - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "Configure Runtime Arguments" and in the argv.json file, change the value for "enable-crash-reporter" to false, restart VScode
 - <mark>Step 4c</mark>: run R scripts in VScode:
+  - *(to signify you should be in the main course folder, fpsetup/ is prepended to the script names)*
   - open the file `fpsetup/4c_set_cran_mirror.R` (Explorer Tab `CTRL` + `SHIFT` + `E`)
   - install the R extension when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
   - run the file and (as instructed there), edit and save the `.Rprofile` file
@@ -82,8 +83,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   |--------|----------|
   | Python: Run Selection/Line in Python Terminal | `CTRL` + `ENTER` |
   | Python: Run Python File in Terminal | `CTRL` + `SHIFT` + `S` |
-  | Toggle Line Comment | `CTRL` + `SHIFT` + `C` |
-  | Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
+  | Toggle Line Comment  *and*<br>Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
   | Delete Line | `CTRL` + `D` |
   | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
 
