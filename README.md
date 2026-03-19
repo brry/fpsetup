@@ -17,19 +17,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd),
 
 #### R
 
-- <mark>Step 1a</mark>: install [R + Rstudio](https://brry.github.io/course/install.html), including the Rdata settings
-- <mark>Step 1b</mark>: check if R is on the PATH (locations where executables are found):
-  - in your OS, search (Windows: `Windows key`. Mac: `CMD` + `SPACE`) for "**Terminal**" (also known as console, shell, bash, cmd)  
-  - run the command `R` (Windows Powershell: `R.exe`) - check if it's a recent version, quit with `q("no")`
-  - if R is not found / recognized, add it to the _system_ (not user) PATH:
-    - copy the path where you installed R  -  or  - in Rstudio -> Tools -> Global Options,
-      copy the path (e.g. `C:\Program Files\R\R-4.5.1)` 
-    - search (`Windows key`)  for "env", click "Edit the system environment variables",
-      then "Environment Variables" ([guide with images](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/))
-    - under "**System** Variables" (in the bottom half) double click on "Path"
-    - click "New" and copy-paste your installation location (if from Rstudio, add `\bin` at the end)
-    - close the variable windows + the terminal, open a new one and try `R`/`R.exe` again.  
-      Potentially restart Windows inbetween.
+- <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), including the Rdata settings
+- <mark>Step 1b</mark>: check if R is on the [PATH](https://brry.github.io/course/path.html)
+  and has a version > 4.3.x.
 
 #### Git
 
