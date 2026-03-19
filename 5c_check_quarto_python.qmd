@@ -19,7 +19,7 @@ testing_object = 44
 testing_object = testing_object + 11
 ```
 
-In Rstudio in the following chunk, click on the arrow to "run all chunks above",
+In RStudio in the following chunk, click on the arrow to "run all chunks above",
 then inside the chunk double-click on `testing_object` to mark it 
 and hit CTRL/CMD + ENTER to see if you can directly see 55.
 
@@ -27,4 +27,4 @@ and hit CTRL/CMD + ENTER to see if you can directly see 55.
 testing_object
 ```
 
-If this is not the case, hopefully this [issue](https://github.com/rstudio/rstudio/issues/17196) on Mac will be solved by then.
+If this is not the case, check this [issue](https://github.com/rstudio/rstudio/issues/17196) on Mac for a workaround.
