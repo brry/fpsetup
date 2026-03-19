@@ -6,10 +6,10 @@
       "type": "shell",
       "command": "python ../key_score.py",
       "options": {
-        "cwd": "${fileDirname}"  // set working directory to the file’s folder
+        "cwd": "${fileDirname}"
       },
       "presentation": {
-        "clear": true // comment out to see previous runs in the dedicated terminal
+        "clear": true
       }
     }
   ]
