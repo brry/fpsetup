@@ -2,7 +2,7 @@
 Send code to CodeOcean, run (hidden) scoring script, display results
 
 This is the scoring mechanism for exercises in the course Fundamentals of Programming.
-It enables scoring while working on the exercise in Rstudio / VS Code,
+It enables scoring while working on the exercise in RStudio / VScode,
 without leaving the Python execution environment.
 It uses medium complex R code that will likely not be ported to Python:
 https://github.com/openHPI/codeoceanR/blob/main/R/rt_score.R
@@ -12,7 +12,7 @@ import os
 import platform
 import subprocess
 def score():
-    ''''''
+	"""Run the CodeOcean scoring script via R."""
     if os.getenv("CODEOCEAN")=="true": # Do not run in CodeOcean browser instance
         return
     cmd = "codeoceanR::rt_score()"

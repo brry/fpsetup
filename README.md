@@ -83,51 +83,49 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - open the Settings (`CTRL` + `,`), search "execin",
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
   - now run the file as instructed inside.
-- <mark>Step 4e</mark>: Customize keyboard shortcuts, suggestions as in Rstudio.
-  - press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left)
-  - Set first, then rightclick -> "show same keybindings" to deal with duplicates.  
-  - search "Python Run" and set
-    - Selection/Line to `CTRL` + `ENTER`
-    - Python File in Terminal to `CTRL` + `SHIFT` + `S`
-  - search "comment" and set  
-    - Toggle Line Comment to `CTRL` + `SHIFT` + `C`
-    - Toggle Block Comment also to `CTRL` + `SHIFT` + `C`
-  - search "delete" and set
-    - Delete Line to `CTRL` + `D`
-  - search "duplicate" and set
-    - Duplicate Selection to `CTRL` + `SHIFT` + `D`
-    
+- <mark>Step 4e</mark>: customize keyboard shortcuts, suggestions as in RStudio.
+  - press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).
+  - set each wanted shortcut, then rightclick -> "show same keybindings" to deal with duplicates.  
+  - search for the action e.g. with "python run" or "comment"
+  
+  | Action | Shortcut |
+  |--------|----------|
+  | Python: Run Selection/Line in Python Terminal | `CTRL` + `ENTER` |
+  | Python: Run Python File in Terminal | `CTRL` + `SHIFT` + `S` |
+  | Toggle Line Comment | `CTRL` + `SHIFT` + `C` |
+  | Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
+  | Delete Line | `CTRL` + `D` |
+  | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
+
 #### qmd
 
 - <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
   - open `fpsetup/5a_check_quarto.qmd` 
   - install the Quarto extension when prompted (or manually)
   - render (a.k.a. compile) the file as instructed inside
-- <mark>Step 5b</mark>:  Open `fpsetup/5a_check_quarto.qmd` in **Rstudio**
+- <mark>Step 5b</mark>:  open `fpsetup/5a_check_quarto.qmd` in **RStudio**
     - render as instructed
-- <mark>Step 5c</mark>:  Open `fpsetup/5c_check_quarto_python.qmd` in **Rstudio**
+- <mark>Step 5c</mark>:  open `fpsetup/5c_check_quarto_python.qmd` in **RStudio**
     - run code chunks as instructed
 
 
 #### Exercises
 
-- <mark>Step 6a</mark>: in an R console (e.g. in Rstudio), run  
-  `remotes::install_github("openHPI/codeoceanR")`  
-  Ignore the Rtools warning.  
-  For issues (like the system libraries on Linux), see these [solutions](https://github.com/openHPI/codeoceanR#issues).  
-- <mark>Step 6b</mark>: copy the file `fpsetup/scriptunzip.py` into your main course folder (one level up)
-- <mark>Step 7</mark>: For a more concise view of the python exercises in VScode,  
+- <mark>Step 6a</mark>: on Windows, install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
+  at `C:/rtools` (compiler paths may not have spaces).
+- <mark>Step 6b</mark>: run `fpsetup/6b_setup_scoring.R`  
+- <mark>Step 6c</mark>: for scoring exercises in VScode, run `fpsetup/6c_set_scoring_keybinding.py` 
+  (change keybinding first if wanted)
+- <mark>Step 7</mark>: for a more concise view of the python exercises in VScode,  
   you can press `CTRL` + `SHIFT` + `P` or `CTRL` + `,` and search "files: exclude" and add
   - **/\_\_pycache__
   - **/.co
   - **/score.py
-- <mark>Step 8</mark>: for scoring python exercises with a keyboard shortcut,
-  - run `fpsetup/8a_set_scoring_keybinding.py` (change keybinding first if wanted)
 
 
 #### Misc
 
-- <mark>Step 9</mark>: housekeeping:
+- <mark>Step 8</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
 
