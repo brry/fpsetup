@@ -41,24 +41,24 @@ exercise folders `FP_P11_Syntax`, `FP_P12_DataTypes` etc, `FP_R12_Syntax`, `FP_R
   If you already have a personal github account, use that :)
 - <mark>Step 2c</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) 
 section to download these instructions into your main course folder (step 2a).
-- <mark>Step 2d</mark>: run `2d_install_Rpackages.R`. Tip: Use the Files pane (Rstudio bottom right) to select and open the file.
+- <mark>Step 2d</mark>: run `2d_install_Rpackages.R`. Tip: Use the Files pane (RStudio bottom right) to select and open the file.
 
 From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 #### Python
 
-- <mark>Step 3a</mark>: Check if Python is installed:
-  - In a terminal (see step 1b), type `python`
-  - If found with a version 3.9+, type `quit` or `quit()` and proceed to step 3c.
-  - If not found, open the file `3a_check_python_installed.py` with any IDE.
-  - Run it as instructed inside.
-  - See if you get a printout with a version > 3.9.
-  - If yes, skip step 3b. You do NOT want several versions of Python installed.
+- <mark>Step 3a</mark>: check if Python is installed:
+  - in a terminal (see step 1b), type `python`
+  - if found with a version 3.9+, type `quit` or `quit()` and proceed to step 3c.
+  - if not found, open the file `3a_check_python_installed.py` with any IDE.
+  - run it as instructed inside.
+  - see if you get a printout with a version > 3.9.
+  - if yes, skip step 3b. You do NOT want several versions of Python installed.
 - <mark>Step 3b</mark>: if not yet installed, install Python with one of
   - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
   - installation via R (way easier, especially on Mac): run `3b_install_python.R` line by line
 - <mark>Step 3c</mark>: install Python modules:
-  - if installed via reticulate, in an R console (e.g. in Rstudio), run  
+  - if installed via reticulate, in an R console (e.g. in RStudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
   - else, run in the terminal (step 1b):  
     `pip install numpy pandas matplotlib`  (pip3 on Mac)
@@ -66,7 +66,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 #### VScode
 
-- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download)  
+- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), then  
   - in the Explorer Tab `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
   - when prompted: manage restricted mode - add folder, click "trust"
   - open the settings (`CTRL` + `,`), search "workbench editor enable preview" and uncheck the box
