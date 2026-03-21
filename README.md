@@ -25,13 +25,13 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd),
 
 - <mark>Step 2a</mark>: in a sensible (easy to reach) location on your computer, 
 create a folder for this course. Use a short expressive name like `FundamentalsProgramming`.
-This will over time contain the folders `fpsetup` and `FP26`, along with the 
-exercise folders `FP_P11_Syntax`, `FP_P12_DataTypes` etc, `FP_R12_Syntax`, `FP_R13_Help` etc.
+This will over time contain the folders *`fpsetup`* and *`FP26`*, along with the 
+exercise folders *`FP_P11_Syntax`*, *`FP_P12_DataTypes`* etc, *`FP_R12_Syntax`*, *`FP_R13_Help`* etc.
 - <mark>Step 2b</mark>: install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
   If you already have a personal github account, use that :)
 - <mark>Step 2c</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) 
 section to download these instructions into your main course folder (step 2a).
-- <mark>Step 2d</mark>: run `2d_install_Rpackages.R`. Tip: Use the Files pane (RStudio bottom right) to select and open the file.
+- <mark>Step 2d</mark>: run *`2d_install_Rpackages.R`*. Tip: Use the Files pane (RStudio bottom right) to select and open the file.
 
 From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
@@ -40,7 +40,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 - <mark>Step 3a</mark>: check if Python is installed:
   - in a terminal (see step 1b), type `python`
   - if found with a version 3.9+, type `quit` or `quit()` and proceed to step 3c.
-  - if not found, open the file `3a_check_python_installed.py` with any IDE.
+  - if not found, open the file *`3a_check_python_installed.py`* with any IDE.
   - run it as instructed inside.
   - see if you get a printout with a version > 3.9.
   - if yes, skip step 3b. You do NOT want several versions of Python installed.
@@ -52,7 +52,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
   - else, run in the terminal (step 1b):  
     `pip install numpy pandas matplotlib`  (pip3 on Mac)
-- <mark>Step 3d</mark>: run `3d_check_python_setup.py`
+- <mark>Step 3d</mark>: run *`3d_check_python_setup.py`*
 
 #### VScode
 
@@ -64,12 +64,12 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
   - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "Configure Runtime Arguments" and in the argv.json file, change the value for "enable-crash-reporter" to false, restart VScode
 - <mark>Step 4c</mark>: run R scripts in VScode:
-  - *(to signify you should be in the main course folder, fpsetup/ is prepended to the script names)*
-  - open the file `fpsetup/4c_set_cran_mirror.R` (Explorer Tab `CTRL` + `SHIFT` + `E`)
+  - *(to signify you should be in the main course folder, `fpsetup/` is prepended to the script names)*
+  - open the file *`fpsetup/4c_set_cran_mirror.R`* (Explorer Tab `CTRL` + `SHIFT` + `E`)
   - install the R extension when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
   - run the file and (as instructed there), edit and save the `.Rprofile` file
 - <mark>Step 4d</mark>: run Python scripts in VScode:
-  - open `fpsetup/3d_check_python_setup.py` (don't run it yet)
+  - open *`fpsetup/3d_check_python_setup.py`* (don't run it yet)
   - install the Python extension when prompted (or manually)
   - open the Settings (`CTRL` + `,`), search "execin",
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
@@ -90,12 +90,12 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 #### qmd
 
 - <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
-  - open `fpsetup/5a_check_quarto.qmd` 
+  - open *`fpsetup/5a_check_quarto.qmd`* 
   - install the Quarto extension when prompted (or manually)
   - render (a.k.a. compile) the file as instructed inside
-- <mark>Step 5b</mark>:  open `fpsetup/5a_check_quarto.qmd` in **RStudio**
+- <mark>Step 5b</mark>:  open *`fpsetup/5a_check_quarto.qmd`* in **RStudio**
     - render as instructed
-- <mark>Step 5c</mark>:  open `fpsetup/5c_check_quarto_python.qmd` in **RStudio**
+- <mark>Step 5c</mark>:  open *`fpsetup/5c_check_quarto_python.qmd`* in **RStudio**
     - run code chunks as instructed
 
 
@@ -103,8 +103,8 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
 - <mark>Step 6a</mark>: on Windows, install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   at `C:/rtools` (compiler paths may not have spaces).
-- <mark>Step 6b</mark>: run `fpsetup/6b_setup_scoring.R`  
-- <mark>Step 6c</mark>: for scoring exercises in VScode, run `fpsetup/6c_set_scoring_keybinding.py` 
+- <mark>Step 6b</mark>: run *`fpsetup/6b_setup_scoring.R`*  
+- <mark>Step 6c</mark>: for scoring exercises in VScode, run *`fpsetup/6c_set_scoring_keybinding.py`*
   (change keybinding first if wanted)
 - <mark>Step 7</mark>: for a more concise view of the python exercises in VScode,  
   you can press `CTRL` + `SHIFT` + `P` or `CTRL` + `,` and search "files: exclude" and add
