@@ -46,7 +46,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - if yes, skip step 3b. You do NOT want several versions of Python installed.
 - <mark>Step 3b</mark>: if not yet installed, install Python with one of
   - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
-  - installation via R (way easier, especially on Mac): run `3b_install_python.R` line by line
+  - installation via R (way easier, especially on Mac): run *`3b_install_python.R`* line by line
 - <mark>Step 3c</mark>: install Python modules:
   - if installed via reticulate, in an R console (e.g. in RStudio), run  
     `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
@@ -92,6 +92,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 - <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
   - open *`fpsetup/5a_check_quarto.qmd`* 
   - install the Quarto extension when prompted (or manually)
+  - restart VScode
   - render (a.k.a. compile) the file as instructed inside
 - <mark>Step 5b</mark>:  open *`fpsetup/5a_check_quarto.qmd`* in **RStudio**
     - render as instructed
