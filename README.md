@@ -13,7 +13,7 @@ It's a bit much at once, but it will be worth it!
 
 Any improvements to this guide are very welcome!
 
-Jump to [R](#1-r), [Git](#2-git), [Python](#3-python), [VScode](#4-vscode), [qmd](#5-qmd), [Exercises](#6-exercises), [Misc](#7-misc)
+Jump to [R](#1-r), [Git](#2-git), [Python](#3-python), [VScode](#vscode), [qmd](#5-qmd), [Exercises](#6-exercises), [Misc](#7-misc)
 
 #### 1. R
 
