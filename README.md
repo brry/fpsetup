@@ -13,15 +13,15 @@ It's a bit much at once, but it will be worth it!
 
 Any improvements to this guide are very welcome!
 
-Jump to [R](#1-r), [Git](#2-git), [Python](#3-python), [VScode](#4-vscode), [qmd](#5-qmd), [Exercises](#6-exercises), [Misc](#7-misc)
+Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#quarto), [Exercises](#exercises), [Misc](#misc)
 
-#### 1. R
+#### R
 
-- <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), change the Rdata settings
+- <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), change the Rdata settings, add Rstudio to taskbar/dock if wanted
 - <mark>Step 1b</mark>: check if R is on the [PATH](https://brry.github.io/course/path.html)
   and has a version > 4.3.x.
 
-#### 2. Git
+#### Git
 
 - <mark>Step 2a</mark>: in a sensible (easy to reach) location on your computer, 
 create a folder for this course. Use a short expressive name like `FundamentalsProgramming`.
@@ -35,9 +35,9 @@ section to download these instructions into your main course folder (step 2a).
 
 From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
-#### 3. Python
+#### Python
 
-- <mark>Step 3a</mark>: if not yet installed, install Python with uv:
+- <mark>Step 3a</mark>: if not yet installed, install Python with uv (very fast & easy Python package manager):
   - install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options)
   - then restart your terminal (see step 1b) and run
   - `uv python install 3.12`
@@ -51,9 +51,9 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 - <mark>Step 3e</mark>: check Python in RStudio:
   - run *`3e_check_python_rstudio.py`* in RStudio as instructed inside.
 
-#### 4. VScode
+#### VScode
 
-- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), then  
+- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), add to taskbar/dock, then  
   - in the Explorer Tab `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
   - when prompted: manage restricted mode - add folder, click "trust"
   - open the settings (`CTRL` + `,`), search "workbench editor enable preview" and uncheck the box
@@ -70,6 +70,9 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - install the Python extension when prompted (or manually)
   - open the Settings (`CTRL` + `,`), search "execin",
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
+  - press `CTRL` + `SHIFT` + `E`, search "Python: Select Interpreter", 
+    set to the path from *`3d_set_python_rstudio.R`* if shown, 
+    else click "Enter interpreter path" and enter your equivalent of ~/.venv/bin/python
   - now run the file as instructed inside.
 - <mark>Step 4e</mark>: customize keyboard shortcuts, suggestions as in RStudio.
   - press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).
@@ -84,11 +87,11 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   | Delete Line | `CTRL` + `D` |
   | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
 
-#### 5. qmd
+#### Quarto
 
 - <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
   - open *`fpsetup/5a_check_quarto.qmd`* 
-  - install the Quarto extension when prompted (or manually)
+  - install the Quarto extension and on MacOS the CLI when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
   - restart VScode
   - render (a.k.a. compile) the file as instructed inside
 - <mark>Step 5b</mark>:  open *`fpsetup/5a_check_quarto.qmd`* in **RStudio**
@@ -97,27 +100,27 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
     - run code chunks as instructed
 
 
-#### 6. Exercises
+#### Exercises
 
 - <mark>Step 6a</mark>: on Windows, install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   at `C:/rtools` (compiler paths may not have spaces).
 - <mark>Step 6b</mark>: run *`fpsetup/6b_setup_scoring.R`*  
 - <mark>Step 6c</mark>: for scoring exercises in VScode, run *`fpsetup/6c_set_scoring_keybinding.py`*
   (change keybinding first if wanted)
-- <mark>Step 7</mark>: for a more concise view of the python exercises in VScode,  
+- <mark>Step 6d</mark>: for a more concise view of the python exercises in VScode,  
   you can press `CTRL` + `SHIFT` + `P` or `CTRL` + `,` and search "files: exclude" and add
   - **/\_\_pycache__
   - **/.co
-  - **/score.py
 
 
-#### 7. Misc
+#### Misc
 
-- <mark>Step 8</mark>: housekeeping:
+- <mark>Step 7</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
 
 You made it through! 🎉  
-Now you're set up for the rest of the course (and beyond).
+Now you're set up for the rest of the course (and beyond).  
+Head to the [course](#) on openHPI to get started with lesson i.1.
 
 *Again: improvements to this guide are very welcome!*

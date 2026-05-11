@@ -11,6 +11,7 @@ https://github.com/openHPI/codeoceanR/blob/main/R/rt_score.R
 import os
 import platform
 import subprocess
+
 def score():
     """Run the CodeOcean scoring script via R."""
     if os.getenv("CODEOCEAN")=="true": # Do not run in CodeOcean browser instance
@@ -22,6 +23,6 @@ def score():
     dn = subprocess.DEVNULL
     sc = subprocess.run(cmd, shell=True, capture_output=True, stdin=dn, text=True)
     print(sc.stderr)
-    return
+
 print("Running rt_score for WD:", os.getcwd())
 score()

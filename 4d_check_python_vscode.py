@@ -1,9 +1,9 @@
 # This script displays where Python is installed.
 # It then tests whether the needed python modules are available.
 
-# Open it in VScode, run it by clicking the play triangle in the topright.
-# If this fails, press `CTRL` + `SHIFT` + `P`, search "Python: Select Interpreter", 
-# set to the path from `3d_set_python_rstudio.py`
+# !!! Make sure to first run all previous instructions in step 4d !!!
+
+# Run this file in VScode by clicking the play triangle in the topright.
 
 import sys
 
