@@ -20,7 +20,7 @@ In RStudio, I recommend to set (Cog symbol)
 
 ```{r, plot_example, echo=TRUE}
 pairs(iris[, 1:4], main="Anderson's Iris Data",
-      col=c("orange", "salmon", "lightblue")[unclass(iris$Species)], 
+      col=c("orange", "salmon", "lightblue")[iris$Species], 
 	  pch=16, cex=1.5, lower.panel=NULL, las=1)
 
 ```

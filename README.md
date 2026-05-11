@@ -15,13 +15,13 @@ Any improvements to this guide are very welcome!
 
 Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [qmd](#qmd), [Exercises](#exercises), [Misc](#misc)
 
-#### R
+#### 1. R
 
 - <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), change the Rdata settings
 - <mark>Step 1b</mark>: check if R is on the [PATH](https://brry.github.io/course/path.html)
   and has a version > 4.3.x.
 
-#### Git
+#### 2. Git
 
 - <mark>Step 2a</mark>: in a sensible (easy to reach) location on your computer, 
 create a folder for this course. Use a short expressive name like `FundamentalsProgramming`.
@@ -35,26 +35,23 @@ section to download these instructions into your main course folder (step 2a).
 
 From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
 
-#### Python
+#### 3. Python
 
-- <mark>Step 3a</mark>: check if Python is installed:
-  - in a terminal (see step 1b), type `python`
-  - if found with a version 3.9+, type `quit` or `quit()` and proceed to step 3c.
-  - if not found, open the file *`3a_check_python_installed.py`* with any IDE.
-  - run it as instructed inside.
-  - see if you get a printout with a version > 3.9.
-  - if yes, skip step 3b. You do NOT want several versions of Python installed.
-- <mark>Step 3b</mark>: if not yet installed, install Python with one of
-  - standalone installation: [Python](https://www.python.org/downloads/), hints on [Windows](https://docs.python.org/using/windows.html)
-  - installation via R (way easier, especially on Mac): run *`3b_install_python.R`* line by line
+- <mark>Step 3a</mark>: if not yet installed, install Python with uv:
+  - install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options)
+  - then restart your terminal (see step 1b) and run
+  - `uv python install 3.12`
+- <mark>Step 3b</mark>: create a virtual environment that keeps your project's packages separate from everything else 
+  - if wanted, navigate to a different folder
+  - `uv venv`
 - <mark>Step 3c</mark>: install Python modules:
-  - if installed via reticulate, in an R console (e.g. in RStudio), run  
-    `reticulate::py_install(c("numpy", "pandas", "matplotlib"))`
-  - else, run in the terminal (step 1b):  
-    `pip install numpy pandas matplotlib`  (pip3 on Mac)
-- <mark>Step 3d</mark>: run *`3d_check_python_setup.py`*
+  - `uv pip install numpy pandas matplotlib`
+- <mark>Step 3d</mark>: instruct RStudio to use the venv:
+  - run *`3d_set_python_rstudio.R`* in RStudio as instructed inside.
+- <mark>Step 3e</mark>: check Python in RStudio:
+  - run *`3e_check_python_rstudio.py`* in RStudio as instructed inside.
 
-#### VScode
+#### 4. VScode
 
 - <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), then  
   - in the Explorer Tab `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
@@ -69,7 +66,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - install the R extension when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
   - run the file and (as instructed there), edit and save the `.Rprofile` file
 - <mark>Step 4d</mark>: run Python scripts in VScode:
-  - open *`fpsetup/3d_check_python_setup.py`* (don't run it yet)
+  - open *`fpsetup/4d_check_python_vscode.py`* (don't run it yet)
   - install the Python extension when prompted (or manually)
   - open the Settings (`CTRL` + `,`), search "execin",
     check the box for "Python > Terminal: execute in file dir" ([Source](https://stackoverflow.com/a/65835091))
@@ -87,7 +84,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   | Delete Line | `CTRL` + `D` |
   | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
 
-#### qmd
+#### 5. qmd
 
 - <mark>Step 5a</mark>: run quarto markdown scripts in **VScode**:
   - open *`fpsetup/5a_check_quarto.qmd`* 
@@ -100,7 +97,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
     - run code chunks as instructed
 
 
-#### Exercises
+#### 6. Exercises
 
 - <mark>Step 6a</mark>: on Windows, install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   at `C:/rtools` (compiler paths may not have spaces).
@@ -114,7 +111,7 @@ From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
   - **/score.py
 
 
-#### Misc
+#### 7. Misc
 
 - <mark>Step 8</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
