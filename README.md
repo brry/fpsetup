@@ -46,7 +46,7 @@ section to download [these instructions](https://github.com/brry/fpsetup) into y
   - close your terminal and open a new one (see step 1b)
 - <mark>Step 3b</mark>: in the terminal, set your directory (use Tab for autocomplete or drag the folder into the terminal):  
   `cd your/path/to/FundamentalsProgramming/fpsetup`  
-  then run **one** of (depending on OS):  
+  then run **one** of (depending on OS; maybe with `zsh` instead of `bash` on MacOS):  
   `bash 3b_install_python_mac.sh`  
   `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`  
 - <mark>Step 3c</mark>: instruct RStudio to use the venv:

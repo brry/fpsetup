@@ -53,7 +53,14 @@ if platform.system() != "Windows":
     with open(".vscode/tasks.json") as f:
         content = f.read()
     with open(".vscode/tasks.json", "w") as f:
-        f.write(content.replace("python ", "python3 "))
+        f.write(content.replace("python ../key_score.py", "python3 ../key_score.py"))
+# Note: Gemini thinks ~/.venv/bin/python may be safer than python3 for students with weird shell settings
+# home = os.path.expanduser("~")
+# if system == "Windows":
+#     venv_python = os.path.join(home, ".venv", "Scripts", "python.exe")
+# else:
+#     venv_python = os.path.join(home, ".venv", "bin", "python")
+# But I'm leaving it as is for now
 
 # --- find VScode's keybindings.json ---
 
