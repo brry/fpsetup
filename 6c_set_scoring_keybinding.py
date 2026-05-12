@@ -2,14 +2,25 @@
 This script will:
 - copy scriptunzip.py + key_score.py + tasks.json from `fpsetup/` to the main course folder
 - add the 'score' keybinding to VScode's keybindings.json
-
-On MacOS, I recommend to change ctrl to cmd in the keybinding
 """
 
-score_binding = {"key": "ctrl+shift+y",   # <-- change Keybinding here if wanted
+# 1: Make sure to have set execin in step 4d instruction 2.
+
+# 2: Customize keybinding if wanted (change ctrl to cmd on MacOS):
+score_binding = {"key": "ctrl+shift+y",   # <-- change here if wanted
                  "command": "workbench.action.tasks.runTask", 
                  "args": "score"}
 # Note: in tasks.json, set "clear": false to see previous scoring runs in the dedicated terminal
+
+# 3: Run this script with the play button.
+# 4: Check if all NOTE: messages make sense.
+
+# 5: for a more concise view of the python exercises in VScode, 
+#    press `CTRL` + `,` and search "files: exclude" and add two entries:
+#    **/\_\_pycache__
+#    **/.co
+
+# In theory, you don't need to look at the rest of this script :)
                  
 import os
 import sys
@@ -19,19 +30,20 @@ import json
 
 # --- Check folder ---
 
-os.chdir("..") # to go up one level to main course folder
-# os.chdir("C:/Dropbox/HPI/FundamentalsProgramming") # for REPL
+# execin sets the working directory to the location of this file.
+# Go up one level to main course folder:
+os.chdir("..") 
 if not os.path.isdir("fpsetup"):
     print("Please run this script from the main course folder containing fpsetup/.")
     sys.exit(1)
 print("NOTE: this is the main course folder:", os.getcwd())
 
-# --- Copy scriptunzip.py, key_score.py and tasks.json to the main course folder ---
+# --- Copy files to the main course folder ---
 
 os.makedirs(".vscode", exist_ok=True)
 shutil.copy2("fpsetup/scriptunzip.py", "scriptunzip.py")
-shutil.copy2("fpsetup/key_score.py", "key_score.py")
-shutil.copy2("fpsetup/tasks.json", ".vscode/tasks.json")
+shutil.copy2("fpsetup/key_score.py"  , "key_score.py")
+shutil.copy2("fpsetup/tasks.json"    , ".vscode/tasks.json")
 
 print("NOTE: exercise files were copied successfully :)")
 

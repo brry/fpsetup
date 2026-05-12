@@ -1,25 +1,24 @@
 # This script sets up the exercise scoring mechanism.
+# Set the cursor anywhere in a line of code (skip the stop line) and 
+# press CTRL/CMD + ENTER to run that whole line.
 stop("Do not run this entire file! Run code line by line!")
-# Set the cursor anywhere in a line of code and press CTRL/CMD + ENTER to run that whole line.
 
+# 1: On Windows only: make sure you have run step 6a.
 
-# Make sure RTools will be found ----
+# 2: On Windows only: let RTools be found:
+if(.Platform$OS.type == "windows" && !pkgbuild::check_build_tools() ) {
+  rtools_home <- Sys.getenv("R_RTOOLS45_PATH") # for older versions use "RTOOLS44_HOME"
+  if(rtools_home=="") stop("Rtools not found. Fix previous line / run step 6a.")
+  cat(paste0('PATH="',rtools_home,';${PATH}"'), file="~/.Renviron", append=TRUE)
+  stop("RTools added to R's PATH. Restart R (CTRL + SHIFT + F10) and run this check again.")
+}
 
-# AFTER running step 6a:
-if(.Platform$OS.type == "windows") cat('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', 
-									   file= "~/.Renviron", append=TRUE)
-
-
-# Install the scoring package ----
-
-# (used for both Python and R exercises)
+# 3: Install the scoring package (used for both Python and R exercises)
 remotes::install_github("openHPI/codeoceanR")
-# for issues (like the system libraries on Linux), see
+# to solve installation issues (like the system libraries on Linux), see
 browseURL("https://github.com/openHPI/codeoceanR#issues")
 
-
-# Keyboard shortcut in Rstudio ----
-
+# 4: set keyboard shortcut in Rstudio:
 remotes::install_github("brry/rskey")
 rskey::setKeyboardBindings(overwrite=TRUE)
 

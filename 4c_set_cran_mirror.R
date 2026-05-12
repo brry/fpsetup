@@ -1,14 +1,18 @@
 # Set the download mirror for R packages.
 # This is not needed in RStudio (which does that for you).
 
-# First make sure you have turned off the workbench editor preview in step 4a!
+# 1: Make sure you have run 2d_install_Rpackages.R in Rstudio
+# 2: Make sure you have turned off the workbench editor preview in step 4a
 
-# Run these lines one by one with SHIFT + ENTER (if not changed to different keyboard shortcut)
-# or in one go with the Play button on the topright.
+# 3: when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`),
+#    install the R extension
 
-# Edit the R startup code (.Rprofile) that is run each time R is started:
-if(!requireNamespace("usethis", quietly=TRUE)) install.packages("usethis")
+# 4: Run this script with the Play button on the topright.
+
+# Open the R startup code (.Rprofile) that is run each time R is started:
 usethis::edit_r_profile()
-#  This opens .Rprofile. Copy the following line into it:
+
+# 5: Copy the following line into it:
 options(repos=c(CRAN="https://cloud.r-project.org/"))
-# If you go line by line, also run the previous line now.
+
+# 6: Save and close the .Rprofile file.

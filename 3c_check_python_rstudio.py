@@ -1,8 +1,8 @@
 # This script displays where Python is installed.
 # It then tests whether the needed python modules are available.
 
-# Open it in RStudio _after_ having run 3d_set_python_rstudio.R
-# press CTRL/CMD + SHIFT + S or click "Source Script" in the topright of the script panel.
+# 1: Make sure you have run 3b_set_python_rstudio.R
+# 2: press CTRL/CMD + SHIFT + S or click "Source Script" in the topright.
 
 import sys
 

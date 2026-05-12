@@ -5,7 +5,7 @@ format:
     embed-resources: true
 ---
 
-Testing python chunk execution
+Testing python chunk execution in Rstudio (instructions below)
 
 ```{r, load_reticulate}
 library(reticulate)
@@ -19,9 +19,9 @@ testing_object = 44
 testing_object = testing_object + 11
 ```
 
-In RStudio in the following chunk, click on the arrow to "run all chunks above",
-then inside the chunk double-click on `testing_object` to mark it 
-and hit CTRL/CMD + ENTER to see if you can directly see 55.
+1: in the following chunk, click on the arrow to "run all chunks above".  
+2: inside the chunk double-click on `testing_object` to mark it.  
+3: press CTRL/CMD + ENTER to check if you can directly see 55.  
 
 ```{python, test_object, echo=TRUE}
 testing_object

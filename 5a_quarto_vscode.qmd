@@ -5,31 +5,22 @@ format:
     embed-resources: true
 ---
 
+1: open this document in VScode.  
+2: when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`),
+   install the Quarto extension (and on MacOS the CLI).  
+3: restart VScode.  
+4: click the Preview button (topright) to render (a.k.a. compile) the file.
+
 ## Section title
 
 This is a mini [quarto](https://quarto.org/) document with text and some R code.  
 
-- in RStudio, click "Render" at the top
-- in VScode, click the Preview button (topright)
-
-This will execute the code chunks and weave together the text, code and output.
-
-In RStudio, I recommend to set (Cog symbol)  
-- `Preview in Viewer Pane`  
-- and (personal preference) `Chunk Output in Console`.
+Rendering as instructed above will execute the code chunks and weave together the text, code and output.
 
 ```{r, plot_example, echo=TRUE}
 pairs(iris[, 1:4], main="Anderson's Iris Data",
       col=c("orange", "salmon", "lightblue")[iris$Species], 
 	  pch=16, cex=1.5, lower.panel=NULL, las=1)
-
 ```
 
 More in lesson i.2, specifically the homework.
-
-
-## Diagnostics for 5c_check_quarto_python.qmd
-
-```{r, pyconfig, echo=TRUE}
-reticulate::py_config()
-```
