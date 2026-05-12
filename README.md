@@ -11,7 +11,10 @@ We want to
 so we have a lot of software to install.  
 It's a bit much at once, but it will be worth it!  
 
-Any improvements to this guide are very welcome!
+*Note: 0n Linux, usually follow the MacOS instructions.*  
+
+Any improvements to this guide are very welcome!  
+So is feedback on how long this all takes for you!  
 
 Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#quarto), [Exercises](#exercises), [Misc](#misc)
 
@@ -30,31 +33,29 @@ exercise folders *`FP_P11_Syntax`*, *`FP_P12_DataTypes`* etc, *`FP_R12_Syntax`*,
 - <mark>Step 2b</mark>: install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
   If you already have a personal github account, use that :)
 - <mark>Step 2c</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) 
-section to download these instructions into your main course folder (step 2a).
+section to download [these instructions](https://github.com/brry/fpsetup) into your main course folder from step 2a.
 - <mark>Step 2d</mark>: run *`2d_install_Rpackages.R`*. Tip: Use the Files pane (RStudio bottom right) to select and open the file.
 
-From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.
+**From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.**
 
 #### Python
 
-- <mark>Step 3a</mark>: install Python
-  - use uv (very fast & easy Python package manager) to
-    - install Python
-    - create a virtual environment in *`~/.venv`* that keeps your project's packages separate from everything else 
-    - install Python modules needed in the course
+- <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager)
   - install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options)
-  - restart your terminal (see step 1b) and run (one by one):
-  - `uv python install 3.12`
-  - `uv venv`
-  - `uv pip install numpy pandas matplotlib`
-- <mark>Step 3b</mark>: instruct RStudio to use the venv:
-  - run *`3b_set_python_rstudio.R`* in RStudio as instructed inside.
-- <mark>Step 3c</mark>: check Python in RStudio:
-  - run *`3c_check_python_rstudio.py`* in RStudio as instructed inside.
+  - close and restart your terminal (see step 1b)
+- <mark>Step 3b</mark>: in the terminal, set your directory (use Tab for autocomplete):  
+  `cd your/path/to/FundamentalsProgramming/fpsetup`  
+  then run **one** of (depending on OS):  
+  `bash 3b_install_python_mac.sh`  
+  `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`  
+- <mark>Step 3c</mark>: instruct RStudio to use the venv:
+  - run *`3c_set_python_rstudio.R`* in RStudio as instructed inside.
+- <mark>Step 3d</mark>: check Python in RStudio:
+  - run *`3d_check_python_rstudio.py`* in RStudio as instructed inside.
 
 #### VScode
 
-- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), add to taskbar/dock, then  
+- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), add to taskbar/dock if wanted, then  
   - in the Explorer Tab `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
   - when prompted, click "trust" (add other folders under "manage restricted mode")
   - open the settings (`CTRL` + `,`), search "workbench editor enable preview" and uncheck the box

@@ -5,13 +5,16 @@
 
 stop("Do not run this entire file! Run code line by line!") # in case you click Source
 
-# 1: run:
+# 1: run ONE of these:
+# MacOS:
 reticulate::use_virtualenv("~/.venv", required=TRUE)
+# Windows:
+reticulate::use_virtualenv(file.path(Sys.getenv("USERPROFILE"), ".venv"), required=TRUE)
 
 # 2: copy the output of:
 message("RETICULATE_PYTHON=", reticulate::py_discover_config()$python)
 # which should look something like the following (with home ~/ folder expanded):
-# RETICULATE_PYTHON=~/.venv/bin/python
+# RETICULATE_PYTHON=~/.venv/bin/python or /.venv/Scripts/python.exe
 
 # 3: paste the previous output into the .Renviron file opened with:
 usethis::edit_r_environ()
