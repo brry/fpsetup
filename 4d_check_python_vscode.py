@@ -6,13 +6,17 @@
 # 1: install the Python extension when prompted 
 #    (or manually under Extensions with `CTRL` + `SHIFT` + `X`)
 
-# 2: open the Settings (`CTRL` + `,`), search "execin",
+# 2: open the Settings (`CTRL` + `,`),
+#    in the topright, click "open modal editor in main window"
+# ToDo: refer to that window throughout the files instead of reopening CTRL+,  (check on Mac, could only be needed on Windows)
+#    search "execin",
 #    check the box for "Python > Terminal: execute in file dir" 
 #    (https://stackoverflow.com/a/65835091)
 
-# 3: press `CTRL` + `SHIFT` + `E`, search "Python: Select Interpreter", 
+# 3: On windows, press `CTRL` + `SHIFT` + `P`  ;  on MacOS, press `CMD` + `SHIFT` + `E`
+#    search "Python: Select Interpreter", 
 #    set to the path from *`3d_set_python_rstudio.R`* if shown, 
-#    else click "Enter interpreter path" and enter your equivalent of ~/.venv/bin/python
+#    else click "Enter interpreter path" and enter your path from file 3c step 3
 
 # 4: customize keyboard shortcuts, suggestions as in RStudio.
 #   - press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).

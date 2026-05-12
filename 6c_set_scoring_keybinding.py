@@ -17,7 +17,7 @@ score_binding = {"key": "ctrl+shift+y",   # <-- change here if wanted
 
 # 5: for a more concise view of the python exercises in VScode, 
 #    press `CTRL` + `,` and search "files: exclude" and add two entries:
-#    **/\_\_pycache__
+#    **/__pycache__
 #    **/.co
 
 # In theory, you don't need to look at the rest of this script :)
@@ -47,24 +47,25 @@ shutil.copy2("fpsetup/tasks.json"    , ".vscode/tasks.json")
 
 print("NOTE: exercise files were copied successfully :)")
 
-# --- change python to python3 on Mac / Linux ---
+system = platform.system()
 
-if platform.system() != "Windows":
-    with open(".vscode/tasks.json") as f:
-        content = f.read()
-    with open(".vscode/tasks.json", "w") as f:
-        f.write(content.replace("python ../key_score.py", "python3 ../key_score.py"))
-# Note: Gemini thinks ~/.venv/bin/python may be safer than python3 for students with weird shell settings
-# home = os.path.expanduser("~")
-# if system == "Windows":
-#     venv_python = os.path.join(home, ".venv", "Scripts", "python.exe")
-# else:
-#     venv_python = os.path.join(home, ".venv", "bin", "python")
-# But I'm leaving it as is for now
+# --- select python interpreter for task (if venv not activated) ---
+
+home = os.path.expanduser("~")
+if system == "Windows":
+    venv_python = os.path.join(home, ".venv", "Scripts", "python.exe")
+else:
+    venv_python = os.path.join(home, ".venv", "bin", "python")
+with open(".vscode/tasks.json", "r") as f:
+    task_data = json.load(f)
+task_data["tasks"][0]["command"] = f'"{venv_python}" ../key_score.py'
+with open(".vscode/tasks.json", "w") as f:
+    json.dump(task_data, f, indent=2)
+print("NOTE: python interpreter for scoring task set to ", venv_python)
+# ToDo: this new version venv_python instead of python3 needs to be tested on Mac
 
 # --- find VScode's keybindings.json ---
 
-system = platform.system()
 if system == "Windows":
     kb_path = os.path.join(os.environ.get("APPDATA", ""), "Code", "User", "keybindings.json")
 elif system == "Darwin":
