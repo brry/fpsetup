@@ -11,7 +11,8 @@ We want to
 so we have a lot of software to install.  
 It's a bit much at once, but it will be worth it!  
 
-*Note: 0n Linux, usually follow the MacOS instructions.*  
+*Note: on Linux, usually follow the MacOS instructions.*  
+*Tip: triple click to mark a full line for copying to the clipboard.*  
 
 Any improvements to this guide are very welcome!  
 So is feedback on how long this all takes for you!  
@@ -42,8 +43,8 @@ section to download [these instructions](https://github.com/brry/fpsetup) into y
 
 - <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager)
   - install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options)
-  - close and restart your terminal (see step 1b)
-- <mark>Step 3b</mark>: in the terminal, set your directory (use Tab for autocomplete):  
+  - close your terminal and open a new one (see step 1b)
+- <mark>Step 3b</mark>: in the terminal, set your directory (use Tab for autocomplete or drag the folder into the terminal):  
   `cd your/path/to/FundamentalsProgramming/fpsetup`  
   then run **one** of (depending on OS):  
   `bash 3b_install_python_mac.sh`  

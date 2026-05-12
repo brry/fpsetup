@@ -11,25 +11,23 @@ reticulate::use_virtualenv("~/.venv", required=TRUE)
 # Windows:
 reticulate::use_virtualenv(file.path(Sys.getenv("USERPROFILE"), ".venv"), required=TRUE)
 
-# 2: copy the output of:
-message("RETICULATE_PYTHON=", reticulate::py_discover_config()$python)
-# which should look something like the following (with home ~/ folder expanded):
-# RETICULATE_PYTHON=~/.venv/bin/python or /.venv/Scripts/python.exe
+# 2: check if this path seems sensible:
+path <- reticulate::py_discover_config()$python ; path
+# should end with   /.venv/bin/python   or   /.venv/Scripts/python.exe
 
-# 3: paste the previous output into the .Renviron file opened with:
-usethis::edit_r_environ()
-# 4: close the .Renviron file.
+# 3: write it into R's environment variables: 
+readr::write_lines(paste0("RETICULATE_PYTHON=", path), "~/.Renviron", append=TRUE)
 
-# 5: Restart R in one of these ways:
+# 4: Restart R in one of these ways:
 # - Windows: CTRL + SHIFT (+FN) + F10
 # - Mac: CMD + SHIFT + 0
 # RStudio -> Session -> Restart R
 
-# 6: Check if you still get the python path:
+# 5: Check if you still get the python path:
 reticulate::py_discover_config()
 
-# 7: Restart RStudio, not just R (close and reopen)
+# 6: Restart RStudio, not just R (close and reopen)
 
-# 8: Check if calling python works:
+# 7: Check if calling python works:
 reticulate::py_available(TRUE)
 reticulate::py_eval("f'sum is {1+1}'") # should show  "sum is 2"

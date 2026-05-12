@@ -9,7 +9,7 @@ stop("Do not run this entire file! Run code line by line!")
 if(.Platform$OS.type == "windows" && !pkgbuild::check_build_tools() ) {
   rtools_home <- Sys.getenv("R_RTOOLS45_PATH") # for older versions use "RTOOLS44_HOME"
   if(rtools_home=="") stop("Rtools not found. Fix previous line / run step 6a.")
-  cat(paste0('PATH="',rtools_home,';${PATH}"'), file="~/.Renviron", append=TRUE)
+  readr::write_lines(paste0('PATH="',rtools_home,';${PATH}"'), "~/.Renviron", append=TRUE)
   stop("RTools added to R's PATH. Restart R (CTRL + SHIFT + F10) and run this check again.")
 }
 
