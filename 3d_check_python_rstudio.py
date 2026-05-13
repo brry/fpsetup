@@ -1,7 +1,7 @@
 # This script displays where Python is installed.
 # It then tests whether the needed python modules are available.
 
-# 1: Make sure you have run 3b_set_python_rstudio.R
+# 1: Make sure you have run 3c_set_python_rstudio.R
 # 2: press CTRL/CMD + SHIFT + S or click "Source Script" in the topright.
 
 import sys

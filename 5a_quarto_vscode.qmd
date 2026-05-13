@@ -24,3 +24,5 @@ pairs(iris[, 1:4], main="Anderson's Iris Data",
 ```
 
 More in lesson i.2, specifically the homework.
+
+If you can see this rendered with a colorful plot, open 5b_quarto_rstudio.qmd in Rstudio.

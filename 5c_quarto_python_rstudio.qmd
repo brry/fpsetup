@@ -28,3 +28,5 @@ testing_object
 ```
 
 If this is not the case, check this [issue](https://github.com/rstudio/rstudio/issues/17196) on Mac for a workaround.
+
+If you can see this rendered with a colorful plot, continue in step 6 (Exercises).

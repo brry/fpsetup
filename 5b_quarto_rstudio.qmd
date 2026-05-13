@@ -31,3 +31,5 @@ More in lesson i.2, specifically the homework.
 ```{r, pyconfig, echo=TRUE}
 reticulate::py_config()
 ```
+
+If you can see this rendered with a colorful plot, open 5c_quarto_python_rstudio.qmd.
