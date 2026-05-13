@@ -20,12 +20,14 @@ browseURL("https://github.com/openHPI/codeoceanR#issues")
 
 # 4: set keyboard shortcut in Rstudio:
 remotes::install_github("brry/rskey")
-rskey::setKeyboardBindings(overwrite=TRUE)
+rskey::setKeyboardBindings()
 
 # Scoring defaults to CTRL + SHIFT + Y. To change it, go to
 # RStudio - Tools - Modify Keyboard Shortcurts
-# click on an addin shortcut field and press the desired key combination
+# Filter (search) for "score", click on the field and change it
 # (potentially restart Rstudio)
 
 # for more info if wanted, see
 browseURL("https://github.com/brry/rskey#rskey")
+
+# You're almost done! Continue with step 7.

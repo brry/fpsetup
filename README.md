@@ -92,6 +92,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   | Toggle Line Comment  *and*<br>Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
   | Delete Line | `CTRL` + `D` |
   | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
+  | Tasks: Run Task (from step 4b) | change if wanted |
 
 #### Quarto
 
@@ -103,11 +104,11 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### Exercises
 
-- <mark>Step 6a</mark>: on Windows, install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
+- <mark>Step 6a</mark>: prepare exercise scoring:
+  - *On Windows only*: install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   directly at `C:/rtools45` (compiler paths may not have spaces).
-- <mark>Step 6b</mark>: run *`fpsetup/6b_setup_scoring.R`* in Rstudio
-- <mark>Step 6c</mark>: for scoring exercises in VScode, run *`fpsetup/6c_set_scoring_keybinding.py`*
-  (change keybinding first if wanted)
+- <mark>Step 6b</mark>: install scoring package:
+  - In RStudio, open *`fpsetup/6b_setup_scoring.R`* and run it as instructed inside.
 
 
 #### Misc
