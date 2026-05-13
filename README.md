@@ -84,7 +84,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).
   - Set each wanted shortcut, then rightclick -> "show same keybindings" to deal with duplicates.  
   - Search for the action e.g. with "python run" or "toggle comment".
-  
+
   | Action | Shortcut |
   |--------|----------|
   | Python: Run Selection/Line in Python Terminal | `CTRL` + `ENTER` |
