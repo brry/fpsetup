@@ -5,11 +5,7 @@ format:
     embed-resources: true
 ---
 
-1: open this document in VScode.  
-2: when prompted (or manually under Extensions with `CTRL` + `SHIFT` + `X`),
-   install the Quarto extension (and on MacOS the CLI).  
-3: restart VScode.  
-4: click the Preview button (topright) to render (a.k.a. compile) the file.
+Click the Preview button (topright) to render (a.k.a. compile) the file.
 
 ## Section title
 

@@ -21,62 +21,84 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### R
 
-- <mark>Step 1a</mark>: install [R + RStudio](https://brry.github.io/course/install.html), change the Rdata settings, add Rstudio to taskbar/dock if wanted
-- <mark>Step 1b</mark>: check if R is on the [PATH](https://brry.github.io/course/path.html)
-  and has a version > 4.3.x.
+- <mark>Step 1a</mark>: install R:
+  - Install [R + RStudio](https://brry.github.io/course/install.html).
+  - Open RStudio and change the Rdata settings as instructed in the previous link.
+  - Add RStudio to the taskbar/dock if wanted.
+- <mark>Step 1b</mark>: check R:
+  - Check if R is on the [PATH](https://brry.github.io/course/path.html)
+  - and has a version > 4.3.x.
 
 #### Git
 
-- <mark>Step 2a</mark>: in a sensible (easy to reach) location on your computer, 
-create a folder for this course. Use a short expressive name like `FundamentalsProgramming`.
-This will over time contain the folders *`fpsetup`* and *`FP26`*, along with the 
-exercise folders *`FP_P11_Syntax`*, *`FP_P12_DataTypes`* etc, *`FP_R12_Syntax`*, *`FP_R13_Help`* etc.
-- <mark>Step 2b</mark>: install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
-  If you already have a personal github account, use that :)
-- <mark>Step 2c</mark>: follow the [use git](https://brry.github.io/course/git.html#use-git) 
-section to download [these instructions](https://github.com/brry/fpsetup) into your main course folder from step 2a.
-- <mark>Step 2d</mark>: run *`2d_install_Rpackages.R`*. Tip: Use the Files pane (RStudio bottom right) to select and open the file.
+- <mark>Step 2a</mark>: create a course folder:
+  - In a sensible (easy to reach) location on your computer, create a folder for this course.
+  - Use a short expressive name without spaces like `FundamentalsProgramming`!
+  - This will over time contain the folders *`fpsetup`* and *`FP26`*, along with the 
+    exercise folders *`FP_P11_Syntax`*, *`FP_P12_DataTypes`* etc, *`FP_R12_Syntax`*, *`FP_R13_Help`* etc.
+  - Except in step 3b, you do not need your OS file explorer anymore - use the file panel in your IDE!
+- <mark>Step 2b</mark>: install git for version control:
+  - Install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
+  - If you already have a personal github account, use that :)
+- <mark>Step 2c</mark>: download this fpsetup repo:
+  - Follow the [use git](https://brry.github.io/course/git.html#use-git) 
+    section to download [these instructions](https://github.com/brry/fpsetup) 
+    into your main course folder from step 2a.
+- <mark>Step 2d</mark>: install R packages:   
+  - In the now opened Rstudio instance with `fpsetup` in the topright,
+  - use the Files pane (bottom right) to open the file *`2d_install_Rpackages.R`*.
+  - Run it as instructed inside.
+  - Keep Rstudio opened for step 3c.
 
 **From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.**
 
 #### Python
 
-- <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager)
-  - install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options)
-  - close your terminal and open a new one (see step 1b)
-- <mark>Step 3b</mark>: in the terminal, set your directory (use Tab for autocomplete or drag the folder into the terminal):  
-  `cd your/path/to/FundamentalsProgramming/fpsetup`  
-  then run **one** of (depending on OS; maybe with `zsh` instead of `bash` on MacOS):  
+- <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager):
+  - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options).
+  - Close your terminal and open a new one (see step 1b).
+- <mark>Step 3b</mark>: in the terminal, set your directory:
+  - Use Tab for autocomplete or drag the folder into the terminal after `cd  `:
+  - `cd your/path/to/FundamentalsProgramming/fpsetup`  
+  - Depending on OS, (maybe with `zsh` instead of `bash` on MacOS), run **one** of:  
   `bash 3b_install_python_mac.sh`  
   `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`  
 - <mark>Step 3c</mark>: instruct RStudio to use the venv:
-  - run *`3c_set_python_rstudio.R`* in RStudio as instructed inside.
-- <mark>Step 3d</mark>: check Python in RStudio:
-  - run *`3d_check_python_rstudio.py`* in RStudio as instructed inside.
+  - In RStudio, open and run the file *`3c_set_python_rstudio.R`* as instructed inside.
+- <mark>Step 3d</mark>: check Python scripts in RStudio:
+  - In RStudio, open and run the file *`3d_check_python_rstudio.py`* as instructed inside.
 
 #### VScode
 
-- <mark>Step 4a</mark>: install [VScode](https://code.visualstudio.com/Download), add to taskbar/dock if wanted, then  
-  - in the Explorer Tab `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
-  - when prompted, click "trust" (add other folders under "manage restricted mode")
-  - open the settings (`CTRL` + `,`), search "workbench editor enable preview" and uncheck the box
-- <mark>Step 4b</mark>: disable [telemetry](https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html) if you don't want to send data to Micro$oft:
-  - open the Settings (`CTRL` + `,`), search "Telemetry level", set to "off"
-  - open the Command Palette (`CTRL` + `SHIFT` + `P`), search "Configure Runtime Arguments" and in the argv.json file, change the value for "enable-crash-reporter" to false, restart VScode
-- <mark>Step 4c</mark>: run R scripts in VScode:
-  - *(to signify you should be in the main course folder, `fpsetup/` is prepended to the script names)*
-  - open the file *`fpsetup/4c_set_cran_mirror.R`* (Explorer Tab `CTRL` + `SHIFT` + `E`)
-  - follow the instructions inside
-- <mark>Step 4d</mark>: run Python scripts in VScode:
-  - open *`fpsetup/4d_check_python_vscode.py`* (don't run it yet)
-  - follow the instructions inside step by step
+- <mark>Step 4a</mark>: install VScode:
+  - Install [VScode](https://code.visualstudio.com/Download) and open it.
+  - Add it to the taskbar/dock if wanted.
+  - Open the Explorer Tab with `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
+  - When prompted, click "trust".
+  - *(To signify you should be in the main course folder, `fpsetup/` is prepended to the script names from now on)*
+- <mark>Step 4b</mark>: change VScode settings
+  - In **RStudio** (to avoid circular dependencies), open and run the file *`4b_setup_vscode.R`*.
+- <mark>Step 4c</mark>: check Python scripts in VScode:
+  - In VScode, open and run the file *`fpsetup/4c_check_python_vscode.py`*.
+- <mark>Step 4d</mark>: *optional*: customize keyboard shortcuts, suggestions as in RStudio.
+  - Press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).
+  - Set each wanted shortcut, then rightclick -> "show same keybindings" to deal with duplicates.  
+  - Search for the action e.g. with "python run" or "toggle comment".
+  
+  | Action | Shortcut |
+  |--------|----------|
+  | Python: Run Selection/Line in Python Terminal | `CTRL` + `ENTER` |
+  | Python: Run Python File in Terminal | `CTRL` + `SHIFT` + `S` |
+  | Toggle Line Comment  *and*<br>Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
+  | Delete Line | `CTRL` + `D` |
+  | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
 
 #### Quarto
 
-- <mark>Step 5</mark>: run quarto markdown scripts as instructed inside:
-  - open *`fpsetup/5a_quarto_vscode.qmd`* in **VScode**
-  - open *`fpsetup/5b_quarto_rstudio.qmd`* in **RStudio**
-  - open *`fpsetup/5c_quarto_python_rstudio.qmd`* in **RStudio**
+- <mark>Step 5</mark>: render quarto markdown scripts as instructed inside:
+  - In **VScode**, open *`fpsetup/5a_quarto_vscode.qmd`*
+  - In **RStudio**, open *`fpsetup/5b_quarto_rstudio.qmd`*
+  - In **RStudio**, open *`fpsetup/5c_quarto_python_rstudio.qmd`*
 
 
 #### Exercises
