@@ -85,14 +85,14 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Set each wanted shortcut, then rightclick -> "show same keybindings" to deal with duplicates.  
   - Search for the action e.g. with "python run" or "toggle comment".
 
-  | Action | Shortcut |
-  |--------|----------|
-  | Python: Run Selection/Line in Python Terminal | `CTRL` + `ENTER` |
-  | Python: Run Python File in Terminal | `CTRL` + `SHIFT` + `S` |
-  | Toggle Line Comment  *and*<br>Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
-  | Delete Line | `CTRL` + `D` |
-  | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
-  | Tasks: Run Task (from step 4b) | change if wanted |
+| Action | Shortcut |
+|--------|----------|
+| Python: Run Selection/Line in Python Terminal | `CTRL` + `ENTER` |
+| Python: Run Python File in Terminal | `CTRL` + `SHIFT` + `S` |
+| Toggle Line Comment  *and*<br>Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
+| Delete Line | `CTRL` + `D` |
+| Duplicate Selection | `CTRL` + `SHIFT` + `D` |
+| Tasks: Run Task (from step 4b) | change if wanted |
 
 #### Quarto
 
