@@ -6,11 +6,10 @@
 
 # 0: Check path ----
 
-setwd("..") # go up one level to main course folder
-if(!dir.exists("fpsetup")) stop(
-  "Please run this script from the main course folder containing fpsetup/.\n",
+if(!dir.exists("../fpsetup")) stop(
+  "Please run this script from your main_course_folder/fpsetup/.\n",
   "make sure you're in the fpsetup project from 2d.")
-message("NOTE: this is your main course directory: ", getwd())
+message("NOTE: this is your main course directory: ", dirname(getwd()))
 
 
 # 1: install extensions ----
@@ -71,11 +70,13 @@ if(is.null(python_path) || !nzchar(python_path)) stop(
   "Could not detect Python via reticulate.\n",
   "Make sure you have completed step 3c and restarted RStudio."
 )
-if(!dir.exists(".vscode")) dir.create(".vscode")
-l_path <- ".vscode/settings.json"
+if(!dir.exists("../.vscode")) dir.create("../.vscode")
+l_path <- "../.vscode/settings.json"
+l_path <- berryFunctions::normalizePathCP(l_path)
 l_final <- if(file.exists(l_path)) jsonlite::read_json(l_path) else list()
 l_final[["python.defaultInterpreterPath"]] <- python_path
 jsonlite::write_json(l_final, l_path, pretty=TRUE, auto_unbox=TRUE)
+message("NOTE: local settings in: ", dirname(l_path))
 message("NOTE: Python interpreter locally set to: ", python_path)
 
 
@@ -95,16 +96,17 @@ if(!any(grepl("repos", existing_lines))) {
 # 5: scoring files ----
 
 # copy exercise scoring files to the main course folder:
-file.copy("fpsetup/scriptunzip.py", "scriptunzip.py")
-file.copy("fpsetup/key_score.py",   "key_score.py")
-file.copy("fpsetup/tasks.json",     ".vscode/tasks.json")
+t_path <- "../.vscode/tasks.json"
+file.copy("scriptunzip.py", "../scriptunzip.py")
+file.copy("key_score.py",   "../key_score.py")
+file.copy("tasks.json",     t_path)
 # Note: in .vscode/tasks.json, set "clear": false to see previous scoring runs in the dedicated terminal
 message("NOTE: exercise scoring files copied successfully.")
 
 # set python interpreter for the scoring task:
-task_data <- jsonlite::read_json(".vscode/tasks.json")
-task_data$tasks[[1]]$command <- paste0('"', python_path, '" ../key_score.py')
-jsonlite::write_json(task_data, ".vscode/tasks.json", pretty=TRUE, auto_unbox=TRUE)
+t_final <- jsonlite::read_json(t_path)
+t_final$tasks[[1]]$command <- paste0('"', python_path, '" ../key_score.py')
+jsonlite::write_json(t_final, t_path, pretty=TRUE, auto_unbox=TRUE)
 message("NOTE: Python interpreter for scoring task set to: ", python_path)
 
 
