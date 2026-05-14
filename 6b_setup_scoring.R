@@ -22,7 +22,7 @@ browseURL("https://github.com/openHPI/codeoceanR#issues")
 remotes::install_github("brry/rskey")
 rskey::setKeyboardBindings()
 
-# Scoring defaults to CTRL + SHIFT + Y. To change it, go to
+# Scoring defaults to CTRL/CMD + SHIFT + Y. To change it, go to
 # RStudio - Tools - Modify Keyboard Shortcurts
 # Filter (search) for "score", click on the field and change it
 # (potentially restart Rstudio)
