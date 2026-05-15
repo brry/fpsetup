@@ -119,6 +119,8 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 You made it through! 🎉  
 Now you're set up for the rest of the course (and beyond).  
-Head to the [course](https://brry.github.io/course/) to get started with lesson i.1.
 
+*At least it took less typing than it [used to](https://github.com/brry/fpsetup/blob/39f5151/README.md)...*  
 *Again: improvements to this guide are very welcome!*
+
+Head to the [course](https://brry.github.io/course/) to get started with lesson i.1.
