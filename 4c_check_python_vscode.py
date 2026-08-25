@@ -13,4 +13,4 @@ print("Seeing if modules can be loaded ...")
 import numpy
 import pandas
 import matplotlib
-print("It worked! You're good continue in step 4d :)")
+print("It worked! Nearing setup completion! You're good to continue in step 4d :)")
