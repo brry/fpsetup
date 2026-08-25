@@ -105,7 +105,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Exercises
 
 - <mark>Step 6a</mark>: prepare exercise scoring:
-  - *On Windows only*: install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
+  - *Only for Windows OS.*
+  - *Can be skipped for the course, but might be needed later.*
+  - Install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   directly at `C:/rtools45` (compiler paths may not have spaces).
 - <mark>Step 6b</mark>: install scoring package:
   - In RStudio, open *`fpsetup/6b_setup_scoring.R`* and run it as instructed inside.
@@ -116,11 +118,11 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 7</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
+  - note the time and send the setup duration to Berry
 
 You made it through! 🎉  
 Now you're set up for the rest of the course (and beyond).  
 
-*At least it took less typing than it [used to](https://github.com/brry/fpsetup/blob/39f5151/README.md)...*  
 *Again: improvements to this guide are very welcome!*
 
 Head to the [course](https://brry.github.io/course/) to get started with lesson i.1.

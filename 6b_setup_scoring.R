@@ -3,14 +3,17 @@
 # press CTRL/CMD + ENTER to run that whole line.
 stop("Do not run this entire file! Run code line by line!")
 
-# 1: On Windows only: make sure you have run step 6a.
+# 1: On Windows only: if wanted, run step 6a.
+# Otherwise, ignore Rtools message in 3: and 4: below.
 
 # 2: On Windows only: let RTools be found:
 if(.Platform$OS.type == "windows" && !pkgbuild::check_build_tools() ) {
   rtools_home <- Sys.getenv("R_RTOOLS45_PATH") # for older versions use "RTOOLS44_HOME"
-  if(rtools_home=="") stop("Rtools not found. Fix previous line / run step 6a.")
+  if(rtools_home!="")
+  {
   readr::write_lines(paste0('PATH="',rtools_home,';${PATH}"'), "~/.Renviron", append=TRUE)
   stop("RTools added to R's PATH. Restart R (CTRL + SHIFT + F10) and run this check again.")
+  } else warning("Rtools not found. Fix line 10 (R_RTOOLS45_PATH) / run step 6a / ignore this.")
 }
 
 # 3: Install the scoring package (used for both Python and R exercises)
