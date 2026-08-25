@@ -13,11 +13,15 @@ It's a bit much at once, but it will be worth it!
 
 *Note: on Linux, usually follow the MacOS instructions.*  
 *Tip: triple click to mark a full line for copying to the clipboard.*  
+*Here for R only? Step 1a + 2a is enough. I do recommend step 2 and 5 as well!*  
 
 Any improvements to this guide are very welcome!  
-So is feedback on how long this all takes for you!  
 
 Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#quarto), [Exercises](#exercises), [Misc](#misc)
+
+- <mark>Step 0</mark>: track setup duration:  
+  - Write down the time you're starting this guide.
+  - At the end, tell Berry how long the installation took you.
 
 #### R
 
@@ -58,7 +62,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options).
   - Close your terminal and open a new one (see step 1b).
 - <mark>Step 3b</mark>: in the terminal, set your directory:
-  - Use Tab for autocomplete or drag the folder into the terminal after `cd  `:
+  - Use Tab for autocomplete or drag the folder into the terminal after typing "`cd  `":
   - `cd your/path/to/FundamentalsProgramming/fpsetup`  
   - Depending on OS, (maybe with `zsh` instead of `bash` on MacOS), run **one** of:  
   `bash 3b_install_python_mac.sh`  
@@ -118,11 +122,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 7</mark>: housekeeping:
   - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
   - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
-  - note the time and send the setup duration to Berry
+  - Note the current time and send the setup duration to Berry
+  - Suggest improvements to this guide if you have any :)
 
 You made it through! 🎉  
-Now you're set up for the rest of the course (and beyond).  
-
-*Again: improvements to this guide are very welcome!*
+Now you're set up for the rest of the course - and beyond!  
 
 Head to the [course](https://brry.github.io/course/) to get started with lesson i.1.
