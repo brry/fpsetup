@@ -84,7 +84,7 @@ message("NOTE: Python interpreter locally set to: ", python_path)
 
 # permanently set the download mirror for R packages:
 rprofile <- "~/.Rprofile"
-mirror_line <- 'options(repos=c(CRAN="https://cloud.r-project.org/"))'
+mirror_line <- 'options(repos=c(CRAN="https://cloud.r-project.org/"))\n'
 existing_lines <- if(file.exists(rprofile)) readr::read_lines(rprofile) else character(0)
 if(!any(grepl("repos", existing_lines))) {
   readr::write_lines(mirror_line, rprofile, append=TRUE)
