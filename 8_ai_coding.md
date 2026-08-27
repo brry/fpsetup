@@ -7,7 +7,7 @@ This part of the course is entirely optional.
   - [claude.ai](https://claude.ai) (suggested for coding),
   - or [gemini.google.com](https://gemini.google.com), [chatgpt.com](https://chatgpt.com) etc.
   - It requires attaching files and copypasting AI output.
-- The **IDE-integrated assistance** requires a paid plan.
+- The **IDE-integrated assistance** requires a paid plan (except step F).
   - It costs around 20€/month, i.e. 0.7% of your expected salary after graduating.  
   - This guide is for [Claude Code](https://code.claude.com/docs/en/overview). 
   - Other options with analogous setup: [OpenAI Codex](https://developers.openai.com/codex/), 
@@ -27,7 +27,8 @@ Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#in-
 - <mark>Step A</mark>: create a Claude account:
   - see the [pricing](https://claude.com/pricing) options. 
 - <mark>Step B</mark>: install the CLI:
-  - *triple click to mark full command for copypasting*
+  - *Good habit*: inspect installation scripts before blindly executing them.
+  - *Triple click to mark full command for copypasting.*
   - **MacOS / Linux**: in a [terminal](https://brry.github.io/course/path.html#mac-os), run  
     `curl -fsSL https://claude.ai/install.sh | bash`
   - **Windows**: in [PowerShell](https://brry.github.io/course/path.html#windows-1), run  
@@ -40,9 +41,13 @@ Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#in-
 
 #### Safety setup
 
-*Do this once, before your first real task - it applies to every project.*  
-Suggested ground rule: Claude Code never runs `git` commands.  
+Suggested ground rule: don't let Claude Code run `git` commands.  
 Version control stays your job, so you keep control of what actually changes.  
+Commit your own work before starting an AI session.
+
+**This step does not provide absolute security!**  
+Claude could still write a script that performs banned actions.  
+For sensitive data / code, look into air-gapping and sandboxing!
 
 - <mark>Step D</mark>: global settings (block sensitive actions for every project):
   - If not already done, clone the fpsetup repo ([step 2c](https://github.com/brry/fpsetup#git)).
@@ -50,10 +55,11 @@ Version control stays your job, so you keep control of what actually changes.
     `mkdir -p ~/.claude && cp fpsetup/8D_claude_settings.json ~/.claude/settings.json`
   - **Windows**: in PowerShell, run  
     `New-Item -ItemType Directory -Force ~/.claude | Out-Null; Copy-Item fpsetup\8D_claude_settings.json ~\.claude\settings.json`
+    *potentially change `~` to `$HOME` or `$env:USERPROFILE`*
   - Stay safe, don't run claude with `--dangerously-skip-permissions`.
   - *Optional*: adapt the settings to your needs.
   - *Optional*: read the full [permissions docs](https://code.claude.com/docs/en/iam#permission-rules).
-- <mark>Step E</mark>: project-level rules for added safety:
+- <mark>Step E</mark>: project-level rules (advisory, not binding to claude) for added safety:
   - **MacOS / Linux**: in a terminal, run  
     `cp fpsetup/8E_claude_rules.md CLAUDE.md`
   - **Windows**: in PowerShell, run  
@@ -65,18 +71,14 @@ Version control stays your job, so you keep control of what actually changes.
 
 #### In RStudio
 
-- <mark>Step F</mark>: use Claude Code from RStudio's built-in terminal:
-  - In RStudio, open the **Terminal** tab (next to Console).
-  - `cd` into your project if not already there, then run `claude`.
+- <mark>Step F</mark>: use AI in RStudio. *Either*:
+  - use [Posit Assistant](https://assistant.posit.co/) (with free trial credits), *or*
+  - open the **Terminal** tab (next to Console), `cd` into your project if not already there, then run `claude`.
   - Ask it something small first, e.g. *"suggest improvements to some_file.R"*
-  - Review the plan/diff it proposes before approving any file edit.
-  - There is no dedicated RStudio extension; the terminal *is* the integration.
-  - *Aside 1*: RStudio also has a native chat assistant, [Posit Assistant](https://assistant.posit.co/)
-    - free trial credits, no terminal needed
-    - suggests/chats rather than autonomously editing files and running commands
-  - *Aside 2*: [ClaudeR](https://github.com/IMNMV/ClaudeR) connects Claude Code to a live RStudio session 
-    - variables, plots etc instead of just files
-    - more powerful, less reviewable per step
+  - Review the keep/undo (posit) or plan/diff (terminal) it proposes before approving any file edit.
+  - *Aside*: [ClaudeR](https://github.com/IMNMV/ClaudeR) connects Claude Code and other LLMs to a live RStudio session 
+    - with access to variables, plots etc instead of just files,
+    - making it more powerful, but less reviewable per step.
   
 
 #### In VScode
@@ -93,6 +95,21 @@ Version control stays your job, so you keep control of what actually changes.
     - reject
     - redirect
 
-Enjoy coding and don't forget to [learn the basics before outsourcing your skill development to a machine](https://brry.github.io/course/ai.html)!
+#### Alternative IDEs
+
+Some other IDEs have AI assistance built directly into the editor interface:
+
+- [Positron](https://positron.posit.co/)
+- [JetBrains AI Assistant](https://www.jetbrains.com/ai/)
+- [Cursor](https://cursor.com/)
+- [Windsurf](https://codeium.com/windsurf)
+- [Zed](https://zed.dev/)
+
+#### A few words at the end
+
+- never blindly trust the AI suggestions
+- take ownership of your code
+- don't forget to [learn the basics before outsourcing your skill development to a machine](https://brry.github.io/course/ai.html)
+- enjoy coding!
 
 *Any improvements to this guide are very welcome!*
