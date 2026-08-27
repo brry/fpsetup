@@ -1,109 +1,98 @@
-#### AI coding assistant (Claude Code)
+#### AI coding assistants
 
-So far your AI coding help has lived in a browser tab. Time to bring it into the
-command line, where it can read your project, edit files, and run commands for you -
-with your approval at each step. We'll use **Claude Code**; other agentic options
-worth knowing about are OpenAI's [Codex](https://developers.openai.com/codex/), Google's
-[Gemini CLI](https://github.com/google-gemini/gemini-cli), and (non-agentic autocomplete)
-[GitHub Copilot](https://github.com/features/copilot) - same idea, different vendor,
-setup is analogous.
+At the end of the course, I'll introduce AI assisted coding in the browser and locally.
+This part of the course is entirely optional.
 
-*Requires a paid Claude plan (Pro or higher, from $20/month) - the free claude.ai plan
-does not include Claude Code. See [pricing](https://claude.com/pricing).*  
-*Note: on Linux, follow the MacOS instructions unless noted otherwise.*
+- **In-browser assistance** is financially free for you at 
+  - [claude.ai](https://claude.ai) (suggested for coding),
+  - or [gemini.google.com](https://gemini.google.com), [chatgpt.com](https://chatgpt.com) etc.
+  - It requires attaching files and copypasting AI output.
+- The **IDE-integrated assistance** requires a paid plan.
+  - It costs around 20€/month, i.e. 0.7% of your expected salary after graduating.  
+  - This guide is for [Claude Code](https://code.claude.com/docs/en/overview). 
+  - Other options with analogous setup: [OpenAI Codex](https://developers.openai.com/codex/), 
+  [Gemini CLI](https://github.com/google-gemini/gemini-cli), or 
+  [GitHub Copilot](https://github.com/features/copilot).
+  - In the command line, AI can read your project, edit files, and run commands for you -
+with your approval at each step.  
 
-Jump to [Install](#install-claude-code), [Safety setup](#safety-setup), [RStudio](#in-rstudio), [VScode](#in-vscode)
+
+
+*The original version of this guide was generated 2026-08-26 with Claude Sonnet 5 Medium.*
+
+Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#in-rstudio), [VScode](#in-vscode)
 
 #### Install Claude Code
 
-- <mark>Step 8a</mark>: install the CLI (native installer, no Node.js needed):
-  * **MacOS / Linux**: in a terminal, run  
+- <mark>Step A</mark>: create a Claude account:
+  - see the [pricing](https://claude.com/pricing) options. 
+- <mark>Step B</mark>: install the CLI:
+  - *triple click to mark full command for copypasting*
+  - **MacOS / Linux**: in a [terminal](https://brry.github.io/course/path.html#mac-os), run  
     `curl -fsSL https://claude.ai/install.sh | bash`
-  * **Windows**: in PowerShell, run  
+  - **Windows**: in [PowerShell](https://brry.github.io/course/path.html#windows-1), run  
     `irm https://claude.ai/install.ps1 | iex`
-  * Close and reopen your terminal, then check with `claude --version`.
-  * Full reference: [Claude Code quickstart](https://code.claude.com/docs/en/quickstart).
-- <mark>Step 8b</mark>: authenticate:
-  * In a terminal, `cd` into your course folder (see step 2a) and run `claude`.
-  * Follow the printed link to log in with your Claude subscription in the browser.
+  - Close and reopen your terminal, then check with `claude --version`.
+  - *Optional*: read the full [Claude Code quickstart](https://code.claude.com/docs/en/quickstart).
+- <mark>Step C</mark>: authenticate:
+  - In a terminal, `cd` into your course folder (see fpsetup [step 3b](https://github.com/brry/fpsetup#python)) and run `claude`.
+  - Follow the displayed link to log in with your Claude subscription in the browser.
 
 #### Safety setup
 
 *Do this once, before your first real task - it applies to every project.*  
-**Ground rule for this course: Claude Code never runs `git` commands.** Staging,
-committing, and pushing stay entirely your job, since that's how you (and your
-instructor) keep control of what actually changes.
+Suggested ground rule: Claude Code never runs `git` commands.  
+Version control stays your job, so you keep control of what actually changes.  
 
-- <mark>Step 8c</mark>: create a global settings file that blocks `git` and other sensitive
-  actions for every project, not just this course folder:
-  * **MacOS / Linux**, in a terminal:  
-    `mkdir -p ~/.claude && cat > ~/.claude/settings.json << 'EOF'
-{
-  "permissions": {
-    "deny": [
-      "Bash(git:*)",
-      "Read(**/.env)",
-      "Read(**/.env.*)",
-      "Read(~/.ssh/**)",
-      "Read(~/.aws/**)"
-    ]
-  }
-}
-EOF`
-  * **Windows**, in PowerShell:  
-    `New-Item -ItemType Directory -Force ~/.claude | Out-Null
-@'
-{
-  "permissions": {
-    "deny": [
-      "Bash(git:*)",
-      "Read(**/.env)",
-      "Read(**/.env.*)",
-      "Read(~/.ssh/**)",
-      "Read(~/.aws/**)"
-    ]
-  }
-}
-'@ | Set-Content ~/.claude/settings.json`
-  * This blocks *any* `git` subcommand and reading of common credential files.
-    Deny rules always win over allow rules. Details: [permissions docs](https://code.claude.com/docs/en/iam#permission-rules).
-- <mark>Step 8d</mark>: add a project-level `CLAUDE.md` in your course folder, so Claude reads
-  your rules as context every session (belt-and-suspenders on top of step 8c):
-  * Run `claude`, then type `/init` and let it draft one from your project.
-  * Open the generated `CLAUDE.md` and add a section, e.g.:
-    ```
-    ## Rules
-    - Never run git commands (status/diff excepted only if I ask). I handle all git myself.
-    - Stay inside this project folder; do not read or edit files elsewhere on my machine.
-    - Do not edit anything under exercise answer-key or scoring files/folders.
-    - Ask before installing packages or changing project-wide settings.
-    ```
-  * More on this file: [CLAUDE.md / memory docs](https://code.claude.com/docs/en/memory).
-- <mark>Step 8e</mark>: keep the default permission mode:
-  * Never start it with `--dangerously-skip-permissions` in this course - you want
-    the file-edit and command prompts to keep appearing so you review every change.
+- <mark>Step D</mark>: global settings (block sensitive actions for every project):
+  - If not already done, clone the fpsetup repo ([step 2c](https://github.com/brry/fpsetup#git)).
+  - **MacOS / Linux**: in a terminal, run  
+    `mkdir -p ~/.claude && cp fpsetup/8D_claude_settings.json ~/.claude/settings.json`
+  - **Windows**: in PowerShell, run  
+    `New-Item -ItemType Directory -Force ~/.claude | Out-Null; Copy-Item fpsetup\8D_claude_settings.json ~\.claude\settings.json`
+  - Stay safe, don't run claude with `--dangerously-skip-permissions`.
+  - *Optional*: adapt the settings to your needs.
+  - *Optional*: read the full [permissions docs](https://code.claude.com/docs/en/iam#permission-rules).
+- <mark>Step E</mark>: project-level rules for added safety:
+  - **MacOS / Linux**: in a terminal, run  
+    `cp fpsetup/8E_claude_rules.md CLAUDE.md`
+  - **Windows**: in PowerShell, run  
+    `Copy-Item fpsetup/8E_claude_rules.md CLAUDE.md`
+  - *Optional*: adapt the rules to your needs.
+  - *Optional*: run `claude`, type `/init`, and let it append a project description above
+    your rules.
+  - *Optional*: read the full [memory docs](https://code.claude.com/docs/en/memory).
 
 #### In RStudio
 
-- <mark>Step 8f</mark>: use Claude Code from RStudio's built-in terminal:
-  * In RStudio, open the **Terminal** tab (next to Console).
-  * `cd` into your project if not already there, then run `claude`.
-  * Ask it something small first, e.g. *"explain what this script does"* - review the
-    plan/diff it proposes before approving any file edit.
-  * There is no dedicated RStudio extension; the terminal *is* the integration.
+- <mark>Step F</mark>: use Claude Code from RStudio's built-in terminal:
+  - In RStudio, open the **Terminal** tab (next to Console).
+  - `cd` into your project if not already there, then run `claude`.
+  - Ask it something small first, e.g. *"suggest improvements to some_file.R"*
+  - Review the plan/diff it proposes before approving any file edit.
+  - There is no dedicated RStudio extension; the terminal *is* the integration.
+  - *Aside 1*: RStudio also has a native chat assistant, [Posit Assistant](https://assistant.posit.co/)
+    - free trial credits, no terminal needed
+    - suggests/chats rather than autonomously editing files and running commands
+  - *Aside 2*: [ClaudeR](https://github.com/IMNMV/ClaudeR) connects Claude Code to a live RStudio session 
+    - variables, plots etc instead of just files
+    - more powerful, less reviewable per step
+  
 
 #### In VScode
 
-- <mark>Step 8g</mark>: install the official extension:
-  * Open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`), search "Claude Code"
+- <mark>Step G</mark>: install the official extension:
+  - Open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`), search "Claude Code"
     (publisher: Anthropic), click Install.
-  * A ✱ (spark) icon appears in the editor toolbar once a file is open - click it to
-    open the chat panel. It reuses the same login and settings from step 8b-8d.
-  * Reference: [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code).
-- <mark>Step 8h</mark>: try it:
-  * Open a project file, click the ✱ icon, ask for a small, verifiable change.
-  * Review the side-by-side diff it proposes; accept, reject, or redirect - same
-    review habit as in RStudio's terminal.
+  - *Optional*: read the full [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code) guide.
+- <mark>Step H</mark>: try it:
+  - Open a project file, click the ✱ icon in the editor toolbar
+  - Ask for a small, verifiable change.
+  - Review the side-by-side diff it proposes
+    - accept
+    - reject
+    - redirect
 
-You now have a second way to code with AI - in your own command line, with guardrails
-you control. Compare it to your browser-based experience and see what you prefer!
+Enjoy coding and don't forget to [learn the basics before outsourcing your skill development to a machine](https://brry.github.io/course/ai.html)!
+
+*Any improvements to this guide are very welcome!*
