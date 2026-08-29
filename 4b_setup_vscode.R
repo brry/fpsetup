@@ -6,9 +6,9 @@
 
 # 0: Check path ----
 
-if(!dir.exists("../fpsetup")) stop(
-  "Please run this script from your main_course_folder/fpsetup/.\n",
-  "make sure you're in the fpsetup project from 2d.")
+if(basename(getwd()) != "fpsetup") stop(
+  "Please run this script from your main_course_folder/fpsetup/.\n->",
+  "Make sure you're in the fpsetup project from step 2d.")
 message("NOTE: this is your main course directory: ", dirname(getwd()))
 
 
