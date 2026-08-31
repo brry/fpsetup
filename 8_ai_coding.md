@@ -1,22 +1,22 @@
 #### AI coding assistants
 
 At the end of the course, I'll introduce AI assisted coding in the browser and locally.
-This part of the course is entirely optional.
+This part of the course is entirely optional and covers:
 
-- **In-browser assistance** is financially free for you at 
-  - [claude.ai](https://claude.ai) (suggested for coding),
+- **in-browser assistance**
+  - financially free for you at [claude.ai](https://claude.ai) (suggested for coding),
   - or [gemini.google.com](https://gemini.google.com), [chatgpt.com](https://chatgpt.com) etc.
-  - It requires attaching files and copypasting AI output.
-- The **IDE-integrated assistance** requires a paid plan (except step F).
-  - It costs around 20€/month, i.e. 0.7% of your expected salary after graduating.  
-  - This guide is for [Claude Code](https://code.claude.com/docs/en/overview). 
-  - Other options with analogous setup: [OpenAI Codex](https://developers.openai.com/codex/), 
+  - requires attaching files and copypasting AI output
+  - covered in the slides in i.4 AI coding
+- **IDE-integrated assistance**
+  - requires a paid plan (except Posit Assistant in step E)
+  - costs around 20€/month, i.e. 0.7% of your expected salary after graduating
+  - enables AI to read your project, edit files, and run commands for you
+  - needs a safety-aware configuration (step D)
+  - covered in the guide below for [Claude Code](https://code.claude.com/docs/en/overview)
+  - other options with analogous setup: [OpenAI Codex](https://developers.openai.com/codex/), 
   [Gemini CLI](https://github.com/google-gemini/gemini-cli), or 
   [GitHub Copilot](https://github.com/features/copilot).
-  - In the command line, AI can read your project, edit files, and run commands for you -
-with your approval at each step.  
-
-
 
 *The original version of this guide was generated 2026-08-26 with Claude Sonnet 5 Medium.*
 
