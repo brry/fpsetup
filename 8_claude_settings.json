@@ -1,0 +1,51 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "pypi.org",
+        "files.pythonhosted.org",
+        "cran.r-project.org",
+        "cloud.r-project.org",
+        "registry.npmjs.org"
+      ]
+    }
+  },
+  "permissions": {
+    "defaultMode": "ask",
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Read(./**)"
+    ],
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git push --force:*)",
+      "Bash(git reset:*)",
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(nc:*)",
+      "Read(../**)",
+      "Read(**/.env*)",
+      "Read(//**/.env*)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(**/credentials*)",
+      "Read(//**/credentials*)",
+      "Read(**/*.pem)",
+      "Read(//**/*.pem)",
+      "Read(**/*.key)",
+      "Read(//**/*.key)",
+      "Read(**/.git/config)",
+      "Read(~/.gitconfig)",
+      "Read(~/.bashrc)",
+      "Read(~/.zshrc)",
+      "Read(~/.bash_profile)",
+      "Read(**/.Renviron)"
+    ]
+  }
+}
