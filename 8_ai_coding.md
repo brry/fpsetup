@@ -73,7 +73,7 @@ Enough warnings, let's go:
 - <mark>Step D</mark>: write safety instructions:
   - If not already done, clone the fpsetup repo ([step 2c](https://github.com/brry/fpsetup#git)).
   - In RStudio or VScode, open and run the file *`8d_setup_claude.R`* as instructed inside.
-  - Follow the instructions to change adapt the settings to your needs, e.g. 
+  - Follow the instructions to adapt the settings to your needs, e.g. 
     - allow `Bash(git commit:*)`
     - allow `Bash(git push:*)` (but not `--force`!)
     - remove or adapt the "folder_AI_may_not_change/"

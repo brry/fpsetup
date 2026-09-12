@@ -1,7 +1,7 @@
 # This script sets up claude code safety settings and rules.
 
 # 1. Set the path for your project (where you want to use AI within the IDE):
-repo_dir <- "your_project_path" # prepend "../../" to start above main_course_folder
+repo_dir <- "../../your_project_path"
 # This folder will be created if not yet present.
 
 
@@ -113,3 +113,5 @@ write_and_message(dir=repo_dir,
 				  content=rules, 
 				  adapt="Adapt it to your project needs.", 
 				  overwrite=FALSE)
+
+message("NOTE: if claude was running already, restart it for the settings to take effect.")

@@ -114,7 +114,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   directly at `C:/rtools45` (compiler paths may not have spaces).
 - <mark>Step 6b</mark>: install scoring package:
   - In RStudio, open *`fpsetup/6b_setup_scoring.R`* and run it as instructed inside.
-- <mark>Step 6c</mark>: diasable automatic unzipping:
+- <mark>Step 6c</mark>: disable automatic unzipping:
   - *Only for Mac OS in the safari browser:*
   - Go to Safari -> Settings -> General and uncheck "Open safe files after downloading"
 
@@ -122,8 +122,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Misc
 
 - <mark>Step 7</mark>: housekeeping:
-  - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
-  - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
+  - In case you do still use your OS file browser sometimes:
+    - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
+    - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
   - Note the current time and send the setup duration to Berry
   - Suggest improvements to this guide if you have any :)
 
