@@ -20,7 +20,9 @@ This part of the course is entirely optional and covers:
 
 *The original version of this guide was generated 2026-08-26 with Claude Sonnet 5 Medium.*
 
-Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#in-rstudio), [VScode](#in-vscode)
+If you plan to use Posit Assistant in Rstudio, read all of this but don't run it and start in step E.
+
+Jump to [Install](#install-claude-code), [Safety](#safety-setup), [IDE-integration](#ide-integration), [Start](#start)
 
 #### Install Claude Code
 
@@ -81,28 +83,28 @@ Enough warnings, let's go:
   - *Optional*: read the full [memory docs](https://code.claude.com/docs/en/memory).
   - *Optional*: run `claude`, type `/init`, and let it append a project description above your rules.
 
-#### In RStudio
+#### IDE integration
 
-- <mark>Step E</mark>: use AI in RStudio. *Either*:
-  - use [Posit Assistant](https://assistant.posit.co/) (with free trial credits), *or*
-  - open the **Terminal** tab (next to Console), `cd` into your project if not already there, then run `claude`.
-  - Ask it something small first, e.g. *"suggest improvements to some_file.R"*
-  - Review the keep/undo (posit) or plan/diff (claude) it proposes before approving any file edit.
-  - *Aside*: [ClaudeR](https://github.com/IMNMV/ClaudeR) connects Claude Code and other LLMs to a live RStudio session 
-    - with access to variables, plots etc instead of just files,
-    - making it more powerful, but less reviewable per step.
+- <mark>Step E</mark>: use AI in your IDE:
+  - For **RStudio** (integrated), follow the instructions for [Posit Assistant](https://assistant.posit.co/) 
+    - Use free trial credits or an API key from one of the [providers](https://assistant.posit.co/docs/getting-started/providers/)
+    - Open a project, click on Posit Assistant (top right).
+    - Turn on the sandbox in each new project.
+    - Use [ClaudeR](https://github.com/IMNMV/ClaudeR) to also edit plots etc.
+  - For RStudio (manual), open the Terminal tab (next to Console),
+    - `cd` into your project if not already there,
+    - then run `claude`.
+  - For **VScode**, open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`),
+    - Search "Claude Code" (publisher: Anthropic), click Install.
+    - *Optional*: read the full [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code) guide.
+    - Open a project file, click the ✱ icon in the editor toolbar.
   
+#### Start
 
-#### In VScode
-
-- <mark>Step F</mark>: install the official extension:
-  - Open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`), search "Claude Code"
-    (publisher: Anthropic), click Install.
-  - *Optional*: read the full [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code) guide.
-- <mark>Step F</mark>: try it:
-  - Open a project file, click the ✱ icon in the editor toolbar
-  - Ask for a small, verifiable change.
-  - Review the side-by-side diff it proposes
+- <mark>Step F</mark>: use AI responsibly and safely:
+  - Ask it something small first, e.g. *"suggest improvements to some_file.R"*
+  - Review the keep/undo or plan/diff it proposes before approving any file edit.
+  - Decide whether to
     - accept
     - reject
     - redirect
