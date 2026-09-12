@@ -2,6 +2,7 @@
 # It then tests whether the needed python modules are available.
 
 # Run this file by clicking the play triangle in the topright.
+# After step 4d, run it with CMD/CTRL + SHIFT + S (or whatever you chose).
 
 import sys
 

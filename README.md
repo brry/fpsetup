@@ -12,8 +12,7 @@ so we have a lot of software to install.
 It's a bit much at once, but it will be worth it!  
 
 *Note: on Linux, usually follow the MacOS instructions.*  
-*Tip: triple click to mark a full line for copying to the clipboard.*  
-*Here for R only? Step 1a + 2a is enough. I do recommend step 2 and 5 as well!*  
+*Here for R only? Skip step 3 and 4.*  
 
 Any improvements to this guide are very welcome!  
 
@@ -64,9 +63,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 3b</mark>: in the terminal, set your directory:
   - Use Tab for autocomplete or drag the folder into the terminal after typing "`cd  `":
   - `cd your/path/to/FundamentalsProgramming/fpsetup`  
+  - *Tip: triple click to mark a full line for copying to the clipboard*  
   - Depending on OS, (maybe with `zsh` instead of `bash` on MacOS), run **one** of:  
-  `bash 3b_install_python_mac.sh`  
-  `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`  
+    - `bash 3b_install_python_mac.sh`
+    - `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`  
 - <mark>Step 3c</mark>: instruct RStudio to use the venv:
   - In RStudio, open and run the file *`3c_set_python_rstudio.R`* as instructed inside.
 - <mark>Step 3d</mark>: check Python scripts in RStudio:
@@ -109,12 +109,14 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Exercises
 
 - <mark>Step 6a</mark>: prepare exercise scoring:
-  - *Only for Windows OS.*
-  - *Can be skipped for the course, but might be needed later.*
+  - *Only for Windows OS; can be skipped for the course, but might be needed later:*
   - Install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   directly at `C:/rtools45` (compiler paths may not have spaces).
 - <mark>Step 6b</mark>: install scoring package:
   - In RStudio, open *`fpsetup/6b_setup_scoring.R`* and run it as instructed inside.
+- <mark>Step 6c</mark>: diasable automatic unzipping:
+  - *Only for Mac OS in the safari browser:*
+  - Go to Safari -> Settings -> General and uncheck "Open safe files after downloading"
 
 
 #### Misc
@@ -128,4 +130,4 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 You made it through! 🎉  
 Now you're set up for the rest of the course - and beyond!  
 
-Head to the [course](https://brry.github.io/course/) to get started with lesson i.1.
+Head to the [course](https://brry.github.io/course/) to get started with lesson i.2 on git and quarto.
