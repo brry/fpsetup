@@ -97,7 +97,7 @@ if(!any(grepl("repos", existing_lines))) {
 
 # copy exercise scoring files to the main course folder:
 t_path <- "../.vscode/tasks.json"
-file.copy("scriptunzip.py", "../scriptunzip.py")
+file.copy("unzip_exercises.py", "../unzip_exercises.py")
 file.copy("key_score.py",   "../key_score.py")
 file.copy("tasks.json",     t_path)
 # Note: in .vscode/tasks.json, set "clear": false to see previous scoring runs in the dedicated terminal

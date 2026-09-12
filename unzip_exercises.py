@@ -1,8 +1,7 @@
-# put this script in your main exercise folder
+# this script should be in your main exercise folder
 # run it with VScode execin setting: execute in file dir
 
-# unzip, then delete (yet zipped) exercise folders
-# then delete unnecessary files
+# unzip, then delete original zipfile and unnecessary files
 import zipfile, shutil, pathlib as p
 for zf in p.Path.cwd().glob("*.zip"):
     folder = p.Path(zf.stem)
