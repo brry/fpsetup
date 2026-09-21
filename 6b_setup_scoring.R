@@ -4,7 +4,7 @@
 stop("Do not run this entire file! Run code line by line!")
 
 # 1: On Windows only: if wanted, run step 6a.
-# Otherwise, ignore Rtools message in 3: and 4: below.
+# Otherwise, ignore Rtools message in 3: and 5: below.
 
 # 2: On Windows only: let RTools be found:
 if(.Platform$OS.type == "windows" && !pkgbuild::check_build_tools() ) {
@@ -13,7 +13,7 @@ if(.Platform$OS.type == "windows" && !pkgbuild::check_build_tools() ) {
   {
   readr::write_lines(paste0('PATH="',rtools_home,';${PATH}"'), "~/.Renviron", append=TRUE)
   stop("RTools added to R's PATH. Restart R (CTRL + SHIFT + F10) and run this check again.")
-  } else warning("Rtools not found. Fix line 10 (R_RTOOLS45_PATH) / run step 6a / ignore this.")
+  } else warning("Rtools not found. Fix line 11 (R_RTOOLS45_PATH) / run step 6a / ignore this.")
 }
 
 # 3: Install the scoring package (used for both Python and R exercises)
@@ -21,7 +21,16 @@ remotes::install_github("openHPI/codeoceanR")
 # to solve installation issues (like the system libraries on Linux), see
 browseURL("https://github.com/openHPI/codeoceanR#issues")
 
-# 4: set keyboard shortcut in Rstudio:
+
+# 4: create Rproject file for R exercises:
+if(basename(getwd()) != "fpsetup") stop(
+  "Please run this script from your main_course_folder/fpsetup/.\n->",
+  "Make sure you're in the fpsetup project from step 2d.")
+cat("Version: 1.0\n\nRestoreWorkspace: No\nSaveWorkspace: No\nEncoding: UTF-8", 
+	file="../00_FP_exercices.Rproj", sep="")
+
+
+# 5: set keyboard shortcut in Rstudio:
 remotes::install_github("brry/rskey")
 rskey::setKeyboardBindings()
 
