@@ -1,7 +1,7 @@
 #### AI coding assistants
 
-At the end of the course, I'll introduce AI assisted coding in the browser and locally.
-This part of the course is entirely optional and covers:
+In the second half of the course, I'll introduce AI assisted coding in the browser and in your IDE.  
+This lesson covers:
 
 - **in-browser assistance**
   - financially free for you at [claude.ai](https://claude.ai) (suggested for coding),
@@ -108,6 +108,13 @@ Enough warnings, let's go:
     - accept
     - reject
     - redirect
+  - Improve the first output! Ask things like:
+    - Iterate over names instead of index
+    - Compress comments by half
+    - Check if there is a package for this code
+    - Simplify/Shorten this code
+    - Suggest alternative approaches for this
+    - ...
 
 #### Alternative IDEs
 
