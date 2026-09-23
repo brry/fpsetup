@@ -121,10 +121,13 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### Misc
 
-- <mark>Step 7</mark>: housekeeping:
+- <mark>Step 7a</mark>: actually hide hidden files in RStudio:
+  - In RStudio, open and run the file *`fpsetup/7a_hide_files_rstudio.R`* 
+- <mark>Step 7b</mark>: change OS file browser settings: 
   - In case you do still use your OS file browser sometimes:
     - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
     - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
+- <mark>Step 7c</mark>: send feedback: 
   - Note the current time and send the setup duration to Berry
   - Suggest improvements to this guide if you have any :)
 
