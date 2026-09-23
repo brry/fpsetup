@@ -32,6 +32,11 @@ for(ext in extensions) {
 
 # 2: global settings ----
 
+message("NOTE: if not already given, setting _global_ VScode preferences to:\n",
+		"- execute Python files with their dir as wd\n",
+		"- have separate tabs per script\n",
+		"- turn off telemetry\n",
+		"- not show '/__pycache__' in the file tree\n")
 g_path <- switch(Sys.info()[["sysname"]],
   Windows = file.path(Sys.getenv("APPDATA"), "Code", "User", "settings.json"),
   Darwin  = "~/Library/Application Support/Code/User/settings.json",
