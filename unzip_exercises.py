@@ -1,5 +1,6 @@
 # this script should be in your main exercise folder
 # run it with VScode execin setting: execute in file dir
+# (this is set for you in fpsetup step 4b)
 
 # unzip, then delete original zipfile and unnecessary files
 import zipfile, shutil, pathlib as p
