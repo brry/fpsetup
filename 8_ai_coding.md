@@ -9,27 +9,25 @@ This lesson covers:
   - requires attaching files and copypasting AI output
   - lacks awareness of all your project files + conventions 
 - **IDE-integrated assistance**
-  - requires a paid plan (except Posit Assistant in step E)
+  - requires a paid plan
   - costs around 20€/month, i.e. 0.7% of your expected salary after graduating
   - enables AI to read your project, edit files, and run commands for you
-  - needs a safety-aware configuration (step D)
-  - covered in the guide below for [Claude Code](https://code.claude.com/docs/en/overview)
-  - other options with analogous setup: [OpenAI Codex](https://developers.openai.com/codex/), 
+  - needs a safety-aware configuration (step B)
+  - here for [Claude Code](https://code.claude.com/docs/en/overview); analogous: [OpenAI Codex](https://developers.openai.com/codex/), 
   [Gemini CLI](https://github.com/google-gemini/gemini-cli), or 
   [GitHub Copilot](https://github.com/features/copilot).
 
 *The original version of this guide was generated 2026-08-26 with Claude Sonnet 5 Medium.*
 
-If you plan to use **Posit Assistant in RStudio**, read all of this but don't run it and **start in step E**.
+If you plan to use **Posit Assistant in RStudio**, read all of this but don't run it and **start in step C**.
 
-Jump to [Install](#install-claude-code), [Safety](#safety-setup), [IDE-integration](#ide-integration), [Start](#start)
+Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#rstudio), [VScode](#vscode), [Start](#start)
 
 #### Install Claude Code
 
-- <mark>Step A</mark>: create a Claude account:
-  - see the [pricing](https://claude.com/pricing) options. 
-- <mark>Step B</mark>: install the CLI:
-  - *Good habit*: inspect installation scripts before blindly executing them.
+- <mark>Step A</mark>: install the claude code CLI (Command Line Interface):
+  - Create a Claude account, see the [pricing](https://claude.com/pricing) options. 
+  - *Good habit*: inspect installation scripts before blindly executing them ([.sh](https://claude.ai/install.sh), [.ps1](https://claude.ai/install.ps1)).
   - In a [terminal](https://brry.github.io/course/path.html), run (*Triple click to mark full command for copypasting*):
     - **MacOS / Linux**  
       `curl -fsSL https://claude.ai/install.sh | bash`
@@ -37,9 +35,8 @@ Jump to [Install](#install-claude-code), [Safety](#safety-setup), [IDE-integrati
       `irm https://claude.ai/install.ps1 | iex`
   - Close and reopen your terminal, then check with `claude --version`.
   - *Optional*: read the full [Claude Code quickstart](https://code.claude.com/docs/en/quickstart).
-- <mark>Step C</mark>: authenticate:
-  - In a terminal, `cd` (see fpsetup [step 3b](https://github.com/brry/fpsetup#python)) into a project you want to use AI in and run `claude`.
-  - Follow the displayed link to log in with your Claude subscription in the browser.
+  - In a terminal, `cd` (see fpsetup [step 3b](https://github.com/brry/fpsetup#python)) into a project you want to use AI in.
+  - Run `claude` and follow the link to authenticate in the browser.
 
 #### Safety setup
 
@@ -73,7 +70,7 @@ disagree on the changes.
 
 Enough warnings, let's go:
 
-- <mark>Step D</mark>: write safety instructions:
+- <mark>Step B</mark>: write safety instructions *(skip this if you want to use step C)*:
   - If not already done, clone the fpsetup repo ([step 2c](https://github.com/brry/fpsetup#git)).
   - In RStudio or VScode, open and run the file *`8d_setup_claude.R`* as instructed inside.
   - Follow the instructions to adapt the settings to your needs, e.g. 
@@ -85,30 +82,30 @@ Enough warnings, let's go:
   - *Optional*: read the full [permissions docs](https://code.claude.com/docs/en/permissions).
   - *Optional*: read the full [memory docs](https://code.claude.com/docs/en/memory).
   - *Optional*: run `claude`, type `/init`, and let it append a project description above your rules.
-  - keep your AGENTS.md file short (ChatGPT suggest way too verbose unnecessary fluff)
+  - Keep your AGENTS.md file short (ChatGPT suggest way too verbose unnecessary fluff).
 
-#### IDE integration
+#### RStudio
 
-- <mark>Step E</mark>: use AI in your IDE:
-  - For **RStudio** (integrated), step D is not needed
-    - Follow the instructions for [Posit Assistant](https://assistant.posit.co/) 
-    - Use an API key from one of the [providers](https://assistant.posit.co/docs/getting-started/providers/)
-    - This costs money per token (i.e. usage), not per month
+- <mark>Step C</mark>: use AI in RStudio (step A+B are not needed):
+    - Follow the instructions for [Posit Assistant](https://assistant.posit.co/).
+    - Use an API key from one of the [providers](https://assistant.posit.co/docs/getting-started/providers/).
+    - This costs money per token (i.e. usage), not per month.
     - The newest models are significantly more expensive than slightly older ones.
     - Open a project, click on Posit Assistant (top right).
-    - Turn on the sandbox in each new project. Other than that, safety-first principles are applied by default.
+    - Turn on the sandbox in each new project. Other than that, safety-first principles are applied [by default](https://assistant.posit.co/docs/features/permissions/).
     - Use [ClaudeR](https://github.com/IMNMV/ClaudeR) to also edit plots etc.
-  - For RStudio (manual), open the Terminal tab (next to Console),
-    - `cd` into your project if not already there,
-    - then run `claude`.
-  - For **VScode**, open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`),
-    - Search "Claude Code" (publisher: Anthropic), click Install.
-    - *Optional*: read the full [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code) guide.
-    - Open a project file, click the ✱ icon in the editor toolbar.
+    
+#### VScode
+
+- <mark>Step D</mark> use AI in VScode: 
+  - Open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`).
+  - Search "Claude Code" (publisher: Anthropic), click Install.
+  - *Optional*: read the full [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code) guide.
+  - Open a project file, click the ✱ icon in the editor toolbar.
   
 #### Start
 
-- <mark>Step F</mark>: use AI responsibly and safely:
+- <mark>Step E</mark>: use AI responsibly and safely:
   - Ask it something small first, e.g. *"suggest improvements to some_file.R"*
   - Review the keep/undo or plan/diff it proposes before approving any file edit.
   - Decide whether to
@@ -116,13 +113,13 @@ Enough warnings, let's go:
     - reject
     - redirect
   - Improve the first output! Ask things like:
-    - Iterate over names instead of index
+    - Suggest alternative approaches for this
+    - Simplify/Shorten this code
     - Compress comments by half
     - Check if there is a package for this code
-    - Simplify/Shorten this code
-    - Suggest alternative approaches for this
+    - Iterate over names instead of index
     - ...
-  - If you make changes to a file, *commit them first* before (!) you ask for a review of the changes.  
+  - If you make changes to a file, **commit them first** before (!) you ask for a review of the changes.
     The AI agent will happily change your file with verbose nonsense that is otherwise hard to undo.
 
 #### Alternative IDEs
