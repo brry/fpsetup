@@ -1,13 +1,13 @@
 #### AI coding assistants
 
-In the second half of the course, I'll introduce AI assisted coding in the browser and in your IDE.  
+In the second half of the course, I'll introduce AI assisted coding in the browser and in your IDE with the slides in i.4 AI coding.  
 This lesson covers:
 
 - **in-browser assistance**
   - financially free for you at [claude.ai](https://claude.ai) (suggested for coding),
   - or [gemini.google.com](https://gemini.google.com), [chatgpt.com](https://chatgpt.com) etc.
   - requires attaching files and copypasting AI output
-  - covered in the slides in i.4 AI coding
+  - lacks awareness of all your project files + conventions 
 - **IDE-integrated assistance**
   - requires a paid plan (except Posit Assistant in step E)
   - costs around 20€/month, i.e. 0.7% of your expected salary after graduating
@@ -20,7 +20,7 @@ This lesson covers:
 
 *The original version of this guide was generated 2026-08-26 with Claude Sonnet 5 Medium.*
 
-If you plan to use Posit Assistant in Rstudio, read all of this but don't run it and start in step E.
+If you plan to use **Posit Assistant in RStudio**, read all of this but don't run it and **start in step E**.
 
 Jump to [Install](#install-claude-code), [Safety](#safety-setup), [IDE-integration](#ide-integration), [Start](#start)
 
@@ -43,13 +43,16 @@ Jump to [Install](#install-claude-code), [Safety](#safety-setup), [IDE-integrati
 
 #### Safety setup
 
-Suggested: Version control stays your job, so you keep control of what actually changes.  
+Need motivation / reasoning for safety first? Read this account [from the trenches](https://techtrenches.dev/p/nine-basic-intrusions-one-zero-day-escape).\
+
+Strongly suggested: **Version control stays your job**, so you keep control of what actually changes.  
 **Commit your work** before starting an AI session! It may change code in unexpected ways.
 
 This step creates  
 - global settings (block sensitive actions for every project)  
 - project settings (do not allow access to parent folders)  
-- project-level rules (advisory, not binding to claude) for added safety.
+- project-level rules (advisory, not binding to claude) for added safety.\
+*Posit Assistant implements the settings by default.*
 
 **This step does not provide absolute security!**  
 
@@ -82,14 +85,18 @@ Enough warnings, let's go:
   - *Optional*: read the full [permissions docs](https://code.claude.com/docs/en/permissions).
   - *Optional*: read the full [memory docs](https://code.claude.com/docs/en/memory).
   - *Optional*: run `claude`, type `/init`, and let it append a project description above your rules.
+  - keep your AGENTS.md file short (ChatGPT suggest way too verbose unnecessary fluff)
 
 #### IDE integration
 
 - <mark>Step E</mark>: use AI in your IDE:
-  - For **RStudio** (integrated), follow the instructions for [Posit Assistant](https://assistant.posit.co/) 
-    - Use free trial credits or an API key from one of the [providers](https://assistant.posit.co/docs/getting-started/providers/)
+  - For **RStudio** (integrated), step D is not needed
+    - Follow the instructions for [Posit Assistant](https://assistant.posit.co/) 
+    - Use an API key from one of the [providers](https://assistant.posit.co/docs/getting-started/providers/)
+    - This costs money per token (i.e. usage), not per month
+    - The newest models are significantly more expensive than slightly older ones.
     - Open a project, click on Posit Assistant (top right).
-    - Turn on the sandbox in each new project.
+    - Turn on the sandbox in each new project. Other than that, safety-first principles are applied by default.
     - Use [ClaudeR](https://github.com/IMNMV/ClaudeR) to also edit plots etc.
   - For RStudio (manual), open the Terminal tab (next to Console),
     - `cd` into your project if not already there,
@@ -115,6 +122,8 @@ Enough warnings, let's go:
     - Simplify/Shorten this code
     - Suggest alternative approaches for this
     - ...
+  - If you make changes to a file, *commit them first* before (!) you ask for a review of the changes.  
+    The AI agent will happily change your file with verbose nonsense that is otherwise hard to undo.
 
 #### Alternative IDEs
 
@@ -131,6 +140,7 @@ Some other IDEs have AI assistance built directly into the editor interface:
 - never blindly trust the AI suggestions
 - take ownership of your code
 - don't forget to [learn the basics before outsourcing your skill development to a machine](https://brry.github.io/course/ai.html)
+- commit everything before letting AI edit your files!!!
 - enjoy coding!
 
 *Any improvements to this guide are very welcome!*
