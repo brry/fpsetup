@@ -101,6 +101,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
 | Tasks: Run Task (from step 4b) | change if wanted |
 
+- <mark>Step 4e</mark>: *optional on MacOS*: re-open last workspace after closing:
+  - Close VScode with `CMD` + `Q` instead of the red X to preserve the opened session.
+  - If you did close the window, press `CMD` + `R` and pick the recent workspace.
+
 #### Quarto
 
 - <mark>Step 5</mark>: render quarto markdown scripts as instructed inside:
