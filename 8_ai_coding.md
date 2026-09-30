@@ -7,7 +7,8 @@ This lesson covers:
   - financially free for you at [claude.ai](https://claude.ai) (suggested for coding),
   - or [gemini.google.com](https://gemini.google.com), [chatgpt.com](https://chatgpt.com) etc.
   - requires attaching files and copypasting AI output
-  - lacks awareness of all your project files + conventions 
+  - lacks awareness of all your project files + conventions
+  - *maybe [don't use](https://garymarcus.substack.com/p/breaking-openai-was-warned-months) OpenAI*
 - **IDE-integrated assistance**
   - requires a paid plan
   - costs around 20€/month, i.e. 0.7% of your expected salary after graduating
@@ -16,8 +17,9 @@ This lesson covers:
   - here for [Claude Code](https://code.claude.com/docs/en/overview); analogous: [OpenAI Codex](https://developers.openai.com/codex/), 
   [Gemini CLI](https://github.com/google-gemini/gemini-cli), or 
   [GitHub Copilot](https://github.com/features/copilot).
+  - *maybe [don't use](https://www.forrester.com/blogs/an-ai-security-facepalm-openais-evaluation-became-hugging-faces-incident/) OpenAI*
 
-*The original version of this guide was generated 2026-08-26 with Claude Sonnet 5 Medium.*
+*The original version of the guide below was generated 2026-08-26 with Claude Sonnet 5 Medium, but has been heavily edited.*
 
 If you plan to use **Posit Assistant in RStudio**, read all of this but don't run it and **start in step C**.
 
@@ -100,7 +102,7 @@ Enough warnings, let's go:
 - <mark>Step D</mark> use AI in VScode: 
   - Open the Extensions view (`CTRL`/`CMD` + `SHIFT` + `X`).
   - Search "Claude Code" (publisher: Anthropic), click Install.
-  - *Optional*: read the full [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code) guide.
+  - *Optional*: read the full [Claude Code in VScode](https://code.claude.com/docs/en/vs-code) guide.
   - Open a project file, click the ✱ icon in the editor toolbar.
   
 #### Start
