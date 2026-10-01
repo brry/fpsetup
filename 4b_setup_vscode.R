@@ -25,9 +25,18 @@ extensions <- c(
   "reditorsupport.r",
   "quarto.quarto"
 )
+# for(ext in extensions) {
+#   message("Installing extension: ", ext)
+#   system(paste("code --install-extension", ext, "--force"))
+# }
 for(ext in extensions) {
   message("Installing extension: ", ext)
-  system(paste("code --install-extension", ext, "--force"))
+  out <- system(paste("code --install-extension", ext, "--force"), intern=TRUE)
+  # Node's CLI emits a harmless DEP0169 deprecation notice on every call
+  # (see https://github.com/microsoft/vscode/issues/301941); drop just that
+  # noise so real warnings/errors still surface.
+  out <- out[!grepl("DEP0169|Use `Code --trace-deprecation", out)]
+  if(length(out)) message(paste(out, collapse="\n"))
 }
 
 
