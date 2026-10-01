@@ -7,8 +7,9 @@
 # 0: Check path ----
 
 if(basename(getwd()) != "fpsetup") stop(
-  "Please run this script from your main_course_folder/fpsetup/.\n->",
-  "Make sure you're in the fpsetup project from step 2d.")
+  "Please run this script from your main_course_folder/fpsetup/.",
+  "\nYou're in: ", getwd(),
+  "\n-> Make sure you're in the fpsetup project from step 2d.")
 message("NOTE: this is your main course directory: ", dirname(getwd()))
 
 
