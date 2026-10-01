@@ -50,6 +50,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Follow the [use git](https://brry.github.io/course/git.html#use-git) 
     section to download [these instructions](https://github.com/brry/fpsetup) 
     into your main course folder from step 2a.
+  - Make sure the project in the RStudio topright shows "fpsetup"
 - <mark>Step 2d</mark>: install R packages:   
   - In the now opened Rstudio instance with `fpsetup` in the topright,
   - use the Files pane (bottom right) to open the file *`2d_install_Rpackages.R`*.
