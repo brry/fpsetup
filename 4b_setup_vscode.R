@@ -31,7 +31,9 @@ extensions <- c(
 # }
 for(ext in extensions) {
   message("Installing extension: ", ext)
-  out <- system(paste("code --install-extension", ext, "--force"), intern=TRUE)
+  # 2>&1 merges stderr into stdout so intern=TRUE can capture (and filter) it;
+  # otherwise Node's warnings print directly to the console, bypassing `out`.
+  out <- system(paste("code --install-extension", ext, "--force", "2>&1"), intern=TRUE)
   # Node's CLI emits a harmless DEP0169 deprecation notice on every call
   # (see https://github.com/microsoft/vscode/issues/301941); drop just that
   # noise so real warnings/errors still surface.
