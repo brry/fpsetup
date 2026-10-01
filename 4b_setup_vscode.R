@@ -1,7 +1,8 @@
 # This script sets up VScode for the course from within RStudio.
 # For a clickable TOC outline, press `CTRL` + `SHIFT` + `O`
 
-# Run this script with the Source button or with `CTRL` + `SHIFT` + `S`
+# Run this script with the Source button or with `CTRL` + `SHIFT` + `S`.
+# Confirm the wd + global settings to be changed (or adapt in section 2).
 # Check if all the NOTE: messages make sense.
 
 # 0: Check path ----
@@ -25,6 +26,12 @@ extensions <- c(
   "reditorsupport.r",
   "quarto.quarto"
 )
+# drop already-installed extensions from the list:
+installed <- system("code --list-extensions", intern=TRUE)
+already_installed <- extensions[tolower(extensions) %in% tolower(installed)]
+if(length(already_installed)>0) 
+  message("NOTE: skipping already installed extensions: ", paste(already_installed, collapse=", "))
+extensions <- setdiff(extensions, already_installed)
 # for(ext in extensions) {
 #   message("Installing extension: ", ext)
 #   system(paste("code --install-extension", ext, "--force"))
@@ -48,7 +55,10 @@ message("NOTE: if not already given, setting _global_ VScode preferences to:\n",
 		"- execute Python files with their dir as wd\n",
 		"- have separate tabs per script\n",
 		"- turn off telemetry\n",
-		"- not show '/__pycache__' in the file tree\n")
+		"- in the file tree, hide `/__pycache__`, `.Rproj.user` and `.Rhistory`\n")
+conf <- readline("Is it OK to proceed with the course folder + the settings above? y/n: ")
+if(tolower(substring(conf, 1, 1)) != "y") 
+	stop("Aborting. Please adapt settings in section 2 and re-run.")
 g_path <- switch(Sys.info()[["sysname"]],
   Windows = file.path(Sys.getenv("APPDATA"), "Code", "User", "settings.json"),
   Darwin  = "~/Library/Application Support/Code/User/settings.json",
@@ -63,7 +73,10 @@ g_new <- list(
   `workbench.editor.enablePreview`        = FALSE,
   `telemetry.telemetryLevel`              = "off", # https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html
   `files.exclude` = list(`**/__pycache__` = TRUE, # for a more concise view of the python exercises
-                          `**/.co`        = TRUE)
+                          `**/.co`        = TRUE,
+                          `**/.Rproj.user`= TRUE,
+                          `**/.Rhistory`  = TRUE
+  					   )
 )
 # merge with any existing settings so nothing is overwritten:
 g_old <- if(file.exists(g_path)) jsonlite::read_json(g_path) else list()
