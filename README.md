@@ -62,6 +62,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Python
 
 - <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager):
+  - *optional*: ask [claude.ai](https://claude.ai/): *give me step by step instructions to find and remove all python installations and environments on my OS for a clean slate.*
   - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options).
   - Close your terminal and open a new one (see step 1b).
 - <mark>Step 3b</mark>: in the terminal, set your directory:
