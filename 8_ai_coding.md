@@ -21,7 +21,7 @@ This lesson covers:
 
 *The original version of the guide below was generated 2026-08-26 with Claude Sonnet 5 Medium, but has been heavily edited.*
 
-If you plan to use **Posit Assistant in RStudio**, read all of this but don't run it and **start in step C**.
+If you plan to use **Posit Assistant in RStudio**, read (but don't run) the safety setup and **start in step C**.
 
 Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#rstudio), [VScode](#vscode), [Start](#start)
 
