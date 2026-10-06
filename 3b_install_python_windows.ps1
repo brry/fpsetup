@@ -16,7 +16,7 @@ uv python install 3.12
 uv venv "$HOME\.venv"
 & "$HOME\.venv\Scripts\Activate.ps1"
 
-uv pip install numpy pandas matplotlib
+uv pip install numpy pandas matplotlib jupyter
 
 Write-Host ""
 Write-Host "Done! Python environment is ready."

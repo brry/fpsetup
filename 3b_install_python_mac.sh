@@ -12,7 +12,7 @@ uv python install 3.12
 uv venv ~/.venv
 source ~/.venv/bin/activate
 
-uv pip install numpy pandas matplotlib
+uv pip install numpy pandas matplotlib jupyter
 
 echo ""
 echo "Done! Python environment is ready."
