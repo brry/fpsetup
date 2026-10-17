@@ -105,6 +105,10 @@ l_path <- "../.vscode/settings.json"
 l_path <- berryFunctions::normalizePathCP(l_path)
 l_final <- if(file.exists(l_path)) jsonlite::read_json(l_path) else list()
 l_final[["python.defaultInterpreterPath"]] <- python_path
+# scoring reads files from disk, so save all before the score task runs.
+# Set locally (overrides global) so the student's global settings stay untouched.
+# Scoring via .vscode/tasks.json only works in course folder anyways.
+l_final[["files.saveBeforeRun"]] <- "always"
 jsonlite::write_json(l_final, l_path, pretty=TRUE, auto_unbox=TRUE)
 message("NOTE: local settings in: ", dirname(l_path))
 message("NOTE: Python interpreter locally set to: ", python_path)
