@@ -32,9 +32,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 1b</mark>: check R:
   - Check if R is on the [PATH](https://brry.github.io/course/path.html)
   - and has a version > 4.3.x.
-- <mark>Step 1c</mark>: set keyboard shortcuts if wanted:
+- <mark>Step 1c</mark>: set keyboard shortcut to wrap long lines if wanted:
   - tools - modify keyboard shortcuts - filter for "wrap" and set
-  - "toggle soft wrap mode" to e.g. `CTRL` + `Z` (Windows) or `control` + `W` (Mac)
+  - "toggle soft wrap mode" to e.g. `ALT` + `W` (Windows) or `control` + `W` (Mac)
 
 #### Git
 
