@@ -13,8 +13,9 @@ uv venv "$HOME\.venv"
 
 uv pip install numpy pandas matplotlib jupyter
 
+# If you use the venv in a new terminal (not needed for this course),
+# run the activate line in that new terminal again.
+
 Write-Host ""
 Write-Host "Done! Python environment is ready."
-Write-Host "Note: the virtual environment is only active in this terminal session."
-Write-Host "To activate it again later, run:  & `"$HOME\.venv\Scripts\Activate.ps1`""
 Write-Host "Continue in step 3c."

@@ -14,8 +14,9 @@ source ~/.venv/bin/activate
 
 uv pip install numpy pandas matplotlib jupyter
 
+# If you use the venv in a new terminal (not needed for this course),
+# run the activate line in that new terminal again.
+
 echo ""
 echo "Done! Python environment is ready."
-echo "Note: the virtual environment is only active in this terminal session."
-echo "To activate it again later, run:  source ~/.venv/bin/activate"
 echo "Continue in step 3c."
