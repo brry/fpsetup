@@ -11,7 +11,10 @@ if(.Platform$OS.type == "windows" && !pkgbuild::check_build_tools() ) {
   rtools_home <- Sys.getenv("R_RTOOLS45_PATH") # for older versions use "RTOOLS44_HOME"
   if(rtools_home!="")
   {
-  readr::write_lines(paste0('PATH="',rtools_home,';${PATH}"'), "~/.Renviron", append=TRUE)
+  renviron <- "~/.Renviron"
+  renviron_lines <- if(file.exists(renviron)) readr::read_lines(renviron) else character(0)
+  renviron_lines <- renviron_lines[!grepl("^PATH=.*Rtools", renviron_lines)]
+  readr::write_lines(c(renviron_lines, paste0('PATH="',rtools_home,';${PATH}"')), renviron)
   stop("RTools added to R's PATH. Restart R (CTRL + SHIFT + F10) and run this check again.")
   } else warning("Rtools not found. Fix line 11 (R_RTOOLS45_PATH) / run step 6a / ignore this.")
 }

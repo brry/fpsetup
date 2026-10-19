@@ -16,7 +16,10 @@ path <- reticulate::py_discover_config()$python ; path
 # should end with   /.venv/bin/python   or   /.venv/Scripts/python.exe
 
 # 3: write it into R's environment variables: 
-readr::write_lines(paste0("RETICULATE_PYTHON=", path), "~/.Renviron", append=TRUE)
+renviron <- "~/.Renviron"
+renviron_lines <- if(file.exists(renviron)) readr::read_lines(renviron) else character(0)
+renviron_lines <- renviron_lines[!grepl("^RETICULATE_PYTHON=", renviron_lines)]
+readr::write_lines(c(renviron_lines, paste0("RETICULATE_PYTHON=", path)), renviron)
 
 # 4: Restart R in one of these ways:
 # - Windows: CTRL + SHIFT (+FN) + F10
