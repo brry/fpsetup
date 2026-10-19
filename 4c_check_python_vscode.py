@@ -12,16 +12,15 @@ print(f"Prefix / Virtual Env: {sys.prefix}")
 
 # Check if set to ~/.venv (e.g C:/users/berry/.venv or /Users/berry/.venv):
 if ".venv" not in sys.executable:
-    print(f"""
-WARNING: VS Code is NOT using the .venv interpreter!
+    sys.exit(f"""
+ERROR: VS Code is not using the .venv interpreter!
   Currently selected: {sys.executable}
-  The module importing step will likely fail.
   Fix it:
     1. CTRL/CMD + SHIFT + P
     2. Search "Python: Select Interpreter"
     3. Choose the one ending in .venv, if listed, else:
-       Click "Enter interpreter path" and then "Find"
-       Set to the RStudio Python Executable output of 3d_check_python_rstudio.py
+       Click "Enter interpreter path" and then "Find",
+       set to the RStudio Python Executable output of 3d_check_python_rstudio.py
 """)
 
 print("Seeing if modules can be loaded ...")
