@@ -11,7 +11,7 @@ print(f"Python Version:       {sys.version.split()[0]}")
 print(f"Prefix / Virtual Env: {sys.prefix}")
 
 # Check if set to ~/.venv (e.g C:/users/berry/.venv or /Users/berry/.venv):
-if ".venv2" not in sys.executable:
+if ".venv" not in sys.executable:
     print(f"""
 WARNING: VS Code is NOT using the .venv interpreter!
   Currently selected: {sys.executable}
