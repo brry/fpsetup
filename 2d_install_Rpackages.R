@@ -6,7 +6,7 @@
 # pick any of the options. It will be set permanently in 4b later.
 
 if(!requireNamespace("pacman", quietly=TRUE)) install.packages("pacman")
-pacman::p_load("reticulate", "rmarkdown", "rdwd", "remotes", 
+pacman::p_load("reticulate", "rmarkdown", "berryFunctions", "rdwd", "remotes", 
 			   "pkgbuild", "readr")
 
 message("Package installation successful :). Continue in step 3.")
