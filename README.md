@@ -92,8 +92,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - In VScode, open and run the file *`fpsetup/4c_check_python_vscode.py`*.
 - <mark>Step 4d</mark>: *optional*: customize keyboard shortcuts, suggestions as in RStudio.
   - Press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).
-  - Set each wanted shortcut, then rightclick -> "show same keybindings" to deal with duplicates.  
-  - Search for the action e.g. with "python run" or "toggle comment".
+  - Set each wanted shortcut, then deal with duplications later if ever needed 
+    (rightclick -> "show same keybindings", remove the interfering one).
+  - *Search for the action with an abbreviation like "python run" or "toggle comment":*
 
 | Action | Shortcut |
 |--------|----------|
