@@ -11,9 +11,10 @@ We want to
 so we have a lot of software to install.  
 It's a bit much at once, but it will be worth it!  
 
-*Note: on Linux, usually follow the MacOS instructions.*  
-*Tip: Mousewheel click or CTRL/CMD + click opens a link in a new tab.*  
-*Here for R only? Skip step 3 and 4.*  
+*Note: update __existing__ installations of the IDEs!*  
+*Tip: Mousewheel click or CTRL/CMD + click opens a __link in a new tab__.*  
+*On __Linux__? Usually follow the MacOS instructions.*  
+*Here for __R only__? Skip step 3 and 4.*  
 
 Any improvements to this guide are very welcome!  
 
