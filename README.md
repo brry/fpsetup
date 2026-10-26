@@ -129,6 +129,22 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 6c</mark>: disable automatic unzipping:
   - *Only for Mac OS in the safari browser:*
   - Go to Safari -> Settings -> General and uncheck "Open safe files after downloading"
+- <mark>Step 6d</mark>: close REPL with keyboard shortcut:
+  - *`CTRL` + `D` (also control on Mac this time) closes a REPL in the terminal,*
+    *without navigating there and typing `quit()` + ENTER.*
+    *To also enable this when the cursor focus is in the editor:*
+  - Press `CTRL` + `K` + `S`
+  - In the topright, click the left button "open Keyboard shortcuts (JSON)"
+  - Add the following:
+
+```json
+{
+"key": "ctrl+d",
+"command": "workbench.action.terminal.sendSequence",
+"args": {"text":"\u0004"},
+"when": "editorTextFocus && editorLangId == python"
+},
+```
 
 
 #### Misc
