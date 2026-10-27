@@ -16,7 +16,7 @@ It's a bit much at once (most students report needing 2-4 hours), but it will be
 *On __Linux__? Usually follow the MacOS instructions.*  
 *Here for __R only__? Skip step 3 and 4.*  
 
-Any improvements to this guide are very welcome!
+Any improvements to this guide are very welcome!  
 You'll receive bonus points for the [course grade](https://brry.github.io/course/grading.html#course-improvements).
 
 Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#quarto), [Exercises](#exercises), [Misc](#misc)
@@ -129,7 +129,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### Quarto
 
-*Why: Quarto lets us mix text, R code and Python code in one document.*
+*Why: Quarto lets you mix text, R code and Python code in one document.*
 *With it, you can generate reports or presentations in a hassle-free, reproducible way.*
 
 - <mark>Step 5</mark>: render quarto markdown scripts as instructed inside:
@@ -141,7 +141,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Exercises
 
 *Why: In this course, you'll learn most from programming exercises.*
-*They are autograded. i.e. you can get automatic feedback on your solutions.*
+*They are autograded, i.e. you can get automatic feedback on your solutions.*
 *With this setup, you can solve + score them within your IDE.*
 
 - <mark>Step 6a</mark>: prepare exercise scoring:
@@ -183,7 +183,8 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
     - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
     - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
 - <mark>Step 7c</mark>: send feedback: 
-  - Note the current time and send the setup duration to Berry
+  - Note the current time and send the setup duration to Berry.
+  - Also note issues you had, so common ones can be avoided with better instructions.
   - Suggest improvements to this guide if you have any :)
 
 You made it through! 🎉  
