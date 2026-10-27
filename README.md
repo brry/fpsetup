@@ -105,7 +105,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Add it to the taskbar/dock if wanted.
   - Open the Explorer Tab with `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
   - When prompted, click "trust".
-  - *(To signify you should be in the main course folder, `fpsetup/` is prepended to the script names from now on)*
+  - *(To signify you should be in the main course folder in VScode, `fpsetup/` is prepended to the script names from now on)*
 - <mark>Step 4b</mark>: change VScode settings:
   - In **RStudio** (to avoid circular dependencies), open and run the file *`4b_setup_vscode.R`*.
 - <mark>Step 4c</mark>: check Python scripts in VScode:
@@ -126,7 +126,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
 | Tasks: Run Task (from step 4b) | change if wanted, e.g to `ALT` + `S` |
 
-- <mark>Step 4e</mark>: *optional on MacOS*: re-open last workspace after closing:
+- <mark>Step 4e</mark>: *note on MacOS*: re-open last workspace after closing:
   - Close VScode with `CMD` + `Q` instead of the red X to preserve the opened session.
   - If you did close the window, press `CMD` + `R` and pick the recent workspace.
 
