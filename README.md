@@ -8,26 +8,30 @@ We want to
 - try two IDEs to find out what we like about each
 - have our exercises scored from within our IDEs (more in lesson i.3)
 
-so we have a lot of software to install.  
-It's a bit much at once, but it will be worth it!  
+so you have a lot of software to install.  
+It's a bit much at once (most students report needing 2-4 hours), but it will be worth it!  
 
 *Note: update __existing__ installations of the IDEs!*  
 *Tip: Mousewheel click or CTRL/CMD + click opens a __link in a new tab__.*  
 *On __Linux__? Usually follow the MacOS instructions.*  
 *Here for __R only__? Skip step 3 and 4.*  
 
-Any improvements to this guide are very welcome!  
+Any improvements to this guide are very welcome!
+You'll receive bonus points for the [course grade](https://brry.github.io/course/grading.html#course-improvements).
 
 Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#quarto), [Exercises](#exercises), [Misc](#misc)
 
-- <mark>Step 0</mark>: track setup duration:  
-  - Write down the time you're starting this guide.
+- <mark>Step 0</mark>: improve this guide for future students:  
+  - Write down the time you're starting the setup.
   - At the end, tell Berry how long the installation took you.
+  - This will help future students to manage expectations.
+  - Also note any issues (and solutions), please :)
 
 #### R
 
-*Why: R is a popular programming language for data science,*
-*RStudio simplifies code development. Both will also be used for the rest of the setup.*
+*Why: R is a popular programming language for data science;*
+*RStudio simplifies code development.*
+*Both will also be used in the following steps of the setup.*
 
 - <mark>Step 1a</mark>: install R:
   - Install [R + RStudio](https://brry.github.io/course/install.html).
@@ -71,7 +75,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Python
 
 *Why: Python is a generic programming language also used in data science.*
-*We'll install it in an isolated virtual environment, so it works reliably.*
+*You'll install it in an isolated virtual environment that is used in either IDE.*
 
 - <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager):
   - *optional*: ask [claude.ai](https://claude.ai/): *give me step by step instructions to find and remove all python installations and environments on my OS for a clean slate.*
@@ -91,7 +95,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### VScode
 
-*Why: VScode is is widely used for Python.*
+*Why: VScode is widely used for Python.*
 *Comparing it with RStudio helps you find out what you like in each.*
 
 - <mark>Step 4a</mark>: install VScode:
@@ -126,8 +130,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Quarto
 
 *Why: Quarto lets us mix text, R code and Python code in one document.*
-*It enables you to hassle-free & reprodicibly generate reports or presentations.*
-*These steps check that rendering works in both IDEs and with both languages.*
+*With it, you can generate reports or presentations in a hassle-free, reproducible way.*
 
 - <mark>Step 5</mark>: render quarto markdown scripts as instructed inside:
   - In **VScode**, open *`fpsetup/5a_quarto_vscode.qmd`*
@@ -138,7 +141,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 #### Exercises
 
 *Why: In this course, you'll learn most from programming exercises.*
-*They are autograded - you can get automatic feedback on your solutions.*
+*They are autograded. i.e. you can get automatic feedback on your solutions.*
 *With this setup, you can solve + score them within your IDE.*
 
 - <mark>Step 6a</mark>: prepare exercise scoring:
@@ -170,7 +173,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### Misc
 
-*Why: a few various things will improve your file folder experience.*
+*Why: a few small settings will improve your file folder experience.*
 *Feedback helps improve this guide for future students.*
 
 - <mark>Step 7a</mark>: actually hide hidden files in RStudio:
