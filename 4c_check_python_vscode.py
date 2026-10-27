@@ -1,8 +1,7 @@
-# This script displays where Python is installed.
-# It then tests whether the needed python modules are available.
+# This script checks whether running Python code works in VScode.
 
 # Run this file by clicking the play triangle in the topright.
-# After step 4d, run it with CMD/CTRL + SHIFT + S (or whatever you chose).
+# After step 4d, you could run it with CMD/CTRL + SHIFT + S (or whatever you chose).
 
 import sys
 
@@ -10,7 +9,7 @@ print(f"Python Executable:    {sys.executable}")
 print(f"Python Version:       {sys.version.split()[0]}")
 print(f"Prefix / Virtual Env: {sys.prefix}")
 
-# Check if set to ~/.venv:
+# Check if interpreter is set to ~/.venv:
 if ".venv" not in sys.prefix:
     sys.exit(f"""
 ERROR: VS Code is not using the .venv interpreter!
@@ -28,7 +27,7 @@ print("Seeing if modules can be loaded ...")
 import numpy
 import pandas
 import matplotlib
-print("It worked! Run the REPL demo below, then continue in step 4d :)")
+print("Running Python code works! Run the REPL demo below, then continue in step 4d :)")
 
 # About the REPL (Read-Eval-Print Loop), see also the video demo in lesson i.1.:
 # REPL helps you build up an analysis step by step and inspect results as you go,

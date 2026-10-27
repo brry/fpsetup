@@ -56,7 +56,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Use a short expressive name without spaces like `FundamentalsProgramming`!
   - This will over time contain the folders *`fpsetup`* and *`FP26`*, along with the 
     exercise folders *`FP_P11_Syntax`*, *`FP_P12_DataTypes`* etc, *`FP_R12_Syntax`*, *`FP_R13_Help`* etc.
-  - Except in step 3b, you do not need your OS file explorer anymore - use the file panel in your IDE!
+  - You do not need your OS file explorer anymore - use the file panel in your IDE!
 - <mark>Step 2b</mark>: install git for version control:
   - Install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
   - If you already have a personal GitHub account, use that :)
@@ -69,7 +69,6 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - In the now opened RStudio instance with `fpsetup` in the top right,
   - use the Files pane (bottom right) to open the file *`2d_install_Rpackages.R`*.
   - Run it as instructed inside.
-  - Keep RStudio opened for step 3c.
 
 **From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.**
 
@@ -78,22 +77,13 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 *Why: Python is a generic programming language also used in data science.*
 *You'll install it in an isolated virtual environment that is used in either IDE.*
 
-- <mark>Step 3a</mark>: install `uv` (very fast & easy Python package manager):
-  - *optional*: ask [claude.ai](https://claude.ai/): *give me step by step instructions to find and remove all python installations and environments on my OS for a clean slate.*
-  - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options).
-  - Close your terminal and open a new one (see step 1b).
-- <mark>Step 3b</mark>: install Python with `uv`:
-  - In the terminal, set your directory:
-  - use Tab for autocomplete or drag the folder into the terminal after typing "`cd  `":
-  - `cd your/path/to/FundamentalsProgramming/fpsetup`  
-  - *Tip: triple click to mark a full line for copying to the clipboard*  
-  - Depending on OS, run **one** of:  
-    - `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`
-    - `bash 3b_install_python_mac.sh`
-    - On Mac, try `zsh` instead of `bash` if it fails
-- <mark>Step 3c</mark>: instruct RStudio to use the venv:
-  - In RStudio, open and run the file *`3c_set_python_rstudio.R`* as instructed inside
-    (and then run *`3d_check_python_rstudio.py`*).
+- <mark>Step 3a</mark>: remove old python versions:
+  - If not needed for other work, ask [claude.ai](https://claude.ai/): 
+    *give me step by step instructions to find and remove all python installations and environments on my OS for a clean slate.*
+- <mark>Step 3b</mark>: install Python + modules with `uv`:
+  - In RStudio, open the file *`3b_install_python.R`* and run it as instructed inside.
+- <mark>Step 3c</mark>: check Python execution in RStudio:
+  - In RStudio, open and run *`3c_check_python_rstudio.py`*.
 
 #### VScode
 

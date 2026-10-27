@@ -1,0 +1,71 @@
+# This script installs uv if needed, then installs python in a venv with some modules.
+# It runs the equivalent of
+'uv python install 3.12
+uv venv ~/.venv
+uv pip install   --python <venv/python_exe>    numpy pandas matplotlib jupyter'
+# It then points RStudio to the venv.
+# We do this in R to make it OS-independent and easy for you.
+
+# Click "Source" (top right of this panel) or press CTRL/CMD + SHIFT + S.
+# It will take a few minutes.
+
+
+# 0: helper functions + paths --------------------------------------------------
+
+windows <- .Platform$OS.type=="windows"
+home <- normalizePath(Sys.getenv(if(windows) "USERPROFILE" else "HOME"), winslash="/")
+venv <- file.path(home, ".venv")
+venv_python <- file.path(venv, if(windows) "Scripts/python.exe" else "bin/python")
+
+find_uv <- function() {
+  exe <- if(windows) "uv.exe" else "uv"
+  # PATH may be outdated in a running RStudio, so also check the default install folders
+  found <- c(unname(Sys.which("uv")), file.path(home, c(".local/bin", ".cargo/bin"), exe))
+  found <- found[nzchar(found) & file.exists(found)]
+  if(length(found)) found[1] else ""
+}
+
+run <- function(cmd, args) {
+  message("> ", basename(cmd), " ", paste(args, collapse=" "))
+  status <- system2(cmd, args)
+  if(status != 0) stop("Command failed (exit status ", status, ").\n",
+  					    "Copy the output above and send it to Berry.", call.=FALSE)
+}
+
+# 1: uv (fast Python package manager) ------------------------------------------
+uv <- find_uv()
+if(uv=="") {
+  message("uv not found, installing it ...")
+  if(windows) {
+    run("powershell", c("-ExecutionPolicy", "Bypass", "-Command",
+                        '"irm https://astral.sh/uv/install.ps1 | iex"'))
+  } else {
+    run("sh", c("-c", shQuote("curl -LsSf https://astral.sh/uv/install.sh | sh")))
+  }
+  uv <- find_uv()
+}
+if(uv=="") stop("uv could not be installed. Install it manually from\n",
+				"https://docs.astral.sh/uv/getting-started/installation/\n",
+				"and run this file 3b_install_python.R again.", call.=FALSE)
+message("Using uv at: ", uv)
+
+# 2: Python + virtual environment + modules ------------------------------------
+run(uv, c("python", "install", "3.12"))
+# set up a virtual environment that keeps your project's packages separate from everything else:
+if(!file.exists(venv_python)) run(uv, c("venv", shQuote(venv), "--python", "3.12"))
+# install modules needed in the course:
+run(uv, c("pip", "install", "--python", shQuote(venv_python),
+          "numpy", "pandas", "matplotlib", "jupyter"))
+
+# 3: point R/RStudio to the venv -----------------------------------------------
+renviron <- file.path(home, ".Renviron")
+lines <- if(file.exists(renviron)) readLines(renviron) else character(0)
+lines <- lines[!grepl("^RETICULATE_PYTHON=", lines)]
+writeLines(c(lines, paste0("RETICULATE_PYTHON=", venv_python)), renviron)
+message("In ",renviron, ", this script set\nRETICULATE_PYTHON = ", venv_python)
+
+# 4: check Python config + code execution --------------------------------------
+Sys.setenv(RETICULATE_PYTHON = venv_python) # after R restart, this is set via .Renviron
+print(reticulate::py_discover_config()$python)
+print(reticulate::py_eval("f'py_eval check: sum of 39 and 3 is {39+3}'"))
+message("Now close Rstudio, re-open it and run the file  3c_check_python_rstudio.py")

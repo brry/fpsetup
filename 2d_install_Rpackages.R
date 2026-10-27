@@ -9,4 +9,4 @@ if(!requireNamespace("pacman", quietly=TRUE)) install.packages("pacman")
 pacman::p_load("reticulate", "rmarkdown", "berryFunctions", "rdwd", "remotes", 
 			   "pkgbuild", "readr")
 
-message("Package installation successful :). Continue in step 3.")
+message("Package installation successful :). Keep RStudio opened. Continue in step 3.")
