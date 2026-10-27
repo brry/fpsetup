@@ -26,6 +26,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### R
 
+*Why: R is a popular programming language for data science,*
+*RStudio simplifies code development. Both will also be used for the rest of the setup.*
+
 - <mark>Step 1a</mark>: install R:
   - Install [R + RStudio](https://brry.github.io/course/install.html).
   - Open RStudio and change the Rdata settings as instructed in the previous link.
@@ -38,6 +41,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - "toggle soft wrap mode" to e.g. `ALT` + `W` (Windows) or `control` + `W` (Mac)
 
 #### Git
+
+*Why: git tracks versions of your work and downloads materials*
+*(like this course repo), so you can get and update them easily.*
+*Through github, you can also publish presentations, documents and websites.*
 
 - <mark>Step 2a</mark>: create a course folder:
   - In a sensible (easy to reach) location on your computer, create a folder for this course.
@@ -63,6 +70,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### Python
 
+*Why: Python is a generic programming language also used in data science.*
+*We'll install it in an isolated virtual environment, so it works reliably.*
+
 - <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager):
   - *optional*: ask [claude.ai](https://claude.ai/): *give me step by step instructions to find and remove all python installations and environments on my OS for a clean slate.*
   - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options).
@@ -80,6 +90,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - In RStudio, open and run the file *`3d_check_python_rstudio.py`* as instructed inside.
 
 #### VScode
+
+*Why: VScode is is widely used for Python.*
+*Comparing it with RStudio helps you find out what you like in each.*
 
 - <mark>Step 4a</mark>: install VScode:
   - Install [VScode](https://code.visualstudio.com/Download) and open it.
@@ -112,6 +125,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 #### Quarto
 
+*Why: Quarto lets us mix text, R code and Python code in one document.*
+*It enables you to hassle-free & reprodicibly generate reports or presentations.*
+*These steps check that rendering works in both IDEs and with both languages.*
+
 - <mark>Step 5</mark>: render quarto markdown scripts as instructed inside:
   - In **VScode**, open *`fpsetup/5a_quarto_vscode.qmd`*
   - In **RStudio**, open *`fpsetup/5b_quarto_rstudio.qmd`*
@@ -119,6 +136,10 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 
 #### Exercises
+
+*Why: In this course, you'll learn most from programming exercises.*
+*They are autograded - you can get automatic feedback on your solutions.*
+*With this setup, you can solve + score them within your IDE.*
 
 - <mark>Step 6a</mark>: prepare exercise scoring:
   - *Only for Windows OS; can be skipped for the course, but might be needed later:*
@@ -148,6 +169,9 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 
 #### Misc
+
+*Why: a few various things will improve your file folder experience.*
+*Feedback helps improve this guide for future students.*
 
 - <mark>Step 7a</mark>: actually hide hidden files in RStudio:
   - In RStudio, open and run the file *`fpsetup/7a_hide_files_rstudio.R`* 
