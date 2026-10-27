@@ -4,7 +4,7 @@
 
 We want to
 
-- mix Python and R code in quarto markdown documents (more in lesson i.2)
+- mix Python and R code in Quarto markdown documents (more in lesson i.2)
 - try two IDEs to find out what we like about each
 - have our exercises scored from within our IDEs (more in lesson i.3)
 
@@ -15,6 +15,7 @@ It's a bit much at once (most students report needing 2-4 hours), but it will be
 *Tip: Mousewheel click or CTRL/CMD + click opens a __link in a new tab__.*  
 *On __Linux__? Usually follow the MacOS instructions.*  
 *Here for __R only__? Skip step 3 and 4.*  
+*Get __stuck__? I'll help in the first support and tutorial sessions :)*
 
 Any improvements to this guide are very welcome!  
 You'll receive bonus points for the [course grade](https://brry.github.io/course/grading.html#course-improvements).
@@ -35,7 +36,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 - <mark>Step 1a</mark>: install R:
   - Install [R + RStudio](https://brry.github.io/course/install.html).
-  - Open RStudio and change the Rdata settings as instructed in the previous link.
+  - Open RStudio and change the RData settings as instructed in the previous link.
   - Add RStudio to the taskbar/dock if wanted.
 - <mark>Step 1b</mark>: check R:
   - Check if R is on the [PATH](https://brry.github.io/course/path.html)
@@ -48,7 +49,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 
 *Why: git tracks versions of your work and downloads materials*
 *(like this course repo), so you can get and update them easily.*
-*Through github, you can also publish presentations, documents and websites.*
+*Through GitHub, you can also publish presentations, documents and websites.*
 
 - <mark>Step 2a</mark>: create a course folder:
   - In a sensible (easy to reach) location on your computer, create a folder for this course.
@@ -58,17 +59,17 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Except in step 3b, you do not need your OS file explorer anymore - use the file panel in your IDE!
 - <mark>Step 2b</mark>: install git for version control:
   - Install [git](https://brry.github.io/course/git.html), including the SSH key setup.  
-  - If you already have a personal github account, use that :)
+  - If you already have a personal GitHub account, use that :)
 - <mark>Step 2c</mark>: download this fpsetup repo:
   - Follow the [use git](https://brry.github.io/course/git.html#use-git) 
     section to download [these instructions](https://github.com/brry/fpsetup) 
     into your main course folder from step 2a.
-  - Make sure the project in the RStudio topright shows "fpsetup"
+  - Make sure the project in the RStudio top right shows "fpsetup"
 - <mark>Step 2d</mark>: install R packages:   
-  - In the now opened Rstudio instance with `fpsetup` in the topright,
+  - In the now opened RStudio instance with `fpsetup` in the top right,
   - use the Files pane (bottom right) to open the file *`2d_install_Rpackages.R`*.
   - Run it as instructed inside.
-  - Keep Rstudio opened for step 3c.
+  - Keep RStudio opened for step 3c.
 
 **From now on, keyboard shortcuts with `CTRL` mean `CMD` on MacOS.**
 
@@ -77,17 +78,19 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 *Why: Python is a generic programming language also used in data science.*
 *You'll install it in an isolated virtual environment that is used in either IDE.*
 
-- <mark>Step 3a</mark>: install Python with `uv` (very fast & easy Python package manager):
+- <mark>Step 3a</mark>: install `uv` (very fast & easy Python package manager):
   - *optional*: ask [claude.ai](https://claude.ai/): *give me step by step instructions to find and remove all python installations and environments on my OS for a clean slate.*
   - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (scroll down for `brew` and other options).
   - Close your terminal and open a new one (see step 1b).
-- <mark>Step 3b</mark>: in the terminal, set your directory:
-  - Use Tab for autocomplete or drag the folder into the terminal after typing "`cd  `":
+- <mark>Step 3b</mark>: install Python with `uv`:
+  - In the terminal, set your directory:
+  - use Tab for autocomplete or drag the folder into the terminal after typing "`cd  `":
   - `cd your/path/to/FundamentalsProgramming/fpsetup`  
   - *Tip: triple click to mark a full line for copying to the clipboard*  
-  - Depending on OS, (maybe with `zsh` instead of `bash` on MacOS), run **one** of:  
+  - Depending on OS, run **one** of:  
+    - `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`
     - `bash 3b_install_python_mac.sh`
-    - `powershell -ExecutionPolicy Bypass -File 3b_install_python_windows.ps1`  
+    - On Mac, try `zsh` instead of `bash` if it fails
 - <mark>Step 3c</mark>: instruct RStudio to use the venv:
   - In RStudio, open and run the file *`3c_set_python_rstudio.R`* as instructed inside.
 - <mark>Step 3d</mark>: check Python scripts in RStudio:
@@ -104,14 +107,15 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - Open the Explorer Tab with `CTRL` + `SHIFT` + `E`, open the main course folder from step 2a.
   - When prompted, click "trust".
   - *(To signify you should be in the main course folder, `fpsetup/` is prepended to the script names from now on)*
-- <mark>Step 4b</mark>: change VScode settings
+- <mark>Step 4b</mark>: change VScode settings:
   - In **RStudio** (to avoid circular dependencies), open and run the file *`4b_setup_vscode.R`*.
 - <mark>Step 4c</mark>: check Python scripts in VScode:
   - In VScode, open and run the file *`fpsetup/4c_check_python_vscode.py`*.
-- <mark>Step 4d</mark>: *optional*: customize keyboard shortcuts, suggestions as in RStudio.
+- <mark>Step 4d</mark>: *optional*: customize keyboard shortcuts:
   - Press `CTRL` + `K` + `S` (or click the cog wheel at the bottom left).
   - Set each wanted shortcut, then deal with duplications later if ever needed 
     (rightclick -> "show same keybindings", remove the interfering one).
+  - *The suggestions follow the RStudio defaults.*
   - *Search for the action with an abbreviation like "python run" or "toggle comment":*
 
 | Action | Shortcut |
@@ -121,7 +125,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 | Toggle Line Comment  *and*<br>Toggle Block Comment | `CTRL` + `SHIFT` + `C` |
 | Delete Line | `CTRL` + `D` |
 | Duplicate Selection | `CTRL` + `SHIFT` + `D` |
-| Tasks: Run Task (from step 4b) | change if wanted |
+| Tasks: Run Task (from step 4b) | change if wanted, e.g to `ALT` + `S` |
 
 - <mark>Step 4e</mark>: *optional on MacOS*: re-open last workspace after closing:
   - Close VScode with `CMD` + `Q` instead of the red X to preserve the opened session.
@@ -137,7 +141,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 *Why: Quarto lets you mix text, R code and Python code in one document.*
 *With it, you can generate reports or presentations in a hassle-free, reproducible way.*
 
-- <mark>Step 5</mark>: render quarto markdown scripts as instructed inside:
+- <mark>Step 5</mark>: render Quarto markdown scripts as instructed inside:
   - In **VScode**, open *`fpsetup/5a_quarto_vscode.qmd`*
   - In **RStudio**, open *`fpsetup/5b_quarto_rstudio.qmd`*
   - In **RStudio**, open *`fpsetup/5c_quarto_python_rstudio.qmd`*
@@ -170,8 +174,8 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - In RStudio, open and run the file *`fpsetup/7a_hide_files_rstudio.R`* 
 - <mark>Step 7b</mark>: change OS file browser settings: 
   - In case you do still use your OS file browser sometimes:
-    - on Windows: in the File explorer, click the "View" tab , then "Show" and check the boxes for "File name extensions" and "Hidden items"
-    - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to  show hidden files
+    - on Windows: in the File explorer, click the "View" tab, then "Show" and check the boxes for "File name extensions" and "Hidden items"
+    - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to show hidden files
 - <mark>Step 7c</mark>: send feedback: 
   - Note the current time and send the setup duration to Berry.
   - Also note issues you had, so common ones can be avoided with better instructions.
