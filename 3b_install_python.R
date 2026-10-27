@@ -27,9 +27,13 @@ find_uv <- function() {
   if(length(found)) found[1] else ""
 }
 
+# quote for the OS shell in case of spaces in the path
+# default shQuote uses single quotes, which cmd.exe doesn't understand
+shell_quote <- function(x) shQuote(x, type=if(windows) "cmd" else "sh")
+
 run <- function(cmd, args) {
   message("> ", basename(cmd), " ", paste(args, collapse=" "))
-  status <- system2(shQuote(cmd), args) # quoted in case of spaces in the path
+  status <- system2(cmd, args) # system2 quotes cmd itself, but not args
   if(status != 0) stop("Command failed (exit status ", status, ").\n",
   					    "Copy the output above and send it to Berry.", call.=FALSE)
 }
@@ -61,9 +65,10 @@ run(uv, c("python", "install", "3.12"))
 if(file.exists(venv_python)) {
   message("NOTE: an existing virtual environment was found at ", venv, " and will be reused.\n",
           "If it causes problems, delete that folder and run this script again.")
-} else run(uv, c("venv", shQuote(venv), "--python", "3.12"))
+} else run(uv, c("venv", shell_quote(venv), "--python", "3.12"))
 # install modules needed in the course:
-run(uv, c("pip", "install", "--python", shQuote(venv_python),
+# --only-binary: never compile from source (students have no C++/Rust toolchain)
+run(uv, c("pip", "install", "--only-binary", ":all:", "--python", shell_quote(venv_python),
           "numpy", "pandas", "matplotlib", "jupyter"))
 
 
