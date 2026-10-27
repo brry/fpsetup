@@ -35,4 +35,4 @@ reticulate::py_discover_config()
 reticulate::py_available(TRUE)
 reticulate::py_eval("f'sum is {1+1}'") # should show  "sum is 2"
 
-# Now to continue with step 3d, open the file 3d_check_python_rstudio.py.
+# Now open the file 3d_check_python_rstudio.py.

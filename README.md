@@ -92,9 +92,8 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
     - `bash 3b_install_python_mac.sh`
     - On Mac, try `zsh` instead of `bash` if it fails
 - <mark>Step 3c</mark>: instruct RStudio to use the venv:
-  - In RStudio, open and run the file *`3c_set_python_rstudio.R`* as instructed inside.
-- <mark>Step 3d</mark>: check Python scripts in RStudio:
-  - In RStudio, open and run the file *`3d_check_python_rstudio.py`* as instructed inside.
+  - In RStudio, open and run the file *`3c_set_python_rstudio.R`* as instructed inside
+    (and then run *`3d_check_python_rstudio.py`*).
 
 #### VScode
 
