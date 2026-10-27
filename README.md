@@ -129,11 +129,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 4e</mark>: *optional on MacOS*: re-open last workspace after closing:
   - Close VScode with `CMD` + `Q` instead of the red X to preserve the opened session.
   - If you did close the window, press `CMD` + `R` and pick the recent workspace.
-- <mark>Step 4f</mark>: close REPL with keyboard shortcut instead of typing `quit()`:
-  - To end the REPL mode (which displays `>>>`), so you can run full files again,
-  - click in the terminal so that the focus is there, and press
-    - `CTRL` + `Z`, then `ENTER` on Windows
-    - `control` + `D` on Mac
+
 
 #### Quarto
 
@@ -156,12 +152,12 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
   - *Only for Windows OS; can be skipped for the course, but might be needed later:*
   - Install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   directly at e.g. `C:/rtools45` (compiler paths may not have spaces).
-- <mark>Step 6b</mark>: install scoring package:
+- <mark>Step 6b</mark>: install + configure scoring package:
   - In RStudio, open *`fpsetup/6b_setup_scoring.R`* and run it as instructed inside.
 - <mark>Step 6c</mark>: disable automatic unzipping:
   - *Only for MacOS in the Safari browser:*
   - Go to Safari -> Settings -> General and uncheck "Open safe files after downloading"
-- <mark>Step 6d</mark>: *moved to step 4f*
+- <mark>Step 6d</mark>: close the Python REPL: *moved to the file in step 4c*
 
 
 #### Misc
