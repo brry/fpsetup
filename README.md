@@ -149,15 +149,16 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 *With this setup, you can solve + score them within your IDE.*
 
 - <mark>Step 6a</mark>: prepare exercise scoring:
-  - *Only for Windows OS; can be skipped for the course, but might be needed later:*
-  - Install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
+  - In your browser, set the downloading files option to always ask for the location.
+    This will also help you have a clean PC instead of a huge messy "Downloads" folder.
+  - *Only for Windows OS; can be skipped for the course, but might be needed later in real life:*
+    - Install [RTools](https://cran.r-project.org/bin/windows/Rtools/) 
   directly at e.g. `C:/rtools45` (compiler paths may not have spaces).
+  - *Only for MacOS in the Safari browser, to disable automatic unzipping:*
+    - Go to Safari -> Settings -> General and uncheck "Open safe files after downloading"
 - <mark>Step 6b</mark>: install + configure scoring package:
   - In RStudio, open *`fpsetup/6b_setup_scoring.R`* and run it as instructed inside.
-- <mark>Step 6c</mark>: disable automatic unzipping:
-  - *Only for MacOS in the Safari browser:*
-  - Go to Safari -> Settings -> General and uncheck "Open safe files after downloading"
-- <mark>Step 6d</mark>: close the Python REPL: *moved to the file in step 4c*
+- Referenced <mark>Step 6d</mark> (close the Python REPL): moved to *`4c_check_python_vscode.py`*.
 
 
 #### Misc
