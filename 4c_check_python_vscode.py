@@ -19,7 +19,7 @@ ERROR: VS Code is not using the .venv interpreter!
     2. Search "Python: Select Interpreter"
     3. Choose the one with .venv, if listed, else:
        Click "Enter interpreter path" and then "Find",
-       set to the RStudio Python Executable output of 3d_check_python_rstudio.py
+       set to the RStudio Python Executable output of 3c_check_python_rstudio.py
        e.g C:/users/berry/.venv/Scripts/python.exe or /Users/berry/.venv/bin/python
 """)
 

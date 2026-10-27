@@ -57,16 +57,16 @@ if(length(out)) message(paste(out, collapse="\n"))
 
 # 2: global settings ----
 
-# detect Python via reticulate (set in step 3c), needed for global + local settings:
+# detect Python via reticulate (set in step 3b), needed for global + local settings:
 python_path <- reticulate::py_discover_config()$python
 if(is.null(python_path) || !nzchar(python_path)) stop(
   "Could not detect Python via reticulate.\n",
-  "Make sure you have completed step 3c and restarted RStudio."
+  "Make sure you have completed step 3b and restarted RStudio."
 )
 if(!file.exists(python_path)) stop("Python path does not exist: ", python_path)
 if(!grepl(".venv", python_path, fixed=TRUE)) warning(
   "Python is not in a .venv folder: ", python_path,
-  "\nStep 4c will complain. Did step 3b and 3c work?", call.=FALSE)
+  "\nStep 4c will complain. Did step 3b work and did you restart RStudio?", call.=FALSE)
 
 message("NOTE: if not already given, setting _global_ VScode preferences to:\n",
 		"- use this Python interpreter in all workspaces: ", python_path, "\n",

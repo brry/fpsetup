@@ -45,4 +45,4 @@ rskey::setKeyboardBindings()
 # for more info if wanted, see
 browseURL("https://github.com/brry/rskey#rskey")
 
-# You're almost done! Continue with step 6c.
+# You're almost done! Continue with step 7a.

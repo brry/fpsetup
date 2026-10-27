@@ -37,7 +37,9 @@ Jump to [Install](#install-claude-code), [Safety](#safety-setup), [RStudio](#rst
       `irm https://claude.ai/install.ps1 | iex`
   - Close and reopen your terminal, then check with `claude --version`.
   - *Optional*: read the full [Claude Code quickstart](https://code.claude.com/docs/en/quickstart).
-  - In a terminal, `cd` (see fpsetup [step 3b](https://github.com/brry/fpsetup#python)) into a project you want to use AI in.
+  - In a terminal, set your directory to a project you want to use AI in:
+    - use Tab for autocomplete or drag the folder into the terminal after typing "`cd  `":
+    - `cd your/path/to/your/project`  
   - Run `claude` and follow the link to authenticate in the browser.
 
 #### Safety setup

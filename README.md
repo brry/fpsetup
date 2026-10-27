@@ -83,7 +83,7 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 3b</mark>: install Python + modules with `uv`:
   - In RStudio, open the file *`3b_install_python.R`* and run it as instructed inside.
 - <mark>Step 3c</mark>: check Python execution in RStudio:
-  - In RStudio, open and run *`3c_check_python_rstudio.py`*.
+  - After restarting RStudio, open and run *`3c_check_python_rstudio.py`*.
 
 #### VScode
 
