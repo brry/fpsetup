@@ -48,6 +48,12 @@ for(ext in extensions) {
   if(length(out)) message(paste(out, collapse="\n"))
 }
 
+# update installed extensions that have a newer version (fast if all current):
+message("Updating installed extensions (only those with newer versions)")
+out <- system("code --update-extensions 2>&1", intern=TRUE)
+out <- out[!grepl("DEP0169|Use `Code --trace-deprecation", out)]
+if(length(out)) message(paste(out, collapse="\n"))
+
 
 # 2: global settings ----
 
