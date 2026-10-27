@@ -51,7 +51,19 @@ for(ext in extensions) {
 
 # 2: global settings ----
 
+# detect Python via reticulate (set in step 3c), needed for global + local settings:
+python_path <- reticulate::py_discover_config()$python
+if(is.null(python_path) || !nzchar(python_path)) stop(
+  "Could not detect Python via reticulate.\n",
+  "Make sure you have completed step 3c and restarted RStudio."
+)
+if(!file.exists(python_path)) stop("Python path does not exist: ", python_path)
+if(!grepl(".venv", python_path, fixed=TRUE)) warning(
+  "Python is not in a .venv folder: ", python_path,
+  "\nStep 4c will complain. Did step 3b and 3c work?", call.=FALSE)
+
 message("NOTE: if not already given, setting _global_ VScode preferences to:\n",
+		"- use this Python interpreter in all workspaces: ", python_path, "\n",
 		"- execute Python files with their dir as wd\n",
 		"- have separate tabs per script\n",
 		"- turn off telemetry\n",
@@ -69,6 +81,7 @@ if(!dir.exists(dirname(g_path)))
 	dir.create(dirname(g_path), recursive=TRUE)
 
 g_new <- list(
+  `python.defaultInterpreterPath`         = python_path, # fallback when no interpreter was selected in a workspace
   `python.terminal.executeInFileDir`      = TRUE,
   `workbench.editor.enablePreview`        = FALSE,
   `telemetry.telemetryLevel`              = "off", # https://www.roboleary.net/tools/2022/04/20/vscode-telemetry.html
@@ -94,16 +107,11 @@ message("NOTE: crash reporter disabled in argv.json")
 
 # 3: local settings ----
 
-# write workspace-level Python interpreter path:
-python_path <- reticulate::py_discover_config()$python
-if(is.null(python_path) || !nzchar(python_path)) stop(
-  "Could not detect Python via reticulate.\n",
-  "Make sure you have completed step 3c and restarted RStudio."
-)
 if(!dir.exists("../.vscode")) dir.create("../.vscode")
 l_path <- "../.vscode/settings.json"
 l_path <- berryFunctions::normalizePathCP(l_path)
 l_final <- if(file.exists(l_path)) jsonlite::read_json(l_path) else list()
+# write workspace-level Python interpreter path (in addition to the global one):
 l_final[["python.defaultInterpreterPath"]] <- python_path
 # scoring reads files from disk, so save all before the score task runs.
 # Set locally (overrides global) so the student's global settings stay untouched.
