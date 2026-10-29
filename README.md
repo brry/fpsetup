@@ -41,9 +41,6 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 - <mark>Step 1b</mark>: check R:
   - Check if R is on the [PATH](https://brry.github.io/course/path.html)
   - and has a version > 4.3.x.
-- <mark>Step 1c</mark>: set keyboard shortcut to wrap long lines if wanted:
-  - tools - modify keyboard shortcuts - filter for "wrap" and set
-  - "toggle soft wrap mode" to e.g. `ALT` + `W` (Windows) or `control` + `W` (Mac)
 
 #### Git
 
@@ -156,13 +153,11 @@ Jump to [R](#r), [Git](#git), [Python](#python), [VScode](#vscode), [Quarto](#qu
 *Why: a few small settings will improve your file folder experience.*
 *Feedback helps improve this guide for future students.*
 
-- <mark>Step 7a</mark>: actually hide hidden files in RStudio:
-  - In RStudio, open and run the file *`fpsetup/7a_hide_files_rstudio.R`* 
-- <mark>Step 7b</mark>: change OS file browser settings: 
+- <mark>Step 7a</mark>: change OS file browser settings: 
   - In case you do still use your OS file browser sometimes:
     - on Windows: in the File explorer, click the "View" tab, then "Show" and check the boxes for "File name extensions" and "Hidden items"
     - on Mac: in any Finder folder, press `CMD` + `Shift` + `.` to show hidden files
-- <mark>Step 7c</mark>: send feedback: 
+- <mark>Step 7b</mark>: send feedback: 
   - Note the current time and send the setup duration to Berry.
   - Also note issues you had, so common ones can be avoided with better instructions.
   - Suggest improvements to this guide if you have any :)
